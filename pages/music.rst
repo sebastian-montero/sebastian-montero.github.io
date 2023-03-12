@@ -1,5 +1,5 @@
 .. title: Music
-.. slug: Music
+.. slug: music
 .. date: 2023-03-12 22:17:21 UTC
 .. tags: 
 .. category: 
