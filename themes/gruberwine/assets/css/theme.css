@@ -169,7 +169,6 @@ address
 {
 	background-color: #111111;
 	width: 100%;
-	padding-top: 1em;
 }
 
 #header .logo
@@ -177,7 +176,6 @@ address
 	text-align: center;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-variant: normal;
-	font-size: min(max(10rem, 10vw), 48pt);
 	font-weight: bold;
 	text-decoration: none;
 	color: #111111;
@@ -187,11 +185,6 @@ address
 #header a:focus
 {
 	text-decoration: none;
-}
-
-#nologoimage
-{
-	padding-bottom: 0.7em;
 }
 
 /* Style the navigation menu */
@@ -334,29 +327,6 @@ address
     	/* Centre the page content. */
 		margin-right: 60% auto;
 		margin-left: 0 auto;
-	}
-
-	.about-highlight {
-		text-decoration: none;
-		color: rgba(65, 105, 225, 1);
-		position: relative;
-		font-weight: 700;
-	}
-	
-	.about-highlight a:after {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		top: 95%;
-		left: 30%;
-		right: 0em;
-		bottom: 0;
-		transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-		background-color: rgba(65, 105, 225, 0.9);
-	}
-	
-	.about-highlight a:hover:after {
-	top: 10%;
 	}
 	
 
@@ -757,7 +727,7 @@ figure, img { padding-bottom: 1em; }
 	margin-right: 2em;
 }
 
-article > header { margin-top: 3em; }
+article > header { margin-top: 5%; }
 
 /* Webmentions using webmention.js */
 #webmentions img
@@ -830,3 +800,26 @@ blockquote, blockquote > p { font-style: italic; }
 .about-div {
 	width: 80%;
   }
+
+.about-highlight {
+	text-decoration: none;
+	color: rgba(65, 105, 225, 1);
+	position: relative;
+	font-weight: 700;
+}
+
+.about-highlight a:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 95%;
+	left: 30%;
+	right: 0em;
+	bottom: 0;
+	transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+	background-color: rgba(65, 105, 225, 0.9);
+}
+
+.about-highlight a:hover:after {
+top: 10%;
+}

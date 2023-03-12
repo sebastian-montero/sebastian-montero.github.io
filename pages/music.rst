@@ -11,8 +11,18 @@
 Music
 =====
 Experiments with my Midi keyboard and drum machines
+ 
 
+Slow vibes
+'''''''''''''
 .. soundcloud:: 1467477916
+    :width: 250
+    :height: 100
+ 
 
+Winter
+'''''''''''''
 .. soundcloud:: 1467477628
+    :width: 250
+    :height: 100
 

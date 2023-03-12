@@ -18,14 +18,9 @@ import time
 # Data about this site
 BLOG_AUTHOR = "Sebastian Montero"  # (translatable)
 BLOG_TITLE = ""  # (translatable)
-# This is the main URL for your site. It will be used
-# in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://example.com/"
-# This is the URL where Nikola's output will be deployed.
-# If not set, defaults to SITE_URL
-# BASE_URL = "https://example.com/"
+SITE_URL = "https://sebastianmontero.com/"
 BLOG_EMAIL = "sebastianmont@duck.com"
-BLOG_DESCRIPTION = "Personal blog."  # (translatable)
+BLOG_DESCRIPTION = "My personal corner of the internet."  # (translatable)
 
 #
 DEFAULT_LANG = "en"
@@ -61,9 +56,9 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ('/pages/about/', 'about', ''),
         ('/', 'blog', ''),
         ('/pages/music/', 'music', ''),
-        ('/pages/about/', 'about', ''),
         ('/archive.html', 'archive', ''),
         ('/categories/', 'tags', ''),
         ('https://twitter.com/sebastianmxnt', '', 'fab fa-twitter'),
