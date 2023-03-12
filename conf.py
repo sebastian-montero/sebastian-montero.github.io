@@ -144,9 +144,10 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ('/index.html', 'home', ''),
-        ('/pages/me', 'about', ''),
+        ('/pages/About', 'about', ''),
         ('/archive.html', 'archive', ''),
         ('/categories/index.html', 'tags', ''),
+        
         ('https://twitter.com/sebastianmxnt', '', 'fab fa-twitter'),
         ('https://www.linkedin.com/in/sebastianmontero/', '', 'fab fa-linkedin'),
         ('https://github.com/sebastian-montero', '', 'fab fa-github'),
@@ -241,8 +242,8 @@ THEME_CONFIG = {
 #     )
 
 POSTS = (
-    ("posts/*.rst", "posts", "post.tmpl"),
     ("posts/*.md", "posts", "post.tmpl"),
+    ("posts/*.rst", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
 )
