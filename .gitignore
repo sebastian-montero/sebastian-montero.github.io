@@ -4,3 +4,4 @@ __pycache__
 output
 .venv/
 .DS_Store
+*.db
