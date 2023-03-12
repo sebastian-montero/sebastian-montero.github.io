@@ -143,7 +143,8 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ('/index.html', 'home', ''),
+        ('/index.html', 'blog', ''),
+        ('/pages/Music', 'music', ''),
         ('/pages/About', 'about', ''),
         ('/archive.html', 'archive', ''),
         ('/categories/index.html', 'tags', ''),
@@ -248,8 +249,8 @@ POSTS = (
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.md", "pages", "page.tmpl"),
+    ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
 )
