@@ -1,0 +1,90 @@
+{# -*- coding: utf-8 -*- #}
+{% import 'base_helper.tmpl' as base with context %}
+{% import 'base_header.tmpl' as header with context %}
+{% import 'base_footer.tmpl' as footer with context %}
+{{ set_locale(lang) }}
+{#
+    <html> tag is included by base.html_headstart
+#}
+
+{{ base.html_headstart() }}
+
+{% block extra_head %}
+    {# Leave this block alone.#}
+{% endblock %}
+
+{{ template_hooks['extra_head']() }}
+</head>
+	{{ base.late_load_js() }}
+
+<!-- fancy dates -->
+	<script>
+
+    moment.locale("{{ momentjs_locales[lang] }}");
+    fancydates({{ date_fanciness }}, {{ js_date_format }});
+
+	</script>
+<!-- end fancy dates -->
+	{% block extra_js %}{% endblock %}
+	<script>
+	
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+	
+	</script>
+	<script src="/assets/js/ToggleNav.js">
+	</script>
+
+<body>
+
+	{{ template_hooks['page_header']() }}
+
+    <section id="header">
+			<div class="logo">
+					<div id="nologoimage">
+						{{ blog_title }}
+					</div>
+    		</div>
+    </section>
+
+	<section id="socialNav">
+
+        <!-- Navigation Menu - on top on small screens, down the left on larger -->
+
+		<div class="navlinks">
+			<a href="/">
+				<div id="titleauth">
+				    
+    					{{ blog_title }}<br />
+            
+				</div>
+			</a>
+
+            <!-- Navigation links (hidden by default) -->
+			<div id="navmenuitems">
+				{{ base.html_navigation_links() }}
+				<div class="navbaritem-div">
+				{{ base.html_navigation_social_links() }}
+				</div>
+			</div>
+
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+			<a href="javascript:void(0);" id="hamburger" class="icon" onclick="toggleNav()">
+				<i class="fa fa-bars">
+				</i>
+			</a>
+		</div>
+
+	</section>
+	<section class="page-content">
+		<div class="content" rel="main">{% block content %}{% endblock %} 	</div>
+			<div class="footer">{{ footer.html_footer() }}</div>
+
+	</section>
+
+
+</body>
+</html>
