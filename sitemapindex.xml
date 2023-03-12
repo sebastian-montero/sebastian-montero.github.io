@@ -6,28 +6,8 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://example.com/categories/anime.xml</loc>
-  <lastmod>2023-03-12T22:08:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://example.com/categories/cat_category1.xml</loc>
-  <lastmod>2023-03-12T22:03:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://example.com/categories/cat_movie-review.xml</loc>
-  <lastmod>2023-03-12T22:08:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://example.com/categories/movie.xml</loc>
-  <lastmod>2023-03-12T22:08:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://example.com/categories/tag1.xml</loc>
-  <lastmod>2023-03-12T22:03:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://example.com/galleries/rss.xml</loc>
-  <lastmod>2023-03-12T22:37:00Z</lastmod>
+  <lastmod>2023-03-12T22:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/rss.xml</loc>
@@ -35,6 +15,6 @@
  </sitemap>
  <sitemap>
   <loc>https://example.com/sitemap.xml</loc>
-  <lastmod>2023-03-12T22:37:00Z</lastmod>
+  <lastmod>2023-03-12T22:50:00Z</lastmod>
  </sitemap>
 </sitemapindex>
