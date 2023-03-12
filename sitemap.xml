@@ -15,23 +15,27 @@
  </url>
  <url>
   <loc>https://example.com/archive.html</loc>
-  <lastmod>2023-03-12T22:03:00Z</lastmod>
+  <lastmod>2023-03-12T22:37:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/</loc>
-  <lastmod>2023-03-12T22:02:00Z</lastmod>
+  <lastmod>2023-03-12T22:07:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/cat_category-test/</loc>
-  <lastmod>2023-03-12T21:56:00Z</lastmod>
+  <loc>https://example.com/categories/anime/</loc>
+  <lastmod>2023-03-12T22:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/cat_category1/</loc>
   <lastmod>2023-03-12T22:02:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/tag-test/</loc>
-  <lastmod>2023-03-12T21:56:00Z</lastmod>
+  <loc>https://example.com/categories/cat_movie-review/</loc>
+  <lastmod>2023-03-12T22:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/categories/movie/</loc>
+  <lastmod>2023-03-12T22:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/categories/tag1/</loc>
@@ -50,11 +54,19 @@
   <lastmod>2023-03-12T21:51:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/pages/me/</loc>
-  <lastmod>2023-03-12T19:32:00Z</lastmod>
+  <loc>https://example.com/pages/music/</loc>
+  <lastmod>2023-03-12T22:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://example.com/posts/hello-world/</loc>
   <lastmod>2023-03-12T20:12:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/movie-review-perfect-blue/</loc>
+  <lastmod>2023-03-12T22:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://example.com/posts/movie-review-perfect-blue2/</loc>
+  <lastmod>2023-03-12T22:07:00Z</lastmod>
  </url>
 </urlset>
