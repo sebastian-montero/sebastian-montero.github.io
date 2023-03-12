@@ -293,10 +293,7 @@ address
 	}
 	
     /* Align the "by author" block with the top of the content area. */
-	#titleauth
-	{
-	    margin-top: -0.75em;
-	}
+	
 
 	/* Brighten on mouseover. */
 	.navbaritem {
@@ -326,7 +323,7 @@ address
 	}
 
 	.navbaritem-div {
-		margin-top: 50%;
+		margin-top: 90%;
 	}
 
 	/* Match the content's padding to the sidebar's width. */

@@ -46,14 +46,8 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 #     ('https://getnikola.com/', 'Nikola Homepage')
 #
 # For submenus:
-#     (
-#         (
-#             ('https://apple.com/', 'Apple'),
-#             ('https://orange.com/', 'Orange'),
-#         ),
-#         'Fruits'
-#     )
-#
+
+
 # WARNING: Support for submenus is theme-dependent.
 #          Only one level of submenus is supported.
 # WARNING: Some themes, including the default Bootstrap 4 theme,
@@ -72,7 +66,6 @@ NAVIGATION_LINKS = {
         ('/pages/about/', 'about', ''),
         ('/archive.html', 'archive', ''),
         ('/categories/', 'tags', ''),
-        
         ('https://twitter.com/sebastianmxnt', '', 'fab fa-twitter'),
         ('https://www.linkedin.com/in/sebastianmontero/', '', 'fab fa-linkedin'),
         ('https://github.com/sebastian-montero', '', 'fab fa-github'),
