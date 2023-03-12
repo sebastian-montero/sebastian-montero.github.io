@@ -27,91 +27,15 @@ SITE_URL = "https://example.com/"
 BLOG_EMAIL = "sebastianmont@duck.com"
 BLOG_DESCRIPTION = "Personal blog."  # (translatable)
 
-# Nikola is multilingual!
 #
-# Currently supported languages are:
-#
-# en        English
-# af        Afrikaans
-# ar        Arabic
-# az        Azerbaijani
-# bg        Bulgarian
-# bs        Bosnian
-# ca        Catalan
-# cs        Czech [ALTERNATIVELY cz]
-# da        Danish
-# de        German
-# el        Greek [NOT gr]
-# eo        Esperanto
-# es        Spanish
-# et        Estonian
-# eu        Basque
-# fa        Persian
-# fi        Finnish
-# fr        French
-# fur       Friulian
-# gl        Galician
-# he        Hebrew
-# hi        Hindi
-# hr        Croatian
-# hu        Hungarian
-# ia        Interlingua
-# id        Indonesian
-# it        Italian
-# ja        Japanese [NOT jp]
-# ko        Korean
-# lt        Lithuanian
-# mi        Maori
-# ml        Malayalam
-# mr        Marathi
-# nb        Norwegian (Bokmål)
-# nl        Dutch
-# oc        Occitan
-# pa        Punjabi
-# pl        Polish
-# pt        Portuguese
-# pt_br     Portuguese (Brazil)
-# ru        Russian
-# sk        Slovak
-# sl        Slovene
-# sq        Albanian
-# sr        Serbian (Cyrillic)
-# sr_latin  Serbian (Latin)
-# sv        Swedish
-# te        Telugu
-# th        Thai
-# tr        Turkish [NOT tr_TR]
-# uk        Ukrainian
-# ur        Urdu
-# vi        Vietnamese
-# zh_cn     Chinese (Simplified)
-# zh_tw     Chinese (Traditional)
-#
-# If you want to use Nikola with a non-supported language you have to provide
-# a module containing the necessary translations
-# (cf. the modules at nikola/data/themes/base/messages/).
-# If a specific post is not translated to a language, then the version
-# in the default language will be shown instead.
-
-# What is the default language?
 DEFAULT_LANG = "en"
 
-# What other languages do you have?
-# The format is {"translationcode" : "path/to/translation" }
-# the path will be used as a prefix for the generated pages location
+
 TRANSLATIONS = {
     DEFAULT_LANG: "",
     # Example for another language:
     # "es": "./es",
 }
-
-# What will translated input files be named like?
-
-# If you have a page something.rst, then something.pl.rst will be considered
-# its Polish translation.
-#     (in the above example: path == "something", ext == "rst", lang == "pl")
-# this pattern is also used for metadata:
-#     something.meta -> something.pl.meta
 
 TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
@@ -143,11 +67,11 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ('/index.html', 'blog', ''),
-        ('/pages/music/index.html', 'music', ''),
-        ('/pages/about/index.html', 'about', ''),
+        ('/', 'blog', ''),
+        ('/pages/music/', 'music', ''),
+        ('/pages/about/', 'about', ''),
         ('/archive.html', 'archive', ''),
-        ('/categories/index.html', 'tags', ''),
+        ('/categories/', 'tags', ''),
         
         ('https://twitter.com/sebastianmxnt', '', 'fab fa-twitter'),
         ('https://www.linkedin.com/in/sebastianmontero/', '', 'fab fa-linkedin'),
