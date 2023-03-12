@@ -6,39 +6,39 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://example.com/</loc>
+  <loc>https://sebastianmontero.com/</loc>
   <lastmod>2023-03-12T21:36:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/2023/</loc>
+  <loc>https://sebastianmontero.com/2023/</loc>
   <lastmod>2023-03-11T00:40:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/archive.html</loc>
-  <lastmod>2023-03-12T23:26:00Z</lastmod>
+  <loc>https://sebastianmontero.com/archive.html</loc>
+  <lastmod>2023-03-12T23:51:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/categories/</loc>
+  <loc>https://sebastianmontero.com/categories/</loc>
   <lastmod>2023-03-12T22:37:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/galleries/</loc>
+  <loc>https://sebastianmontero.com/galleries/</loc>
   <lastmod>2023-03-11T00:40:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/listings/</loc>
+  <loc>https://sebastianmontero.com/listings/</loc>
   <lastmod>2023-03-11T00:40:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/pages/about/</loc>
+  <loc>https://sebastianmontero.com/pages/about/</loc>
   <lastmod>2023-03-12T21:51:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/pages/music/</loc>
+  <loc>https://sebastianmontero.com/pages/music/</loc>
   <lastmod>2023-03-12T22:56:00Z</lastmod>
  </url>
  <url>
-  <loc>https://example.com/posts/hello-world/</loc>
+  <loc>https://sebastianmontero.com/posts/hello-world/</loc>
   <lastmod>2023-03-12T20:12:00Z</lastmod>
  </url>
 </urlset>

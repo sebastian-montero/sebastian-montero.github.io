@@ -1,4 +1,4 @@
-Sitemap: https://example.com/sitemapindex.xml
+Sitemap: https://sebastianmontero.com/sitemapindex.xml
 
 User-Agent: *
-Host: example.com
+Host: sebastianmontero.com
