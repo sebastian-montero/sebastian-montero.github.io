@@ -17,10 +17,10 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Sebastian Montero"  # (translatable)
-BLOG_TITLE = ""  # (translatable)
-SITE_URL = "https://sebastianmontero.com/"
+BLOG_TITLE = "SM"  # (translatable)
+SITE_URL = ""
 BLOG_EMAIL = "sebastianmont@duck.com"
-BLOG_DESCRIPTION = "My personal corner of the internet."  # (translatable)
+BLOG_DESCRIPTION = "My pod in the matrix."  # (translatable)
 
 #
 DEFAULT_LANG = "en"
