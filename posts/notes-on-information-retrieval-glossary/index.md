@@ -1,6 +1,6 @@
 <!--
 .. title: Notes on Infromation Retrieval (Glossary)
-.. slug: notes-on-infromation-retrieval-glossary
+.. slug: notes-on-information-retrieval-glossary
 .. date: 2023-03-13 22:28:27 UTC
 .. tags: information retrieval, textbook
 .. category: 

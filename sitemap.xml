@@ -20,19 +20,11 @@
  </url>
  <url>
   <loc>/categories/</loc>
-  <lastmod>2023-03-13T22:04:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/information-retrieval/</loc>
-  <lastmod>2023-03-13T22:04:00Z</lastmod>
+  <lastmod>2023-03-13T23:01:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/meta/</loc>
   <lastmod>2023-03-13T16:21:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/textbook/</loc>
-  <lastmod>2023-03-13T22:04:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/web-development/</loc>
@@ -53,7 +45,7 @@
  </url>
  <url>
   <loc>/posts/</loc>
-  <lastmod>2023-03-13T22:37:00Z</lastmod>
+  <lastmod>2023-03-13T23:09:00Z</lastmod>
  </url>
  <url>
   <loc>/posts/building-this-website/</loc>
@@ -64,5 +56,9 @@
   <loc>/posts/hello-world/</loc>
   <lastmod>2023-03-13T15:18:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/hello-world/" />
+ </url>
+ <url>
+  <loc>/posts/notes-on-infromation-retrieval-glossary/</loc>
+  <lastmod>2023-03-13T22:37:00Z</lastmod>
  </url>
 </urlset>
