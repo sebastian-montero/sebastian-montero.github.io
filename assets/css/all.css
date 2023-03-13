@@ -1828,6 +1828,9 @@ pre.code
 	overflow-y: scroll;
 }
 
+h1 { color: black; font-size: 170% }
+h2 { color: black; font-size: 170% }
+
 .backlink { margin-top: 6px; }
 .backlink a:after { content: ' /'; }
 .backlink + .postbox > h1.title,
@@ -1835,10 +1838,10 @@ pre.code
 .backlink + h1.title { margin-top: 0; }
 
 article.post-text h1.entry-title a,
-article.post-link h1.entry-title a { color: black; font-size: 80% }
+article.post-link h1.entry-title a { color: black}
 
 article.post-text h1.entry-title a:hover,
-article.post-text h1.entry-title a:focus { color: inherit; }
+article.post-text h1.entry-title a:focus { color: rgba(65, 105, 225, 1);  }
 article.post-text .backlink { margin-top: 6px; }
 article.post-text .backlink a:after { content: ' /'; }
 article.post-text .backlink + .postbox > h1.title,
@@ -1991,7 +1994,7 @@ figure, img { padding-bottom: 1em; }
 	margin-right: 2em;
 }
 
-article > header { margin-top: 5%; }
+article > header { margin-top: 1%; }
 
 /* Webmentions using webmention.js */
 #webmentions img
@@ -2057,8 +2060,10 @@ blockquote, blockquote > p { font-style: italic; }
 }
 
 .footer {
-	margin-top: 10%;
-	font-size: 50%;
+	position: fixed;
+	bottom: 0;
+	font-size: 60%;
+	background-color: white;
 }
 
 
@@ -2084,3 +2089,4 @@ blockquote, blockquote > p { font-style: italic; }
 .about-highlight a:hover:after {
 top: 10%;
 }
+
