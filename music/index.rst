@@ -16,13 +16,13 @@ Experiments with my Midi keyboard and drum machines. All the tracks are currentl
 Slow vibes
 '''''''''''''
 .. soundcloud:: 1467477916
-    :width: 250
+    :width: 350
     :height: 100
  
 
 Winter
 '''''''''''''
 .. soundcloud:: 1467477628
-    :width: 250
+    :width: 350
     :height: 100
 
