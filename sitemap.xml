@@ -15,11 +15,19 @@
  </url>
  <url>
   <loc>https://sebastianmontero.com/archive.html</loc>
-  <lastmod>2023-03-13T15:27:00Z</lastmod>
+  <lastmod>2023-03-13T16:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://sebastianmontero.com/categories/</loc>
-  <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <lastmod>2023-03-13T16:21:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sebastianmontero.com/categories/meta/</loc>
+  <lastmod>2023-03-13T16:21:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sebastianmontero.com/categories/web-development/</loc>
+  <lastmod>2023-03-13T16:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://sebastianmontero.com/galleries/</loc>
@@ -35,7 +43,11 @@
  </url>
  <url>
   <loc>https://sebastianmontero.com/posts/</loc>
-  <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <lastmod>2023-03-13T16:21:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sebastianmontero.com/posts/building-this-website/</loc>
+  <lastmod>2023-03-13T16:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://sebastianmontero.com/posts/hello-world/</loc>
