@@ -89,11 +89,13 @@ section
 }
 
 
+
+
 a {
 	text-decoration: none;
 	color: rgba(65, 105, 225, 1);
 	position: relative;
-	font-weight: 700;
+	font-weight: 550;
 }
 
 a:hover,
@@ -565,22 +567,31 @@ pre.code
 h1 { color: black; font-size: 180% }
 h2 { color: black; font-size: 180% }
 
+
+section h3 {
+	margin: 0px;
+}
+
 .backlink { margin-top: 6px; }
 .backlink a:after { content: ' /'; }
-.backlink + .postbox > h1.title,
-.backlink + .post > h1.title,
-.backlink + h1.title { margin-top: 0; }
+.backlink + .postbox > h3.title,
+.backlink + .post > h3.title,
+.backlink + h3.title { margin-top: 0; }
 
-article.post-text h1.entry-title a,
-article.post-link h1.entry-title a { color: black}
 
-article.post-text h1.entry-title a:hover,
-article.post-text h1.entry-title a:focus { color: rgba(65, 105, 225, 1);  }
-article.post-text .backlink { margin-top: 6px; }
+article.post-text h3.entry-title {margin: 0px; margin-top: 4%;}
+
+article.post-text h3.entry-title a,
+article.post-link h3.entry-title a { color: black; font-size: 130%;}
+
+article.post-text h3.entry-title a:hover,
+article.post-text h3.entry-title a:focus { color: rgba(65, 105, 225, 1);  }
+
+article.post-text .backlink { margin-top: 0px; }
 article.post-text .backlink a:after { content: ' /'; }
-article.post-text .backlink + .postbox > h1.title,
-article.post-text .backlink + .post > h1.title,
-article.post-text .backlink + h1.title { margin-top: 0; }
+article.post-text .backlink + .postbox > h3.title,
+article.post-text .backlink + .post > h3.title,
+article.post-text .backlink + h3.title { margin-top: 0; }
 
 article.post-text .metadata
 {
@@ -805,7 +816,7 @@ blockquote, blockquote > p { font-style: italic; }
 	text-decoration: none;
 	color: rgba(65, 105, 225, 1);
 	position: relative;
-	font-weight: 700;
+	font-weight: 550;
 }
 
 .about-highlight a:after {

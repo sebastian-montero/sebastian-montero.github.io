@@ -6,51 +6,55 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://sebastianmontero.com/</loc>
+  <loc>/</loc>
+  <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="index.html" />
+ </url>
+ <url>
+  <loc>/2023/</loc>
   <lastmod>2023-03-13T15:18:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/2023/</loc>
-  <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <loc>/archive.html</loc>
+  <lastmod>2023-03-13T20:55:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/archive.html</loc>
-  <lastmod>2023-03-13T16:40:00Z</lastmod>
- </url>
- <url>
-  <loc>https://sebastianmontero.com/categories/</loc>
+  <loc>/categories/</loc>
   <lastmod>2023-03-13T16:21:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/categories/meta/</loc>
+  <loc>/categories/meta/</loc>
   <lastmod>2023-03-13T16:21:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/categories/web-development/</loc>
+  <loc>/categories/web-development/</loc>
   <lastmod>2023-03-13T16:21:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/galleries/</loc>
+  <loc>/galleries/</loc>
   <lastmod>2023-03-13T15:18:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/listings/</loc>
+  <loc>/listings/</loc>
   <lastmod>2023-03-13T15:18:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/music/</loc>
+  <loc>/music/</loc>
   <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="music/" />
  </url>
  <url>
-  <loc>https://sebastianmontero.com/posts/</loc>
+  <loc>/posts/</loc>
   <lastmod>2023-03-13T16:21:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/posts/building-this-website/</loc>
+  <loc>/posts/building-this-website/</loc>
   <lastmod>2023-03-13T16:21:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="posts/building-this-website/" />
  </url>
  <url>
-  <loc>https://sebastianmontero.com/posts/hello-world/</loc>
+  <loc>/posts/hello-world/</loc>
   <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="posts/hello-world/" />
  </url>
 </urlset>
