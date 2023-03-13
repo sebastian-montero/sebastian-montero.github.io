@@ -10,7 +10,7 @@
 =====
 Music
 =====
-Experiments with my Midi keyboard and drum machines
+Experiments with my Midi keyboard and drum machines. All the tracks are currently hosted in `Soundcloud <https://soundcloud.com/sebastianmxnt>`_.
  
 
 Slow vibes
