@@ -1510,9 +1510,9 @@ address
 .page-content
 {
 	/* Get the text appropriately inset. */
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-top: 1em;
+	padding-left: 4%;
+	padding-right: 7%;
+	padding-top: 4%;
 	padding-bottom: 1em;
 	background-color: white;
 }
@@ -1828,8 +1828,8 @@ pre.code
 	overflow-y: scroll;
 }
 
-h1 { color: black; font-size: 170% }
-h2 { color: black; font-size: 170% }
+h1 { color: black; font-size: 180% }
+h2 { color: black; font-size: 180% }
 
 .backlink { margin-top: 6px; }
 .backlink a:after { content: ' /'; }
