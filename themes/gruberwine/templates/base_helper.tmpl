@@ -22,10 +22,12 @@ lang="{{ lang }}">
         <meta name="description" content="{{ description|e }}">
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     {% if title == blog_title %}
-        <title>{{ blog_title|e }}</title>
+        <title>Blog</title>
     {% else %}
-        <title>{{ title|e }} | {{ blog_title|e }}</title>
+        <title>{{ title|e }} </title>
     {% endif %}
 
     {{ html_stylesheets() }}
