@@ -567,10 +567,8 @@ textarea {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
@@ -1357,9 +1355,11 @@ section
 }
 
 
-a
-{
+a {
 	text-decoration: none;
+	color: rgba(65, 105, 225, 1);
+	position: relative;
+	font-weight: 700;
 }
 
 a:hover,
