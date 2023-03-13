@@ -16,7 +16,6 @@ Music
 | 
 | All my tracks are currently hosted in `Soundcloud <https://soundcloud.com/sebastianmxnt>`_. 
 |
-|
 
 Winter
 '''''''''''''
