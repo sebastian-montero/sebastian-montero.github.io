@@ -16,15 +16,23 @@
  </url>
  <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-03-13T20:55:00Z</lastmod>
+  <lastmod>2023-03-13T22:37:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/</loc>
-  <lastmod>2023-03-13T16:21:00Z</lastmod>
+  <lastmod>2023-03-13T22:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/categories/information-retrieval/</loc>
+  <lastmod>2023-03-13T22:04:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/meta/</loc>
   <lastmod>2023-03-13T16:21:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/categories/textbook/</loc>
+  <lastmod>2023-03-13T22:04:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/web-development/</loc>
@@ -45,7 +53,7 @@
  </url>
  <url>
   <loc>/posts/</loc>
-  <lastmod>2023-03-13T16:21:00Z</lastmod>
+  <lastmod>2023-03-13T22:37:00Z</lastmod>
  </url>
  <url>
   <loc>/posts/building-this-website/</loc>
