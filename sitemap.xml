@@ -7,38 +7,46 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://sebastianmontero.com/</loc>
-  <lastmod>2023-03-12T21:36:00Z</lastmod>
+  <lastmod>2023-03-13T01:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://sebastianmontero.com/2023/</loc>
-  <lastmod>2023-03-11T00:40:00Z</lastmod>
+  <lastmod>2023-03-13T01:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://sebastianmontero.com/archive.html</loc>
-  <lastmod>2023-03-12T23:51:00Z</lastmod>
+  <lastmod>2023-03-13T01:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sebastianmontero.com/archive/2023/</loc>
+  <lastmod>2023-03-13T01:13:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sebastianmontero.com/archive/archive.html</loc>
+  <lastmod>2023-03-13T01:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://sebastianmontero.com/categories/</loc>
-  <lastmod>2023-03-12T22:37:00Z</lastmod>
+  <lastmod>2023-03-13T01:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://sebastianmontero.com/galleries/</loc>
-  <lastmod>2023-03-11T00:40:00Z</lastmod>
+  <lastmod>2023-03-13T01:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://sebastianmontero.com/listings/</loc>
-  <lastmod>2023-03-11T00:40:00Z</lastmod>
+  <lastmod>2023-03-13T01:13:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/pages/about/</loc>
-  <lastmod>2023-03-12T21:51:00Z</lastmod>
+  <loc>https://sebastianmontero.com/music/</loc>
+  <lastmod>2023-03-13T01:13:00Z</lastmod>
  </url>
  <url>
-  <loc>https://sebastianmontero.com/pages/music/</loc>
-  <lastmod>2023-03-12T22:56:00Z</lastmod>
+  <loc>https://sebastianmontero.com/posts/</loc>
+  <lastmod>2023-03-13T01:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://sebastianmontero.com/posts/hello-world/</loc>
-  <lastmod>2023-03-12T20:12:00Z</lastmod>
+  <lastmod>2023-03-13T01:13:00Z</lastmod>
  </url>
 </urlset>
