@@ -100,7 +100,7 @@ a:hover,
 a:focus
 {
 	color: black;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 blockquote
@@ -123,7 +123,7 @@ blockquote small:before { content: '\2014 \00A0'; }
 blockquote.pull-right
 {
 	float: right;
-	padding-right: 15px;
+	padding-right: 5px;
 	padding-left: 0;
 	border-right: 5px solid #eee;
 	border-left: 0;
@@ -248,7 +248,6 @@ address
 	padding-right: 1em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-
 	background-color: white;
 }
 
@@ -330,9 +329,6 @@ address
 		margin-right: 60% auto;
 		margin-left: 0 auto;
 	}
-	
-
-
 
 } /* end of media only screen and min-width: 768px; */
 
@@ -345,7 +341,7 @@ ul.daily-post-list {
 article.post-text .entry-content .figure
 {
 	display: block;
-	width: 90%;
+	width: 70%;
 }
 
 .page-content > .content em { font-style: italic; }
@@ -799,9 +795,6 @@ blockquote, blockquote > p { font-style: italic; }
 	font-size: 50%;
 }
 
-.about-div {
-	width: 80%;
-  }
 
 .about-highlight {
 	text-decoration: none;
