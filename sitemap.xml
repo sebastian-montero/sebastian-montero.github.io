@@ -16,7 +16,7 @@
  </url>
  <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-03-14T00:09:00Z</lastmod>
+  <lastmod>2023-03-14T07:56:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/</loc>
@@ -64,14 +64,5 @@
   <loc>/posts/hello-world/</loc>
   <lastmod>2023-03-13T15:18:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/hello-world/" />
- </url>
- <url>
-  <loc>/posts/notes-on-information-retrieval-1/</loc>
-  <lastmod>2023-03-14T00:15:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-1/" />
- </url>
- <url>
-  <loc>/posts/notes-on-information-retrieval-18/</loc>
-  <lastmod>2023-03-13T22:04:00Z</lastmod>
  </url>
 </urlset>
