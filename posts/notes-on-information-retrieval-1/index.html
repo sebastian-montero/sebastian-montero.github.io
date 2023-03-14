@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notes on Information Retrieval (1) </title>
+<title>Notes on IR: Boolean retrieval </title>
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -14,9 +14,8 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="posts/notes-on-information-retrieval-1/">
 <!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sebastian Montero">
-<meta name="robots" content="noindex">
 <meta property="og:site_name" content="SM">
-<meta property="og:title" content="Notes on Information Retrieval (1)">
+<meta property="og:title" content="Notes on IR: Boolean retrieval">
 <meta property="og:url" content="posts/notes-on-information-retrieval-1/">
 <meta property="og:description" content="This is a blog series on Information Retrieval covering the first chapters of the textbook Introduction to Information Retrieval. This post covers Chapter 1: Boolean retrieval.
 
@@ -24,7 +23,7 @@
 Introduction
 Informat">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2023-03-13T22:02:20Z">
+<meta property="article:published_time" content="2023-03-14T23:20:00Z">
 <meta property="article:tag" content="information retrieval">
 <meta property="article:tag" content="textbook">
 </head>
@@ -116,10 +115,10 @@ Informat">
 			</a>
 		</div>
 
-	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Notes on Information Retrieval (1)</a></h3>
+	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Notes on IR: Boolean retrieval</a></h3>
 
         <div class="metadata">
-            <p class="dateline"><a href="." rel="bookmark"><i class="fa fa-clock"></i> <time class="published dt-published" datetime="2023-03-13T22:02:20Z" itemprop="datePublished" title="2023-03-13 22:02">2023-03-13 22:02</time></a></p>
+            <p class="dateline"><a href="." rel="bookmark"><i class="fa fa-clock"></i> <time class="published dt-published" datetime="2023-03-14T23:20:00Z" itemprop="datePublished" title="2023-03-14 23:20">2023-03-14 23:20</time></a></p>
 
             
                 <div class="tags">
@@ -138,25 +137,24 @@ Informat">
 </blockquote>
 <p><br></p>
 <h3>Introduction</h3>
-<p>Information Retrieval (IR) is finding material of an unstructured nature that satisfies an information need. Often this material is in the form on unstructured text data. In other fields we can also use IR to search for e.g. sounds in music.  </p>
-<p>IR most commonly used in web search but other applications also include email search, computer search, knowledge databases, etc. In the past, most companies were relying on structured data for search; however around the 1990s, the production of unstructured data has been increased exponentially, giving a rise in information retrieval an quickly replacing traditional database searching.</p>
-<p>Other tasks in IR also include searching on semi-structured data (e.g. code bases), and grouping/clustering documents together to support users in browsing of filtering based on a user's topics and information needs. </p>
-<p>IR systems can also be divided into three main scales:</p>
+<p>Information Retrieval (IR) is all about finding material that satisfies the information need of a user. Often this material is in the form on unstructured text data, such as in the typical case of online searches, where IR is most commonly used. Other applications also include email search, computer search, knowledge databases, etc. In the past, most companies used to rely on structured data for search; however around 1990s, the production of unstructured data increased exponentially, giving a raise to advances in information retrieval over large quantities of content, and quickly replacing traditional database searching where data pre-processing of such content was required.</p>
+<p>The IR field also includes additional tasks such as searching on semi-structured data (e.g. code bases where you want to find a specific HTML tag within a CSS file), and grouping/clustering documents together to help users in surfacing documents faster (and satisfying their information needs) by understanding their topics during browsing and filtering relevant results.</p>
+<p>Depending on the volume of data, IR systems can be divided into three main scales:</p>
 <ul>
-<li>Web search: search over billions of documents. The main challenges at this scales include the document gathering and indexing, system scalability and handling web-specific attributes such as hypertext. </li>
-<li>Enterprise / domain specific: Can internal documents within a company, domain-specific searches such as research papers, company search tools, patent search tools, etc. Usually these documents are in a centralized location. </li>
-<li>Personal: These can be part of personal computers, email apps, etc. They include user-specific features such as categorizing emails into spam. The main challenge here is handling different data types and making the system maintenance tools lightweight.</li>
+<li>Web search: search over billions of documents. This scale has challenges such as document gathering and indexing, system scalability and handling web-specific attributes like hypertext. </li>
+<li>Enterprise / domain specific: Can include internal documents within a company or domain-specific searches like research papers, company search tools, patent search tools, etc. Usually these documents are in a centralized location. </li>
+<li>Personal: These can be part of personal computers, email apps, etc. They include user-specific features like categorizing emails into spam. The main challenge here is handling different data types and making the system maintenance tools lightweight.</li>
 </ul>
 <p><br></p>
 <h3>Simple boolean retrieval example</h3>
-<p>Take a book such as <em>Shakespeare's Collected Works</em> where the user wants to find plays containing <code>BRUTUS AND CESAR and NOT CALPURINA</code>. This is a typical IR problem where you are filtering for documents that contain two characters and exclude the third. A computer can easily do a GREP (linear scan) through the documents on this collection of documents; however we might need another solution in order to:</p>
+<p>Take the book <em>Shakespeare's Collected Works</em> which includes multiple plays by Shakespeare as our search collection. In this example, a user wants to find plays containing the characters <code>BRUTUS AND CESAR and NOT CALPURINA</code>. This is a typical IR problem where you are filtering for documents that contain similar terms and also excluding additional terms. Even though a computer can easily do a GREP (linear scan) through the documents on this collection (which includes just a few million words), we might want to approach this problem as an information retrieval solution which allows us to:</p>
 <ol>
-<li>Search a larger collection quicker</li>
-<li>Allow for flexible operations when searching</li>
-<li>Allow ranked retrieval (best answer at the top)</li>
+<li>Search a larger collection quicker that using GREP</li>
+<li>Allows for flexible operations when searching</li>
+<li>Allows for ranked retrieval</li>
 </ol>
-<p>To avoid linear scanning of text we need to create an <strong>index</strong> of documents. In the <em>Shakespeare's Collected Works</em> example, we could process each document (or play) and mark the all the words the documents contain. This results in an <strong>incidence matrix</strong> that contains the words or <strong>terms</strong> being indexed. Now we can filter for rows and columns containing terms we are interested in. </p>
-<p>In the example above <code>BRUTUS AND CESAR AND NOT CALPURINA</code>, we can filter for <code>1101 AND 1101 AND NOT 0100 = 1101 AND 1101 AND 1011 = 1001</code></p>
+<p>To avoid linear scanning of text we need to create an <strong>index</strong> of documents. In the <em>Shakespeare's Collected Works</em> example, we could process each document (or play) and mark all the words that the documents contain. This results in an <strong>incidence matrix</strong> (below) that contains the words or <strong>terms</strong> being indexed. With our incidence matrix, we can filter for rows or columns containing the terms we are interested in.</p>
+<p>In the example using <em>Shakespeare's Collected Works</em>, if we want to find <code>BRUTUS AND CESAR AND NOT CALPURNIA</code>, we can run a logical operation in our index using boolean expressions: <code>1101 AND 1101 AND NOT 0100 = 1101 AND 1101 AND 1011 = 1001</code>. The result is <code>1001</code>, which mark the documents that satisfy our search query. Note that since the term <code>CALPURNIA</code> is negated we are using the inverse of the row where <code>CALPURNIA</code> appears. The table below  shows this example.</p>
 <table>
 <thead><tr>
 <th></th>
@@ -196,20 +194,20 @@ Informat">
 </tr>
 </tbody>
 </table>
-<p>This is an example of a <strong>Boolean retrieval model</strong> in which we search using boolean logic in the terms of <code>AND</code>, <code>OR</code> and <code>NOT</code>. </p>
+<p>This is an example of a <strong>Boolean retrieval model</strong> in which we search using boolean logic in the terms of <code>AND</code>, <code>OR</code> and <code>NOT</code>. Note that in this case we are also marking the terms and documents as <code>0</code> or <code>1</code>. </p>
 <p><br></p>
-<h3>A more realistic example</h3>
-<p>Now let's say we have 1m <strong>documents</strong> (meaning any unit we build our system on e.g. music, books, plays, patents, company information, etc.). These documents live in our <strong>collection</strong> or <strong>corpus</strong> (meaning the group of documents). </p>
-<p>Our goal is to allow the user to do ad hoc searches e.g. <strong>ad hoc retrieval</strong>, where the user will provide a <strong>query</strong> (user-to-computer) that can satisfy their <strong>information need</strong> and have in return a set of documents that are <strong>relevant</strong>. Relevance is measured by ensuring that the documents that are returned have value to the user for that specific query and information need. </p>
-<p>To ensure that the results of the system are <strong>effective</strong> we can use the two following metrics:</p>
+<h3>A more realistic example and definitions</h3>
+<p>Now let's say we have 1m <strong>documents</strong> (meaning any unit we build our system on e.g. music, books, plays, patents, company information, etc.). These documents live in our <strong>collection</strong> or <strong>corpus</strong> (group of documents). </p>
+<p>Our goal is to allow the user to do ad hoc searches for <strong>ad hoc retrieval</strong>. This means that we want to create a system where the can run multiple search queries and we can satisfy these. The user will provide a <strong>query</strong> (which is an interpretation of the user's information needs that the computer can read) that can satisfy their <strong>information need</strong> and have in return a set of documents that are <strong>relevant</strong> to that information need. Relevance is measured by ensuring that the documents that are returned have value to the user for that specific query and information need. </p>
+<p>To ensure that the results of a search system are <strong>effective</strong> we can use the two following metrics:</p>
 <ul>
 <li>
 <strong>Precision</strong>: Fraction of documents that are relevant to the user. (How many of the retrieved documents are relevant to the user?)</li>
 <li>
 <strong>Recall</strong>: Fraction of relevant documents that are retrieved. (How many documents are actually retrieved from the collection?)</li>
 </ul>
-<p>If we take the initial 1m documents and assuming each document has ~500k terms, we will have a matrix with ~500,000,000,000 1s and 0s, causing a memory problem. Even more so considering that there will be a disproportionate amount of 0s to 1s. </p>
-<p>This issue can be solved with an <strong>inverted index</strong>. The inverted index allows us to keep a <strong>dictionary</strong>/<strong>vocabulary</strong>/<strong>lexicon</strong> of terms per document. Each item in the list recording that a term appears is called a <strong>posting</strong>. This builds the <strong>postings list</strong>. </p>
+<p>If we try to apply the boolean retrieval example of the previous section to a problem with ~1m documents where each document has ~500k terms,, we will have a matrix with ~500,000,000,000 1s and 0s, whcih will most likely cause a memory problem. If we have a large number of documents containing a large number of tokens, boolean retrieval is not the best approach to use, even more so considering that there will be a disproportionate amount of 0s to 1s (this is usually referred to as a sparse matrix).</p>
+<p>This issue can be solved by creating an <strong>inverted index</strong>. The inverted index allows us to keep a <strong>dictionary</strong> (or <strong>vocabulary</strong>, <strong>lexicon</strong>) of terms per document. We will build a <strong>postings list</strong> that contains multiple <strong>postings</strong>. A posting contains each document where a term appears. Take the table below as an example. More advanced search strategies can implement the <strong>term frequency</strong> within the inverted index to have higher weights on documents being retrieved.</p>
 <table>
 <thead><tr>
 <th>Term</th>
@@ -230,16 +228,20 @@ Informat">
 </tr>
 </tbody>
 </table>
-<p>We always need to build an inverted index in advance by collecting the documents that we are interesting in and then tokenizing the text. These results in a list of tokens per document. Then we can do natural language preprocessing in the list of tokens to standardise them and finally index the documents. </p>
-<p>We need to ensure that each document has a unique <strong>DocID</strong> that will be used to refer back to that document. We can also ensure that terms are sorted alphabetically and the term to DocID pars are unique. </p>
+<p>We always need to build an inverted index in advance by collecting the documents that we are interesting in searching and then tokenizing the text (this means separating each document into unique words) The results are a list of tokens per document where we can then do natural language preprocessing standardise the terms before finally indexing the terms per documents. Standardisation ensures that examples like <code>searched</code> and <code>searching</code> can be traced back to the same underlying token <code>search</code>.</p>
+<p>We also need to ensure that each document has a unique document identifier or <strong>DocID</strong> that will be used to refer back to that document. We can also ensure that terms are sorted alphabetically and the term to DocID pairs are unique helping in speeding up computation and reducing the memory footprint of the index.</p>
 <blockquote>
 <p>This inverted index structure is essentially without rivals as the most efficient structure for supporting ad hoc text search.</p>
 </blockquote>
-<p>Now, how do we go from a boolean query into an inverted index search query? To do this we need to follow a process called <strong>simple conjunctive querying</strong>. If we take the example of <code>BRUTUS AND CALPURNIA</code> we need to locate both terms in the inverted index and retrieve their postings, then <strong>intersect</strong> or <strong>merge</strong> both sets of postings.</p>
-<p>We can also perform <strong>query optimization</strong> which transforms the input query to ensure the least amount of work is done by the system such as ordering.</p>
-<p>Finally, we also have <strong>ranked retrieval models</strong>. These models return ranked results to the user. An example of this is the use of free text queries. </p>
+<p>Now, how do we go from a boolean query into an inverted index search query? To do this we need to follow a process called <strong>simple conjunctive querying</strong>. If we take the example of <code>BRUTUS AND CALPURNIA</code> we need to locate both terms in the inverted index and retrieve their postings, then <strong>intersect</strong> or <strong>merge</strong> both sets of postings. We can also perform <strong>query optimization</strong> such as query ordering, which transforms the input query to ensure the least amount of work is done by the system.</p>
+<p>Recently more advanced techniques such as vector space models have become popular because they enable <strong>ranked retrieval models</strong>. The vector space model allows the user to use use unstructured queries that can be parsed into a vector used as a search query. This type of retrieval has become more relevant as the previous boolean retrieval approaches provide unordered results instead of a ranked list of relevance. Other approaches have extended the boolean retrieval model by understanding what terms are closer together using a proximity operation which ensures that terms that are close in the query are close in the document (e.g. searching for <code>machine learning</code> together)</p>
+<p>Even though ranked retrieval models can satisfy a user's information need by allowing them to prioritize and generalize the search result, boolean retrieval models are still used to this day as they provide fast and transparent results for ad hoc searches.  </p>
     </div>
-    <aside class="postpromonav"><nav></nav></aside></article></div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../building-this-website/" rel="prev" title="building this website">Previous post</a>
+            </li>
+        </ul></nav></aside></article></div>
 			<div class="footer">        <footer id="footer"><p>Contents © 2023         <a href="mailto:sebastianmont@duck.com">Sebastian Montero</a></p>
             
         </footer>
