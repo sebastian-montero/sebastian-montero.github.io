@@ -7,6 +7,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. status: draft
 -->
 
 > This is a blog series on Information Retrieval covering the first chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers **Chapter 1: Boolean retrieval**.
