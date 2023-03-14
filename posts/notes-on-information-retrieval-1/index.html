@@ -133,7 +133,7 @@
 <p>This is a blog series on Information Retrieval covering the first chapters of the textbook <a href="https://nlp.stanford.edu/IR-book/information-retrieval-book.html">Introduction to Information Retrieval</a>. This post covers <strong>Chapter 1: Boolean retrieval</strong>.</p>
 </blockquote>
 <p><br></p>
-<h3>Introduction</h3>
+<h3>What is Information Retrieval?</h3>
 <p>Information Retrieval (IR) is all about finding material that satisfies the information need of a user. Often this material is in the form on unstructured text data, such as in the typical case of online searches, where IR is most commonly used. Other applications also include email search, computer search, knowledge databases, etc. In the past, most companies used to rely on structured data for search; however around 1990s, the production of unstructured data increased exponentially, giving a raise to advances in information retrieval over large quantities of content, and quickly replacing traditional database searching where data pre-processing of such content was required.</p>
 <p>The IR field also includes additional tasks such as searching on semi-structured data (e.g. code bases where you want to find a specific HTML tag within a CSS file), and grouping/clustering documents together to help users in surfacing documents faster (and satisfying their information needs) by understanding their topics during browsing and filtering relevant results.</p>
 <p>Depending on the volume of data, IR systems can be divided into three main scales:</p>
@@ -143,7 +143,7 @@
 <li>Personal: These can be part of personal computers, email apps, etc. They include user-specific features like categorizing emails into spam. The main challenge here is handling different data types and making the system maintenance tools lightweight.</li>
 </ul>
 <p><br></p>
-<h3>Simple boolean retrieval example</h3>
+<h3>Baby steps: a simple boolean retrieval example</h3>
 <p>Take the book <em>Shakespeare's Collected Works</em> which includes multiple plays by Shakespeare as our search collection. In this example, a user wants to find plays containing the characters <code>BRUTUS AND CESAR and NOT CALPURINA</code>. This is a typical IR problem where you are filtering for documents that contain similar terms and also excluding additional terms. Even though a computer can easily do a GREP (linear scan) through the documents on this collection (which includes just a few million words), we might want to approach this problem as an information retrieval solution which allows us to:</p>
 <ol>
 <li>Search a larger collection quicker that using GREP</li>
@@ -193,7 +193,7 @@
 </table>
 <p>This is an example of a <strong>Boolean retrieval model</strong> in which we search using boolean logic in the terms of <code>AND</code>, <code>OR</code> and <code>NOT</code>. Note that in this case we are also marking the terms and documents as <code>0</code> or <code>1</code>. </p>
 <p><br></p>
-<h3>A more realistic example and definitions</h3>
+<h3>What happens when we have way more documents? Enter the inverse index</h3>
 <p>Now let's say we have 1m <strong>documents</strong> (meaning any unit we build our system on e.g. music, books, plays, patents, company information, etc.). These documents live in our <strong>collection</strong> or <strong>corpus</strong> (group of documents). </p>
 <p>Our goal is to allow the user to do ad hoc searches for <strong>ad hoc retrieval</strong>. This means that we want to create a system where the can run multiple search queries and we can satisfy these. The user will provide a <strong>query</strong> (which is an interpretation of the user's information needs that the computer can read) that can satisfy their <strong>information need</strong> and have in return a set of documents that are <strong>relevant</strong> to that information need. Relevance is measured by ensuring that the documents that are returned have value to the user for that specific query and information need. </p>
 <p>To ensure that the results of a search system are <strong>effective</strong> we can use the two following metrics:</p>
