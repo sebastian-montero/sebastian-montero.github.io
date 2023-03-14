@@ -38,13 +38,3 @@ Slow vibes
 .. soundcloud:: 1467477916
     :width: 350
     :height: 100
-
-|
-
-Bells
-'''''''''''''
-.. soundcloud:: 1468664953
-    :width: 350
-    :height: 100
-
-
