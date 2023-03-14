@@ -5,7 +5,7 @@
 .. tags: information retrieval, textbook
 .. category: 
 .. link: 
-.. description: 
+.. description: Notes on IR: Term vocabulary and postings list
 .. type: text
 .. status: draft
 -->
