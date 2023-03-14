@@ -12,7 +12,7 @@
 > This is a blog series on Information Retrieval covering the first chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers **Chapter 1: Boolean retrieval**.
 
 <br />
-## Introduction
+## What is Information Retrieval?
 
 Information Retrieval (IR) is all about finding material that satisfies the information need of a user. Often this material is in the form on unstructured text data, such as in the typical case of online searches, where IR is most commonly used. Other applications also include email search, computer search, knowledge databases, etc. In the past, most companies used to rely on structured data for search; however around 1990s, the production of unstructured data increased exponentially, giving a raise to advances in information retrieval over large quantities of content, and quickly replacing traditional database searching where data pre-processing of such content was required.
 
@@ -25,7 +25,7 @@ Depending on the volume of data, IR systems can be divided into three main scale
 - Personal: These can be part of personal computers, email apps, etc. They include user-specific features like categorizing emails into spam. The main challenge here is handling different data types and making the system maintenance tools lightweight.
 
 <br />
-## Simple boolean retrieval example
+## Baby steps: a simple boolean retrieval example
 
 Take the book *Shakespeare's Collected Works* which includes multiple plays by Shakespeare as our search collection. In this example, a user wants to find plays containing the characters `BRUTUS AND CESAR and NOT CALPURINA`. This is a typical IR problem where you are filtering for documents that contain similar terms and also excluding additional terms. Even though a computer can easily do a GREP (linear scan) through the documents on this collection (which includes just a few million words), we might want to approach this problem as an information retrieval solution which allows us to:
 
@@ -47,7 +47,7 @@ In the example using *Shakespeare's Collected Works*, if we want to find `BRUTUS
 This is an example of a **Boolean retrieval model** in which we search using boolean logic in the terms of `AND`, `OR` and `NOT`. Note that in this case we are also marking the terms and documents as `0` or `1`. 
 
 <br />
-## A more realistic example and definitions
+## What happens when we have way more documents? Enter the inverse index
 
 Now let's say we have 1m **documents** (meaning any unit we build our system on e.g. music, books, plays, patents, company information, etc.). These documents live in our **collection** or **corpus** (group of documents). 
 
