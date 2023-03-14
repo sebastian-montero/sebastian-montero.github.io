@@ -5,23 +5,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notes on Information Retrieval (1/8) </title>
+<title>Notes on Information Retrieval (1) </title>
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#000000">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="posts/notes-on-information-retrieval-18/">
+<link rel="canonical" href="posts/notes-on-information-retrieval-1/">
 <!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sebastian Montero">
 <meta property="og:site_name" content="SM">
-<meta property="og:title" content="Notes on Information Retrieval (1/8)">
-<meta property="og:url" content="posts/notes-on-information-retrieval-18/">
-<meta property="og:description" content="This is a blog series on Information Retrieval covering the first eight chapters of the textbook Introduction to Infromation Retrieval. This post covers Chapter 1: Boolean retrieval.
+<meta property="og:title" content="Notes on Information Retrieval (1)">
+<meta property="og:url" content="posts/notes-on-information-retrieval-1/">
+<meta property="og:description" content="This is a blog series on Information Retrieval covering the first chapters of the textbook Introduction to Information Retrieval. This post covers Chapter 1: Boolean retrieval.
 
 
 Introduction
-In">
+Informat">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2023-03-13T22:02:20Z">
 <meta property="article:tag" content="information retrieval">
@@ -115,7 +115,7 @@ In">
 			</a>
 		</div>
 
-	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Notes on Information Retrieval (1/8)</a></h3>
+	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Notes on Information Retrieval (1)</a></h3>
 
         <div class="metadata">
             <p class="dateline"><a href="." rel="bookmark"><i class="fa fa-clock"></i> <time class="published dt-published" datetime="2023-03-13T22:02:20Z" itemprop="datePublished" title="2023-03-13 22:02">2023-03-13 22:02</time></a></p>
@@ -133,28 +133,28 @@ In">
         </div>
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <blockquote>
-<p>This is a blog series on Information Retrieval covering the first eight chapters of the textbook <a href="https://nlp.stanford.edu/IR-book/information-retrieval-book.html">Introduction to Infromation Retrieval</a>. This post covers <strong>Chapter 1: Boolean retrieval</strong>.</p>
+<p>This is a blog series on Information Retrieval covering the first chapters of the textbook <a href="https://nlp.stanford.edu/IR-book/information-retrieval-book.html">Introduction to Information Retrieval</a>. This post covers <strong>Chapter 1: Boolean retrieval</strong>.</p>
 </blockquote>
 <p><br></p>
 <h3>Introduction</h3>
 <p>Information Retrieval (IR) is finding material of an unstructured nature that satisfies an information need. Often this material is in the form on unstructured text data. In other fields we can also use IR to search for e.g. sounds in music.  </p>
 <p>IR most commonly used in web search but other applications also include email search, computer search, knowledge databases, etc. In the past, most companies were relying on structured data for search; however around the 1990s, the production of unstructured data has been increased exponentially, giving a rise in information retrieval an quickly replacing traditional database searching.</p>
-<p>Other tasks in IR also include searching on semistructured data (e.g. codebases), and grouping/clustering documents together to support users in browsing of filtering based on a user's topics and infromation needs. </p>
+<p>Other tasks in IR also include searching on semi-structured data (e.g. code bases), and grouping/clustering documents together to support users in browsing of filtering based on a user's topics and information needs. </p>
 <p>IR systems can also be divided into three main scales:</p>
 <ul>
 <li>Web search: search over billions of documents. The main challenges at this scales include the document gathering and indexing, system scalability and handling web-specific attributes such as hypertext. </li>
-<li>Enterprise / domain specific: Can internal documents within a company, domain-specific searches such as research papers, company search tools, patent search tools, etc. Usually these documents are in a centralised location. </li>
-<li>Personal: These can be part of personal computers, email apps, etc. They include user-specific features such as categorising emails into spam. The main challenge here is handling different data types and making the system maintenance tools lighweight.</li>
+<li>Enterprise / domain specific: Can internal documents within a company, domain-specific searches such as research papers, company search tools, patent search tools, etc. Usually these documents are in a centralized location. </li>
+<li>Personal: These can be part of personal computers, email apps, etc. They include user-specific features such as categorizing emails into spam. The main challenge here is handling different data types and making the system maintenance tools lightweight.</li>
 </ul>
 <p><br></p>
 <h3>Simple boolean retrieval example</h3>
-<p>Take a book such as <em>Shakespeare's Collected Works</em> where the user wants to find plays containining <code>BRUTUS AND CESAR and NOT CALPURINA</code>. This is a typical IR problem where you are filterning for documents that contain two characters and exclude the third. A computer can easly do a GREP (linear scan) through the documents on this collection of documents; however we might need another solution in order to:</p>
+<p>Take a book such as <em>Shakespeare's Collected Works</em> where the user wants to find plays containing <code>BRUTUS AND CESAR and NOT CALPURINA</code>. This is a typical IR problem where you are filtering for documents that contain two characters and exclude the third. A computer can easily do a GREP (linear scan) through the documents on this collection of documents; however we might need another solution in order to:</p>
 <ol>
 <li>Search a larger collection quicker</li>
 <li>Allow for flexible operations when searching</li>
 <li>Allow ranked retrieval (best answer at the top)</li>
 </ol>
-<p>To avoid linear scanning of text we need to create an <strong>index</strong> of documents. In the <em>Shakespeare's Collected Works</em> example, we could process each document (or play) and mark the all the words the documents contain. This results in an <strong>incidence matrix</strong> that contains the words or <strong>terms</strong> being indexed. Now we can filter for rows and columns containing termns we are interested in. </p>
+<p>To avoid linear scanning of text we need to create an <strong>index</strong> of documents. In the <em>Shakespeare's Collected Works</em> example, we could process each document (or play) and mark the all the words the documents contain. This results in an <strong>incidence matrix</strong> that contains the words or <strong>terms</strong> being indexed. Now we can filter for rows and columns containing terms we are interested in. </p>
 <p>In the example above <code>BRUTUS AND CESAR AND NOT CALPURINA</code>, we can filter for <code>1101 AND 1101 AND NOT 0100 = 1101 AND 1101 AND 1011 = 1001</code></p>
 <table>
 <thead><tr>
@@ -203,11 +203,11 @@ In">
 <p>To ensure that the results of the system are <strong>effective</strong> we can use the two following metrics:</p>
 <ul>
 <li>
-<strong>Precision</strong>: Fraction of documents that are relevant to the user. (How many of the retreived documents are relavant to the user?)</li>
+<strong>Precision</strong>: Fraction of documents that are relevant to the user. (How many of the retrieved documents are relevant to the user?)</li>
 <li>
 <strong>Recall</strong>: Fraction of relevant documents that are retrieved. (How many documents are actually retrieved from the collection?)</li>
 </ul>
-<p>If we take the intial 1m documents and assuming each document has ~500k terms, we will have a matrix with ~500,000,000,000 1s and 0s, causing a memory problem. Even more so considering that there will be a dispropotionate amount of 0s to 1s. </p>
+<p>If we take the initial 1m documents and assuming each document has ~500k terms, we will have a matrix with ~500,000,000,000 1s and 0s, causing a memory problem. Even more so considering that there will be a disproportionate amount of 0s to 1s. </p>
 <p>This issue can be solved with an <strong>inverted index</strong>. The inverted index allows us to keep a <strong>dictionary</strong>/<strong>vocabulary</strong>/<strong>lexicon</strong> of terms per document. Each item in the list recording that a term appears is called a <strong>posting</strong>. This builds the <strong>postings list</strong>. </p>
 <table>
 <thead><tr>
@@ -229,12 +229,12 @@ In">
 </tr>
 </tbody>
 </table>
-<p>We always need to build an inverted index in advance by collecting the documents that we are interesting in and then tokenising the text. Thes results in a list of tokens per document. Then we can do natural language preprocessing in the list of tokens to standardise them and finally index the documents. </p>
+<p>We always need to build an inverted index in advance by collecting the documents that we are interesting in and then tokenizing the text. These results in a list of tokens per document. Then we can do natural language preprocessing in the list of tokens to standardise them and finally index the documents. </p>
 <p>We need to ensure that each document has a unique <strong>DocID</strong> that will be used to refer back to that document. We can also ensure that terms are sorted alphabetically and the term to DocID pars are unique. </p>
 <blockquote>
 <p>This inverted index structure is essentially without rivals as the most efficient structure for supporting ad hoc text search.</p>
 </blockquote>
-<p>Now, how do we go from a boolean query into an invertes index search query? To do this we need to follow a process called <strong>simple conjunctive querying</strong>. If we take the example of <code>BRUTUS AND CALPURNIA</code> we need to locate both terms in the inverted index and retrieve their postings, then <strong>intersect</strong> or <strong>merge</strong> both sets of postings.</p>
+<p>Now, how do we go from a boolean query into an inverted index search query? To do this we need to follow a process called <strong>simple conjunctive querying</strong>. If we take the example of <code>BRUTUS AND CALPURNIA</code> we need to locate both terms in the inverted index and retrieve their postings, then <strong>intersect</strong> or <strong>merge</strong> both sets of postings.</p>
 <p>We can also perform <strong>query optimization</strong> which transforms the input query to ensure the least amount of work is done by the system such as ordering.</p>
 <p>Finally, we also have <strong>ranked retrieval models</strong>. These models return ranked results to the user. An example of this is the use of free text queries. </p>
     </div>

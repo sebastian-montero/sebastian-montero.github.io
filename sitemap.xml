@@ -53,7 +53,7 @@
  </url>
  <url>
   <loc>/posts/</loc>
-  <lastmod>2023-03-13T23:09:00Z</lastmod>
+  <lastmod>2023-03-14T00:15:00Z</lastmod>
  </url>
  <url>
   <loc>/posts/building-this-website/</loc>
@@ -66,12 +66,12 @@
   <xhtml:link rel="alternate" hreflang="en" href="posts/hello-world/" />
  </url>
  <url>
-  <loc>/posts/notes-on-information-retrieval-18/</loc>
-  <lastmod>2023-03-13T22:04:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-18/" />
+  <loc>/posts/notes-on-information-retrieval-1/</loc>
+  <lastmod>2023-03-14T00:15:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-1/" />
  </url>
  <url>
-  <loc>/posts/notes-on-information-retrieval-glossary/</loc>
-  <lastmod>2023-03-13T23:09:00Z</lastmod>
+  <loc>/posts/notes-on-information-retrieval-18/</loc>
+  <lastmod>2023-03-13T22:04:00Z</lastmod>
  </url>
 </urlset>
