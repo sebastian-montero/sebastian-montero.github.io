@@ -1,6 +1,6 @@
 <!--
-.. title: Notes on Information Retrieval (1/8)
-.. slug: notes-on-information-retrieval-18
+.. title: Notes on Information Retrieval (1)
+.. slug: notes-on-information-retrieval-1
 .. date: 2023-03-13 22:02:20 UTC
 .. tags: information retrieval, textbook
 .. category: 
@@ -9,7 +9,7 @@
 .. type: text
 -->
 
-> This is a blog series on Information Retrieval covering the first eight chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers **Chapter 1: Boolean retrieval**.
+> This is a blog series on Information Retrieval covering the first chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers **Chapter 1: Boolean retrieval**.
 
 <br />
 ## Introduction
