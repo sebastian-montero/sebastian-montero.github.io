@@ -1,11 +1,11 @@
 <!--
-.. title: Notes on IR: On terms and the postings list
+.. title: Creating terms and optimizing the postings list
 .. slug: notes-on-information-retrieval-2
 .. date: 2023-03-14 23:22:07 UTC
 .. tags: information retrieval, textbook
-.. category: 
+.. category: Notes on Information Retrieval
 .. link: 
-.. description: Notes on IR: Term vocabulary and postings list
+.. description: Term vocabulary and postings list
 .. type: text
 .. status: draft
 -->
