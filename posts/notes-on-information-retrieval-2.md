@@ -21,8 +21,7 @@ Every documents must be read into memory as characters and words (see Notes) wit
 
 Once a file is read, we can start the task of defining the **document unit** that will be used for indexing. There are some intricacies on how to define *what* a document is. For example, emails can contain large threads and attachments - are these all part of the same document? On the other hand, what happens with long documents? Do we take the *entire* file as our *document* or do we break it into smaller pieces? Depending on the **granularity** we want in our system there will always be a precision - recall trade off: small documents will be low on precision (many documents might come up) but high on recall and larger documents will be high on recall and low on precision (information will be hard to find).
 
-<br />
-### Preprocessing terms into index-ready tokens
+### Using preprocessing and NLP to transform terms into index-ready tokens
 
 xxx
 
