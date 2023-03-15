@@ -1,11 +1,11 @@
 <!--
-.. title: Notes on IR: Boolean retrieval
+.. title: Introducing boolean retrieval
 .. slug: notes-on-information-retrieval-1
 .. date: 2023-03-14 23:20:00 UTC
 .. tags: information retrieval, textbook
-.. category: 
+.. category: Notes on Information Retrieval
 .. link: 
-.. description: Notes on IR: Boolean retrieval
+.. description: Boolean retrieval
 .. type: text
 -->
 
