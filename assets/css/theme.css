@@ -572,6 +572,10 @@ section h3 {
 	margin: 0px;
 }
 
+.tagindex h2 {
+	color: black; font-size: 140%
+}
+
 .backlink { margin-top: 6px; }
 .backlink a:after { content: ' /'; }
 .backlink + .postbox > h3.title,
