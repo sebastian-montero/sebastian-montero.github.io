@@ -138,8 +138,7 @@
 <h3>Defining what is a term that should be indexed</h3>
 <p>Every documents must be read into memory as characters and words (see Notes) with a particular sequence. Depending on the language, there will be edge cases on how files are read for example, Arabic languages are written from right to left and can include numbers written from left to right. For these section we will work with the Latin alphabet where characters, words and numbers are written sequentially from left to right. </p>
 <p>Once a file is read, we can start the task of defining the <strong>document unit</strong> that will be used for indexing. There are some intricacies on how to define <em>what</em> a document is. For example, emails can contain large threads and attachments - are these all part of the same document? On the other hand, what happens with long documents? Do we take the <em>entire</em> file as our <em>document</em> or do we break it into smaller pieces? Depending on the <strong>granularity</strong> we want in our system there will always be a precision - recall trade off: small documents will be low on precision (many documents might come up) but high on recall and larger documents will be high on recall and low on precision (information will be hard to find).</p>
-<p><br></p>
-<h4>Preprocessing terms into index-ready tokens</h4>
+<h4>Using preprocessing and NLP to transform terms into index-ready tokens</h4>
 <p>xxx</p>
 <p><br></p>
 <h3>Optimizing the postings list</h3>
