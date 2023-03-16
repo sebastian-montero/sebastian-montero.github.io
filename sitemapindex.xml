@@ -11,7 +11,11 @@
  </sitemap>
  <sitemap>
   <loc>/categories/cat_notes-on-information-retrieval.xml</loc>
-  <lastmod>2023-03-16T22:53:00Z</lastmod>
+  <lastmod>2023-03-16T23:38:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/dictionary.xml</loc>
+  <lastmod>2023-03-16T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/index-terms.xml</loc>
@@ -19,7 +23,7 @@
  </sitemap>
  <sitemap>
   <loc>/categories/information-retrieval.xml</loc>
-  <lastmod>2023-03-16T22:53:00Z</lastmod>
+  <lastmod>2023-03-16T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/inverse-index.xml</loc>
@@ -34,8 +38,12 @@
   <lastmod>2023-03-16T22:53:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>/categories/search.xml</loc>
+  <lastmod>2023-03-16T23:38:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>/categories/textbook.xml</loc>
-  <lastmod>2023-03-16T22:53:00Z</lastmod>
+  <lastmod>2023-03-16T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/tokens.xml</loc>
@@ -51,10 +59,10 @@
  </sitemap>
  <sitemap>
   <loc>/rss.xml</loc>
-  <lastmod>2023-03-16T22:53:00Z</lastmod>
+  <lastmod>2023-03-16T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/sitemap.xml</loc>
-  <lastmod>2023-03-16T22:53:00Z</lastmod>
+  <lastmod>2023-03-16T23:38:00Z</lastmod>
  </sitemap>
 </sitemapindex>
