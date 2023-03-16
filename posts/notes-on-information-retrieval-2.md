@@ -1,5 +1,5 @@
 <!--
-.. title: Creating index-ready terms and enhancing the postings list
+.. title: How to process index tokens and optimizing for fast information retrieval
 .. slug: notes-on-information-retrieval-2
 .. date: 2023-03-16 17:18:00 UTC
 .. tags: information retrieval, textbook, tokens, index terms, postings list
