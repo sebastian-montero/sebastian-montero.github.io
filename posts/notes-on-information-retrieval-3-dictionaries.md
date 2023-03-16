@@ -8,7 +8,7 @@
 .. description:
 -->
 
-> This is a blog series on Information Retrieval covering the first chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers section **Chapter 3, Section 1: Search structures for dictionaries**.
+> This is a blog series on Information Retrieval covering the first chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers **Chapter 3, Section 1: Search structures for dictionaries**.
 
 For any IR task we need to start with an inverted index and a user query. The search process is the following: First, the system finds the query terms in the index vocabulary and second it identifies pointers to the term's postings
 
