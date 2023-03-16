@@ -1,7 +1,7 @@
 <!--
 .. title: Creating index-ready terms and enhancing the postings list
 .. slug: notes-on-information-retrieval-2
-.. date: 2023-03-16 16:45:00 UTC
+.. date: 2023-03-16 17:18:00 UTC
 .. tags: information retrieval, textbook, tokens, index terms, postings list
 .. category: Notes on Information Retrieval
 .. link: 
