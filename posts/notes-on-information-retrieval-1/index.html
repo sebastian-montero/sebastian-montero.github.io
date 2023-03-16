@@ -4,9 +4,9 @@
     " vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Boolean retrieval">
+<meta name="description" content="Introduction to information retrieval, boolean retrieval and inverse indexes.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Introducing boolean retrieval </title>
+<title>Introducing boolean retrieval and the inverse index </title>
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -16,12 +16,14 @@
 <link rel="canonical" href="posts/notes-on-information-retrieval-1/">
 <!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sebastian Montero">
 <meta property="og:site_name" content="SM">
-<meta property="og:title" content="Introducing boolean retrieval">
+<meta property="og:title" content="Introducing boolean retrieval and the inverse index">
 <meta property="og:url" content="posts/notes-on-information-retrieval-1/">
-<meta property="og:description" content="Boolean retrieval">
+<meta property="og:description" content="Introduction to information retrieval, boolean retrieval and inverse indexes.">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2023-03-14T23:20:00Z">
+<meta property="article:tag" content="boolean retrieval">
 <meta property="article:tag" content="information retrieval">
+<meta property="article:tag" content="inverse index">
 <meta property="article:tag" content="textbook">
 </head>
 <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
@@ -112,7 +114,7 @@
 			</a>
 		</div>
 
-	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Introducing boolean retrieval</a></h3>
+	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Introducing boolean retrieval and the inverse index</a></h3>
 
         <div class="metadata">
             <p class="dateline"><a href="." rel="bookmark"><i class="fa fa-clock"></i> <time class="published dt-published" datetime="2023-03-14T23:20:00Z" itemprop="datePublished" title="2023-03-14 23:20">2023-03-14 23:20</time></a></p>
@@ -122,7 +124,9 @@
 <h3 class="metadata-title">
 <i class="fa fa-tags"></i> Tags:</h3>
         <ul itemprop="keywords" class="tags-ul">
-<li><a class="tag p-category" href="../../categories/information-retrieval/" rel="tag">information retrieval</a></li>
+<li><a class="tag p-category" href="../../categories/boolean-retrieval/" rel="tag">boolean retrieval</a></li>
+            <li><a class="tag p-category" href="../../categories/information-retrieval/" rel="tag">information retrieval</a></li>
+            <li><a class="tag p-category" href="../../categories/inverse-index/" rel="tag">inverse index</a></li>
             <li><a class="tag p-category" href="../../categories/textbook/" rel="tag">textbook</a></li>
         </ul>
 </div>
@@ -203,7 +207,7 @@
 <li>
 <strong>Recall</strong>: Fraction of relevant documents that are retrieved. (How many documents are actually retrieved from the collection?)</li>
 </ul>
-<p>If we try to apply the boolean retrieval example of the previous section to a problem with ~1m documents where each document has ~500k terms,, we will have a matrix with ~500,000,000,000 1s and 0s, whcih will most likely cause a memory problem. If we have a large number of documents containing a large number of tokens, boolean retrieval is not the best approach to use, even more so considering that there will be a disproportionate amount of 0s to 1s (this is usually referred to as a sparse matrix).</p>
+<p>If we try to apply the boolean retrieval example of the previous section to a problem with ~1m documents where each document has ~500k terms,, we will have a matrix with ~500,000,000,000 1s and 0s, which will most likely cause a memory problem. If we have a large number of documents containing a large number of tokens, boolean retrieval is not the best approach to use, even more so considering that there will be a disproportionate amount of 0s to 1s (this is usually referred to as a sparse matrix).</p>
 <p>This issue can be solved by creating an <strong>inverted index</strong>. The inverted index allows us to keep a <strong>dictionary</strong> (or <strong>vocabulary</strong>, <strong>lexicon</strong>) of terms per document. We will build a <strong>postings list</strong> that contains multiple <strong>postings</strong>. A posting contains each document where a term appears. Take the table below as an example. More advanced search strategies can implement the <strong>term frequency</strong> within the inverted index to have higher weights on documents being retrieved.</p>
 <table>
 <thead><tr>
@@ -237,6 +241,9 @@
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../building-this-website/" rel="prev" title="building this website">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../notes-on-information-retrieval-2/" rel="next" title="Creating index-ready terms and enhancing the postings list">Next post</a>
             </li>
         </ul></nav></aside></article></div>
 			<div class="footer">        <footer id="footer"><p>Contents © 2023         <a href="mailto:sebastianmont@duck.com">Sebastian Montero</a></p>

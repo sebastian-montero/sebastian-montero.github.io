@@ -1,11 +1,11 @@
 <!--
-.. title: Introducing boolean retrieval
+.. title: Introducing boolean retrieval and the inverse index
 .. slug: notes-on-information-retrieval-1
 .. date: 2023-03-14 23:20:00 UTC
-.. tags: information retrieval, textbook
+.. tags: information retrieval, textbook, boolean retrieval, inverse index, 
 .. category: Notes on Information Retrieval
 .. link: 
-.. description: Boolean retrieval
+.. description: Introduction to information retrieval, boolean retrieval and inverse indexes.
 .. type: text
 -->
 
@@ -58,7 +58,7 @@ To ensure that the results of a search system are **effective** we can use the t
 - **Precision**: Fraction of documents that are relevant to the user. (How many of the retrieved documents are relevant to the user?)
 - **Recall**: Fraction of relevant documents that are retrieved. (How many documents are actually retrieved from the collection?)
 
-If we try to apply the boolean retrieval example of the previous section to a problem with ~1m documents where each document has ~500k terms,, we will have a matrix with ~500,000,000,000 1s and 0s, whcih will most likely cause a memory problem. If we have a large number of documents containing a large number of tokens, boolean retrieval is not the best approach to use, even more so considering that there will be a disproportionate amount of 0s to 1s (this is usually referred to as a sparse matrix).
+If we try to apply the boolean retrieval example of the previous section to a problem with ~1m documents where each document has ~500k terms,, we will have a matrix with ~500,000,000,000 1s and 0s, which will most likely cause a memory problem. If we have a large number of documents containing a large number of tokens, boolean retrieval is not the best approach to use, even more so considering that there will be a disproportionate amount of 0s to 1s (this is usually referred to as a sparse matrix).
 
 This issue can be solved by creating an **inverted index**. The inverted index allows us to keep a **dictionary** (or **vocabulary**, **lexicon**) of terms per document. We will build a **postings list** that contains multiple **postings**. A posting contains each document where a term appears. Take the table below as an example. More advanced search strategies can implement the **term frequency** within the inverted index to have higher weights on documents being retrieved.
 

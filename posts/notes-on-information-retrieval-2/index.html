@@ -4,9 +4,9 @@
     " vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Term vocabulary and postings list">
+<meta name="description" content="How to go from raw data sequences into index terms and optimizing the postings list data structure for faster retrieval.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creating terms and optimizing the postings list </title>
+<title>Creating index-ready terms and enhancing the postings list </title>
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -15,15 +15,17 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="posts/notes-on-information-retrieval-2/">
 <!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sebastian Montero">
-<meta name="robots" content="noindex">
 <meta property="og:site_name" content="SM">
-<meta property="og:title" content="Creating terms and optimizing the postings list">
+<meta property="og:title" content="Creating index-ready terms and enhancing the postings list">
 <meta property="og:url" content="posts/notes-on-information-retrieval-2/">
-<meta property="og:description" content="Term vocabulary and postings list">
+<meta property="og:description" content="How to go from raw data sequences into index terms and optimizing the postings list data structure for faster retrieval.">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2023-03-14T23:22:07Z">
+<meta property="article:published_time" content="2023-03-16T17:18:00Z">
+<meta property="article:tag" content="index terms">
 <meta property="article:tag" content="information retrieval">
+<meta property="article:tag" content="postings list">
 <meta property="article:tag" content="textbook">
+<meta property="article:tag" content="tokens">
 </head>
 <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
 
@@ -113,18 +115,21 @@
 			</a>
 		</div>
 
-	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Creating terms and optimizing the postings list</a></h3>
+	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Creating index-ready terms and enhancing the postings list</a></h3>
 
         <div class="metadata">
-            <p class="dateline"><a href="." rel="bookmark"><i class="fa fa-clock"></i> <time class="published dt-published" datetime="2023-03-14T23:22:07Z" itemprop="datePublished" title="2023-03-14 23:22">2023-03-14 23:22</time></a></p>
+            <p class="dateline"><a href="." rel="bookmark"><i class="fa fa-clock"></i> <time class="published dt-published" datetime="2023-03-16T17:18:00Z" itemprop="datePublished" title="2023-03-16 17:18">2023-03-16 17:18</time></a></p>
 
             
                 <div class="tags">
 <h3 class="metadata-title">
 <i class="fa fa-tags"></i> Tags:</h3>
         <ul itemprop="keywords" class="tags-ul">
-<li><a class="tag p-category" href="../../categories/information-retrieval/" rel="tag">information retrieval</a></li>
+<li><a class="tag p-category" href="../../categories/index-terms/" rel="tag">index terms</a></li>
+            <li><a class="tag p-category" href="../../categories/information-retrieval/" rel="tag">information retrieval</a></li>
+            <li><a class="tag p-category" href="../../categories/postings-list/" rel="tag">postings list</a></li>
             <li><a class="tag p-category" href="../../categories/textbook/" rel="tag">textbook</a></li>
+            <li><a class="tag p-category" href="../../categories/tokens/" rel="tag">tokens</a></li>
         </ul>
 </div>
 
@@ -133,23 +138,43 @@
     <blockquote>
 <p>This is a blog series on Information Retrieval covering the first chapters of the textbook <a href="https://nlp.stanford.edu/IR-book/information-retrieval-book.html">Introduction to Information Retrieval</a>. This post covers <strong>Chapter 2: The term vocabulary and postings lists</strong>.</p>
 </blockquote>
-<p>In the previous blog we talked about how to create an inverted index. In this second part, we will look into the intricacies of how a <em>term</em> can be defined and standardized, and how to use optimize a postings list data structure to index these terms.</p>
+<p>In the previous blog we talked about how to create an inverted index. In this second part, we will look into the intricacies of how a <em>token</em> can be defined and standardized in order to add it into an index as a <em>term</em>, and how to use optimize a postings list data structure to ensure faster retrieval.</p>
 <p><br></p>
-<h3>Defining what is a term that should be indexed</h3>
-<p>Every documents must be read into memory as characters and words (see Notes) with a particular sequence. Depending on the language, there will be edge cases on how files are read for example, Arabic languages are written from right to left and can include numbers written from left to right. For these section we will work with the Latin alphabet where characters, words and numbers are written sequentially from left to right. </p>
-<p>Once a file is read, we can start the task of defining the <strong>document unit</strong> that will be used for indexing. There are some intricacies on how to define <em>what</em> a document is. For example, emails can contain large threads and attachments - are these all part of the same document? On the other hand, what happens with long documents? Do we take the <em>entire</em> file as our <em>document</em> or do we break it into smaller pieces? Depending on the <strong>granularity</strong> we want in our system there will always be a precision - recall trade off: small documents will be low on precision (many documents might come up) but high on recall and larger documents will be high on recall and low on precision (information will be hard to find).</p>
-<h4>Using preprocessing and NLP to transform terms into index-ready tokens</h4>
-<p>xxx</p>
+<h3>Indexing terms</h3>
+<p>In very low-level computing terms, every documents must be read into memory as characters and words (see Note 1) with a particular sequence through a decoding algorithm. Depending on the language, there will be different cases on how files are decoded into a sequence of characters and how that language is read. For example, Arabic languages are written from right to left and can include numbers written from left to right. For this section we will work with the Latin alphabet where characters, and more specifically the English language, where words and numbers are written sequentially from left to right. </p>
+<p>Once we have a sequence of characters, we can start the task of defining the <strong>document unit</strong> that will be used for indexing. There are some intricacies on how to define <em>what</em> a document unit and a document itself is. For example, emails can contain large threads and attachments - are these all part of the same document? On the other hand, what happens with long documents? Do we take the <em>entire</em> file as our <em>document</em> or do we break it into smaller pieces? Depending on the <strong>granularity</strong> we want in our information retrieval system, there will always be a precision - recall trade off: small documents will be low on precision (many documents might come up), but high on recall and larger documents will be high on recall and low on precision (information will be hard to find).</p>
+<h4>Using preprocessing to transform sequences into index-ready terms</h4>
+<p>After defining our the document unit and decoding our text data into a sequence of characters, we can start working towards creating our <strong>tokens</strong> by breaking down our sequence at specific intervals. In the case of a sentence, tokens can be the words that make up that sentence split by white space. It is important to note that tokens can also be defined as terms or words; however we define tokens as instances that can be grouped together under the same token <strong>type</strong>. The <strong>terms</strong>, on the other hand, are the types that are included in an information retrieval system dictionary, these are related to tokens but include a few preprocessing steps in between, which we will discuss next.</p>
+<p>There will always be a challenge defining how to create a tokens. Some words are very straight forward to index, but others take more critical thining. For example, take the word <code>don't</code> - shall we tokenize it as <code>don't</code>, <code>dont</code>, <code>don</code> and <code>t</code>, or <code>do</code> and <code>n't</code>? Most of the issues in defining how to tokenize will be language specific so identifying a language before tokenizing is useful to catch and process these language-specific patterns. Whatever strategy we choose we need to ensure that we apply the same strategy at the user retrieval side to ensure the same processing is done and the term types are the same.</p>
+<p>Some other issues with tokenization in the English language include:
+- How should we tokenize sequences with "special" characters such as proper nouns, urls, monetary values, etc? (e.g. <code>Turkey</code> (the country), <code>https://www.google.com/</code>, <code>$100</code>)
+- Should we separate on hyphens (-), when hyphens can be used for naming or grouping words? 
+- Should we separate on spaces as some sequences don't can mean the wrong thing independently e.g. <code>New York</code>, <code>whitespace</code> vs <code>white space</code>, dates, etc.</p>
+<p>After deciding our tokenization strategy, we can start filtering for common words that do not add value to our searches. These words are called <strong>stop words</strong>, the set of stop words is called a <strong>stop list</strong>. Commonly we can group terms by frequency across all collections (<strong>collection frequency</strong>) and filter them our based on a human-in-the-loop assessment, assuming that common words across all collections don't add a lot of information value to any single document. It is important to consider that we should <em>not always</em> discard these stop words as they can be valuable in some phrases (e.g. the song <code>Let It Be</code>); however, phrase processing will be discussed later in this blog. Recent trends have also started to keep the stop word list in favour of more robust language processing for indexing and content understanding.</p>
+<p>After processing stop words, we can start normalizing our tokens. We do this because there are tokens that mean the same thing but are represented differently such as <code>UK</code>, <code>U.K.</code>, and <code>United Kingdom</code>. <strong>Normalization</strong> is the process of ensuring all our terms are represented equally. The most standard way is to manually create <strong>equivalence classes</strong>, which are dictionaries of "ground truth" terms mapped to different spellings. An alternative is to maintain both normalized and unnormalized terms and use them by keeping an index of unnormalized terms and a dictionary to expand the search query into all unnormalized terms. </p>
+<p>There are other processing techniques that can process the differences in how tokens are represented grammatically in language. These are stemming and lemmatization. <strong>Stemming</strong> refers to the process of slicing the ends of the words to remove grammatical differences (e.g. <code>colored</code> and <code>colors</code> become <code>color</code>). Stemming in the English language most commonly relies on <code>Porter's algorithm</code> which reduces word sequences in 5 stages. This blog will not go into the details, but these can be found in <a href="http://www.tartarus.org/~martin/PorterStemmer/">the Porter Stemmer official site</a>. On the other hand, <strong>lemmatization</strong> tries to use morphological analysis to analyze the words and transform them into their base dictionary form using techniques from Natural Language Processing (e.g. <code>saw</code>, <code>sees</code> and <code>seeing</code> become <code>see</code>). This base form is called the <em>lemma</em>. Even though stemming and lemmatization can help in normalizing how we represent tokens, they usually come with marginal gains and other tradeoffs.</p>
 <p><br></p>
-<h3>Optimizing the postings list</h3>
-<p>xxx</p>
+<h3>Updates to the postings list</h3>
+<p>Just how preprocessing tokens into terms can help in increasing the precision of our information retrieval system, we can also optimize the postings list data structures to make the retrieval computation more efficient and accurate. </p>
+<h4>Skip pointers in postings lists</h4>
+<p>If we want to analyze to two lists of sizes <code>m</code> and <code>n</code> simultaneously, the time complexity will be <code>O(m+n)</code>. To reduce the time complexity below this linear form, we can use a <strong>skip list</strong> - this is a change to the underlying list data structure that contains <strong>skip pointers</strong>. Skip pointers allow us to skip parts of the list that will not appear in the search result. The general idea is that when we step through multiple lists, we can skip to a matched document in another list allowing the document retrieval to be done faster. For example, if we take two posting lists <code>A: {2,3,4,5,6,7}</code> and <code>B:{1,4,5,7}</code> the moment we match on the document with index <code>4</code>, we can skip to the next pointer in both lists.</p>
+<h4>Processing phrase queries</h4>
+<p>It is common that users want to use <strong>phrase queries</strong> such as <code>New York</code> and retrieve messages that are familiar with the city and not the words <code>new</code> and <code>york</code>. Because of this, the reader might be familiar with the use of double quotes (<code>" "</code>) around a token to get an exact match. To support these types of phrase queries using exact or close matches, a search system needs to support and properly implement phrase indexes or use proximity indexes that weight terms that appear closer in different documents.</p>
+<p><strong>Biword indexes</strong> or <strong>phrase index</strong> are a type of index that considers words that are together in the document (data practitioners familiar with NLP might relate this to n-grams). Adding these terms into our indexes allows for immediate search amongst them. A downside to this approach is that there might be a large number of false positives. To avoid these we can focus on <em>noun phrases</em> and some preprocessing. For example if we take a noun phrase such as <code>renegotiation of the constitution</code> we can perform tokenization and part-of-speech tagging to extract nouns from the sub-tokens and this phrase can become the term <code>renegotiate constitution</code>. A phrase index is a good solution but there can be issues resulting in multiple false positives if we combine a phrase index with single word indexes (which is usually required). </p>
+<p>For the issues described above, phrase indexes are not the standard solution. Instead, <strong>positional indexes</strong> are most commonly used for IR. To create a positional index, we need to store postings in the form of <code>docID: {position1, position2, ...}</code> where each position is the position of the token in the document with the number of times it occurs (expanded into <code>term, totalFrequency: {docId, frequency:{position1, position2}}</code>). The retrieval algorithm for phrases will look for documents with both terms and then find documents where the position of the second term is one higher than the first. This retrieval can also be used with <code>k</code> positions. Additional notes on sizes of the positional index in Notes 2.</p>
+<p>Finally, we can also combine the strategies of phrase indexes and positional indexes. This is done by using phrase indexes for certain queries and positional indexes for other queries. The normal approach is to add common queries in the positional index into the phrase index to ensure faster retrieval.</p>
 <p><br></p>
 <h3>Notes</h3>
-<ul>
-<li>At the very basic level, every term is a byte in a file. These bytes are decoded into human-readable characters. Usually the document can be decoded using the encoding scheme found in the file's metadata so an in-depth analysis of byte decoding and encoding will are spared in this post. More details on this can be found in the book. </li>
-</ul>
+<ol>
+<li>On document decoding; At the very basic level, every term is a byte in a file. These bytes are decoded into human-readable characters. Usually the document can be decoded using the encoding scheme found in the file's metadata so an in-depth analysis of byte decoding and encoding will are spared in this post. More details on this can be found in the book. </li>
+<li>On positional index size; Using positional indexes will increase the size of the stored index as well as the computing complexity. </li>
+</ol>
 </div>
-    <aside class="postpromonav"><nav></nav></aside></article></div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../notes-on-information-retrieval-1/" rel="prev" title="Introducing boolean retrieval and the inverse index">Previous post</a>
+            </li>
+        </ul></nav></aside></article></div>
 			<div class="footer">        <footer id="footer"><p>Contents © 2023         <a href="mailto:sebastianmont@duck.com">Sebastian Montero</a></p>
             
         </footer>
