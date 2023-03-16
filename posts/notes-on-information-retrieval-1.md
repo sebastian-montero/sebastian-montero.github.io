@@ -5,7 +5,7 @@
 .. tags: information retrieval, textbook, boolean retrieval, inverse index, 
 .. category: Notes on Information Retrieval
 .. link: 
-.. description: Boolean retrieval
+.. description: Introduction to information retrieval, boolean retrieval and inverse indexes.
 .. type: text
 -->
 
