@@ -18,4 +18,10 @@ In the hashing data structure, each key is transformed into an integer represent
 
 Search trees, on the other hand, allow the system to use a term slice (e.g. `sta` for `stack` or `star`) as a node in the tree. The most common search tree is a **binary tree**, where the tree options are split in two. When an algorithm makes it way through the tree is performs logical operations to find the right path. The issue here is that a binary tree needs to be balanced (trees under a single node is equal or differs by one) and when the structure changes, rebalancing becomes an expensive operation. To avoid rebalancing the number of paths can be flexible. Another type of search tree is a **B-tree**. Every node in the B-tree has a number of child nodes in a specific interval, which allows to collapse various levels of the binary tree. This is an advantage as it allows the dictionary to be optimized for being stored in disk, depending on the size of the intervals.
 
+
+<figure>
+  <img src="/images/binary_search_tree.png" alt="Binary Search Tree (From Wikipedia)" width="25%">
+  <figcaption>Binary Search Tree (<a href="https://en.wikipedia.org/wiki/Binary_search_tree">Wikipedia</a>)</figcaption>
+</figure>
+
 Unlike hashing, search trees require characters in the document collection to be ordered. This works for the English language but some issues might arise in other languages.
