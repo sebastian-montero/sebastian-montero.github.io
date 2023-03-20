@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>/</loc>
-  <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <lastmod>2023-03-20T00:02:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="index.html" />
  </url>
  <url>
@@ -16,7 +16,7 @@
  </url>
  <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-03-16T23:38:00Z</lastmod>
+  <lastmod>2023-03-20T00:05:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/</loc>
@@ -111,5 +111,22 @@
   <loc>/posts/notes-on-information-retrieval-3-dictionaries/</loc>
   <lastmod>2023-03-16T23:08:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-3-dictionaries/" />
+ </url>
+ <url>
+  <loc>/r1/</loc>
+  <lastmod>2023-03-20T00:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/recipes/</loc>
+  <lastmod>2023-03-20T00:01:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="recipes/" />
+ </url>
+ <url>
+  <loc>/recipes/r1/</loc>
+  <lastmod>2023-03-20T00:01:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/recipes/recipes/</loc>
+  <lastmod>2023-03-19T23:59:00Z</lastmod>
  </url>
 </urlset>
