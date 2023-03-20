@@ -7,11 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>/categories/boolean-retrieval.xml</loc>
-  <lastmod>2023-03-20T00:05:00Z</lastmod>
+  <lastmod>2023-03-20T00:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/cat_notes-on-information-retrieval.xml</loc>
-  <lastmod>2023-03-20T00:05:00Z</lastmod>
+  <lastmod>2023-03-20T00:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/dictionary.xml</loc>
@@ -23,11 +23,11 @@
  </sitemap>
  <sitemap>
   <loc>/categories/information-retrieval.xml</loc>
-  <lastmod>2023-03-20T00:06:00Z</lastmod>
+  <lastmod>2023-03-20T00:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/inverse-index.xml</loc>
-  <lastmod>2023-03-20T00:05:00Z</lastmod>
+  <lastmod>2023-03-20T00:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/meta.xml</loc>
@@ -43,7 +43,7 @@
  </sitemap>
  <sitemap>
   <loc>/categories/textbook.xml</loc>
-  <lastmod>2023-03-20T00:06:00Z</lastmod>
+  <lastmod>2023-03-20T00:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/tokens.xml</loc>
@@ -55,14 +55,14 @@
  </sitemap>
  <sitemap>
   <loc>/galleries/rss.xml</loc>
-  <lastmod>2023-03-20T00:05:00Z</lastmod>
+  <lastmod>2023-03-20T20:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/rss.xml</loc>
-  <lastmod>2023-03-20T00:05:00Z</lastmod>
+  <lastmod>2023-03-20T20:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/sitemap.xml</loc>
-  <lastmod>2023-03-20T00:06:00Z</lastmod>
+  <lastmod>2023-03-20T20:39:00Z</lastmod>
  </sitemap>
 </sitemapindex>
