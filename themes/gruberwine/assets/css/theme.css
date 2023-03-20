@@ -568,6 +568,7 @@ h1 { color: black; font-size: 180% }
 h2 { color: black; font-size: 180% }
 .entry-content p { margin-top: 1.5% }
 
+
 section h3 {
 	margin: 0px;
 }
@@ -625,24 +626,15 @@ article.post-text .metadata p
 
 article.post-text .metadata p a { color: #999; font-size: 70%; }
 
-article.post-text .metadata p a:hover,
-article.post-text .metadata p:hover
-{
-	color: black;
-	-webkit-transition: color 1s linear;
-	-moz-transition: color 1s linear;
-	-o-transition: color 1s linear;
-	transition: color 1s linear;
-}
 
-article.post-text .metadata h3
+/* article.post-text .metadata h3
 {
 	color: #999; font-size: 70%;
 	display: inline;
 	margin: 0;
 	padding: 0;
-	font-weight: normal;
-}
+	font-weight: 500;
+} */
 
 
 article.post-text .metadata .tags ul
@@ -650,6 +642,7 @@ article.post-text .metadata .tags ul
 	margin: 0;
 	list-style: none;
 	display: inline-block;
+	padding: 0
 }
 
 article.post-text .metadata .tags a
