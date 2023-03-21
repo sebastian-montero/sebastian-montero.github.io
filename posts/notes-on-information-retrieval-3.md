@@ -1,18 +1,18 @@
 <!--
 .. title: Ensuring tolerant retrieval in your search system
 .. slug: notes-on-information-retrieval-3
-.. date: 2023-03-20 20:54:00 UTC
+.. date: 2023-03-21 00:26:00 UTC
 .. tags: information retrieval, textbook, tolerant retrieval
 .. category: Notes on Information Retrieval
 .. link: 
 .. description: Creating a tolerant retrieval system that supports wildcards, errors and alternate spellings.
 .. type: text
-.. status: draft
+.. status: public
 -->
 
 > This is a blog series on Information Retrieval covering the first chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers **Chapter 3: Dictionaries and tolerant retrieval**. The first section of the chapter is in its separate blog: [How is a dictionary data structure optimized for search?](/posts/notes-on-information-retrieval-3-dictionaries/)
 
-Tolerant retrieval is an essential for users querying an information retrieval system. Tolerance at query time includes fixing user mistakes such as spelling mistakes, alternative spelling, phoentic corrections and also includes the flexibility for users to use wildcards during their search.
+Tolerant retrieval is an essential for users querying an information retrieval system. Tolerance at query time includes fixing user mistakes such as spelling mistakes, alternative spelling, phonetic corrections and also includes the flexibility for users to use wildcards during their search.
 
 This section will introduce wildcards and query correction.
 
@@ -37,7 +37,7 @@ First, we introduce the **permuterm index**. This index uses a special character
 
 ### k-gram indexes
 
-The next type of index is a **k-gram index**. To build this specialised wildcard index, we need to build a set of k-grams for each term. a **k-gram** is a sequence of `k` characters that are adjecent in a term. We again use a special symbol such as `$` to denote the beginning and the end of the term. So in the case of the word `hello`, a 3-gram index would include the words `($he, hel, ell, llo, lo$)`. Then we can index each of these k-grams in our k-gram index. When we search for `he*o`, we then search for the k-grams that make up this phrase. K-grams sometimes require post-filtering steps that check the original query against the returns terms to filter out terms that don't match. 
+The next type of index is a **k-gram index**. To build this specialised wildcard index, we need to build a set of k-grams for each term. a **k-gram** is a sequence of `k` characters that are adjacent in a term. We again use a special symbol such as `$` to denote the beginning and the end of the term. So in the case of the word `hello`, a 3-gram index would include the words `($he, hel, ell, llo, lo$)`. Then we can index each of these k-grams in our k-gram index. When we search for `he*o`, we then search for the k-grams that make up this phrase. K-grams sometimes require post-filtering steps that check the original query against the returns terms to filter out terms that don't match. 
 
 
 <br />
@@ -47,11 +47,11 @@ When it comes to spelling corrections and alternate spellings, there are two pri
 
 Before we will introduce spelling correction algorithms, we can discuss how we run these corrections. We can use **isolated-term** correction, this is the type of correction that will identify a misspelled term and attempt to correct each term individually. Note that the system will not understand if the query as a whole makes sense, just its individual parts, hence the phrase `flew form Heathrow` would be correct as each term is individually correct. On the other hand, we also have **context-sensitive** correction which considers the search phrase as a whole. We will proceed to look into two algorithms for isolated-term corrections: edit distance and k-gram overlap.
 
-The **edit distance** algorithm takes two strings `s1` and `s2` and defines the distance as the number of edit operations required to transform `s1` to `s2`. The edit operations can include: inserting a character, deleting a character, replacing a character. The edit distance can also be called the **Levenshtein distance**. https://nlp.stanford.edu/IR-book/html/htmledition/edit-distance-1.html 
+The **edit distance** algorithm takes two strings `s1` and `s2` and defines the distance as the number of edit operations required to transform `s1` to `s2`. The edit operations can include: inserting a character, deleting a character, replacing a character. The edit distance can also be called the **Levenshtein distance**. The edit distance can also be changed to allow for different weights for different operations. Setting weights for the likelihood of making a change or a mistake is very effective. I will not go into detail of the algorithm in this post; however this can be found in section 3.3.3 of the book.
 
-Another method for spelling correction is using k-gram indexes called **k-gram overlap**. We can use a k-gram index to limit the vocabulary terms for which we compute edit distances. We want to use the k-gram index to find vocabulary terms that have many k-grams in common with the query. https://nlp.stanford.edu/IR-book/html/htmledition/k-gram-indexes-for-spelling-correction-1.html
+Another method for spelling correction using k-gram indexes is called **k-gram overlap**. We can use k-gram indexes to limit the set of vocabulary terms for which we compute the edit distances. Using a k-gram index will results in many terms that have common k-grams. From here we will need to do a linear scan through the postings to filter for the k-grams that overlap with the search query.
 
-A retrieval system might want to first look into isolated-term correction if it identifies an issue with the query, but if there are a small number of documents returned without a any correction or after isolated-term corrections, we might want the system to do context-sensitive correction. To do this we need to provide alternative spellings for all the terms being searched and try to substitute them in the query. This operation can be computationally expensive so we could use simple heuristics like looking at the most frequent alternative spelling only or look at bi-word statistics and find what words are usually used together.
+In a retrieval system, we might want to first look into isolated-term correction if it identifies an issue with the query, but if there are a small number of documents returned without a any correction or after isolated-term corrections, we might want the system to do context-sensitive correction. To do this we need to provide alternative spellings for all the terms being searched and try to substitute them in the query. This operation can be computationally expensive so we could use simple heuristics like looking at the most frequent alternative spelling only or look at bi-word statistics and find what words are usually used together.
 
 Another form of correction is the phonetic corrections. This type of correction requires a specialized index and which considers how terms sound. To build a phonetic search index, we need to create a `phonetic hash` that map similar word sounds to the same hash. Phonetic hashing is collectively known as **soundex** algorithms. At the most basic level a soundex algorithm will turn every indexable term into a hash form and build a soundex index from that, then do the same for query terms and finally use the soundex index to see if there is a match to the soundex query. Even though we are not going too much in the detail of soundex algorithms, they work very well, specially with names. A caveat of this indexes, however, is that they are alphabet dependent.
 
