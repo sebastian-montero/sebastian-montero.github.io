@@ -7,7 +7,7 @@
 .. link: 
 .. description: Creating a tolerant retrieval system that supports wildcards, errors and alternate spellings.
 .. type: text
-.. status: public
+.. status: published
 -->
 
 > This is a blog series on Information Retrieval covering the first chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers **Chapter 3: Dictionaries and tolerant retrieval**. The first section of the chapter is in its separate blog: [How is a dictionary data structure optimized for search?](/posts/notes-on-information-retrieval-3-dictionaries/)
