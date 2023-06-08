@@ -17,6 +17,22 @@ Music
 | All my tracks are currently hosted in `Soundcloud <https://soundcloud.com/sebastianmxnt>`_. 
 |
 
+Waves
+'''''''''''''
+.. soundcloud:: 1532043145
+    :width: 350
+    :height: 100
+
+|
+
+Kafka
+'''''''''''''
+.. soundcloud:: 1467477916
+    :width: 350
+    :height: 100
+
+|
+
 Winter
 '''''''''''''
 .. soundcloud:: 1467477628
@@ -32,9 +48,3 @@ Spring
     :height: 100
 
 |
-
-Slow vibes
-'''''''''''''
-.. soundcloud:: 1467477916
-    :width: 350
-    :height: 100
