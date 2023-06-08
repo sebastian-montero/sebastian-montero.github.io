@@ -19,6 +19,8 @@ Music
 
 Waves
 '''''''''''''
+I created Waves in Garageband. It started off with a very simple chord progression in the key of A minor. I then added a rhythm section with drums and baseline around it. From here I added a vintage synth called `Classic House Sequence` that adds some more musical texture to the song. For me, the cherry on top of this song is the addition of female vocals and a short guitar solo. These are called `Midnight Moves Vocal 01` and `Midnight Moves Lead Guitar`, respectively in Garageband. I think they add a lot of depth to the song. Waves has 5 versions where you can hear the evolution of the song all are posted in SoundCloud. The artwork is Gerhard Richter's Seascapes which also inspired the name of the song.
+
 .. soundcloud:: 1532043145
     :width: 350
     :height: 100
