@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="description" content="Step-by-step walkthrough to create a searchable index.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creating an index </title>
+<title>Choosing your type of index </title>
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -15,13 +15,12 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="posts/notes-on-information-retrieval-4/">
 <!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sebastian Montero">
-<meta name="robots" content="noindex">
 <meta property="og:site_name" content="SM">
-<meta property="og:title" content="Creating an index">
+<meta property="og:title" content="Choosing your type of index">
 <meta property="og:url" content="posts/notes-on-information-retrieval-4/">
 <meta property="og:description" content="Step-by-step walkthrough to create a searchable index.">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2023-07-29T00:26:00Z">
+<meta property="article:published_time" content="2023-07-29T20:56:00Z">
 <meta property="article:tag" content="indexing">
 <meta property="article:tag" content="information retrieval">
 <meta property="article:tag" content="textbook">
@@ -114,10 +113,10 @@
 			</a>
 		</div>
 
-	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Creating an index</a></h3>
+	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Choosing your type of index</a></h3>
 
         <div class="metadata">
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2023-07-29T00:26:00Z" itemprop="datePublished" title="2023-07-29 00:26">2023-07-29 00:26</time></a></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2023-07-29T20:56:00Z" itemprop="datePublished" title="2023-07-29 20:56">2023-07-29 20:56</time></a></p>
 
             
                 <div class="tags">
@@ -167,7 +166,11 @@
 <p>Dynamic indexing comes in when the document collection changes over time and is not static. The previous examples work under the assumption that the document collection is static which work for collections that change infrequently or never. The fastest way to create a dynamic index is to periodically reconstruct the whole index from scratch if the changes over time are small and if the final use case accepts that limitation.</p>
 <p>An approach to having a dynamic index is to use an <code>auxiliary index</code> next to your main index. Queries are run on both indexes are results are merged. When the auxiliary index becomes too large we can merge it into the main index. The best way to merge indexes it to extend the postings list, however this is not always feasible for the end user.</p>
     </div>
-    <aside class="postpromonav"><nav></nav></aside></article></div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../notes-on-information-retrieval-3/" rel="prev" title="Ensuring tolerant retrieval in your search system">Previous post</a>
+            </li>
+        </ul></nav></aside></article></div>
 			<div class="footer">        <footer id="footer"><p>Contents © 2023         <a href="mailto:sebastianmont@duck.com">Sebastian Montero</a></p>
             
         </footer>

@@ -16,11 +16,11 @@
  </url>
  <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
+  <lastmod>2023-07-29T20:56:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
+  <lastmod>2023-07-29T20:55:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/boolean-retrieval/</loc>
@@ -37,6 +37,10 @@
  <url>
   <loc>/categories/index-terms/</loc>
   <lastmod>2023-07-29T20:53:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/categories/indexing/</loc>
+  <lastmod>2023-07-29T20:55:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/information-retrieval/</loc>
@@ -112,6 +116,11 @@
   <loc>/posts/notes-on-information-retrieval-3/</loc>
   <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-3/" />
+ </url>
+ <url>
+  <loc>/posts/notes-on-information-retrieval-4/</loc>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-4/" />
  </url>
  <url>
   <loc>/recipes/</loc>
