@@ -7,123 +7,115 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>/</loc>
-  <lastmod>2023-03-20T00:02:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="index.html" />
  </url>
  <url>
   <loc>/2023/</loc>
-  <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-03-21T00:27:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/</loc>
-  <lastmod>2023-03-21T00:27:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/boolean-retrieval/</loc>
-  <lastmod>2023-03-16T00:28:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/cat_notes-on-information-retrieval/</loc>
-  <lastmod>2023-03-15T00:11:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/dictionary/</loc>
-  <lastmod>2023-03-16T23:38:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/index-terms/</loc>
-  <lastmod>2023-03-16T00:28:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/information-retrieval/</loc>
-  <lastmod>2023-03-14T23:21:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/inverse-index/</loc>
-  <lastmod>2023-03-16T00:28:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/meta/</loc>
-  <lastmod>2023-03-13T16:21:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/postings-list/</loc>
-  <lastmod>2023-03-16T00:28:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/search/</loc>
-  <lastmod>2023-03-16T23:38:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/textbook/</loc>
-  <lastmod>2023-03-14T23:21:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/tokens/</loc>
-  <lastmod>2023-03-16T00:28:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/tolerant-retrieval/</loc>
-  <lastmod>2023-03-21T00:27:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/web-development/</loc>
-  <lastmod>2023-03-13T16:21:00Z</lastmod>
- </url>
- <url>
-  <loc>/galleries/</loc>
-  <lastmod>2023-03-13T15:18:00Z</lastmod>
- </url>
- <url>
-  <loc>/listings/</loc>
-  <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/music/</loc>
-  <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="music/" />
  </url>
  <url>
   <loc>/posts/</loc>
-  <lastmod>2023-03-21T00:33:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/posts/building-this-website/</loc>
-  <lastmod>2023-03-13T16:21:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/building-this-website/" />
  </url>
  <url>
   <loc>/posts/hello-world/</loc>
-  <lastmod>2023-03-13T15:18:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/hello-world/" />
  </url>
  <url>
   <loc>/posts/notes-on-information-retrieval-1/</loc>
-  <lastmod>2023-03-14T00:15:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-1/" />
  </url>
  <url>
   <loc>/posts/notes-on-information-retrieval-2/</loc>
-  <lastmod>2023-03-14T23:23:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-2/" />
  </url>
  <url>
   <loc>/posts/notes-on-information-retrieval-3-dictionaries/</loc>
-  <lastmod>2023-03-16T23:08:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-3-dictionaries/" />
  </url>
  <url>
   <loc>/posts/notes-on-information-retrieval-3/</loc>
-  <lastmod>2023-03-16T00:23:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-3/" />
  </url>
  <url>
   <loc>/recipes/</loc>
-  <lastmod>2023-03-20T00:01:00Z</lastmod>
+  <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="recipes/" />
  </url>
 </urlset>
