@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How is a dictionary data structure optimized for search? </title>
+<title>Notes on IR: Optimizing a dictionary structure for search </title>
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@
 <link rel="canonical" href="posts/notes-on-information-retrieval-3-dictionaries/">
 <!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sebastian Montero">
 <meta property="og:site_name" content="SM">
-<meta property="og:title" content="How is a dictionary data structure optimized for search?">
+<meta property="og:title" content="Notes on IR: Optimizing a dictionary structure for search">
 <meta property="og:url" content="posts/notes-on-information-retrieval-3-dictionaries/">
 <meta property="og:description" content="This is a blog series on Information Retrieval covering the first chapters of the textbook Introduction to Information Retrieval. This post covers Chapter 3, Section 1: Search structures for dictionar">
 <meta property="og:type" content="article">
@@ -113,7 +113,7 @@
 			</a>
 		</div>
 
-	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">How is a dictionary data structure optimized for search?</a></h3>
+	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Notes on IR: Optimizing a dictionary structure for search</a></h3>
 
         <div class="metadata">
             <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2023-03-16T23:38:28Z" itemprop="datePublished" title="2023-03-16 23:38">2023-03-16 23:38</time></a></p>
@@ -134,17 +134,17 @@
 <p>This is a blog series on Information Retrieval covering the first chapters of the textbook <a href="https://nlp.stanford.edu/IR-book/information-retrieval-book.html">Introduction to Information Retrieval</a>. This post covers <strong>Chapter 3, Section 1: Search structures for dictionaries</strong>.</p>
 </blockquote>
 <p>For any IR task we need to start with an inverted index and a user query. The search process is the following: First, the system finds the query terms in the index vocabulary and second it identifies pointers to the term's postings</p>
-<p>The vocabulary lookup relies on a dictionary data structure. For IR examples the vocabulary terms will be the dictionaries' keys. Dictionaries can categorized into hashing and search trees. To decide if we want to use a hashing dictionary or a search tree dictionary we need to define the number of keys, the frequency of updates to these keys, and how often keys will be accessed. </p>
+<p>The vocabulary lookup relies on a dictionary data structure. For IR examples the vocabulary terms will be the dictionaries' keys. Dictionaries can categorized into hashing and search trees. To decide if we want to use a hashing dictionary or a search tree dictionary we need to define the number of keys, the frequency of updates to these keys, and how often keys will be accessed.</p>
 <p>In the hashing data structure, each key is transformed into an integer representation. At query time, we search for the specific integers and retrieve the postings. In this case, we can't make any decision on alternate spellings as the system only sees integers instead of the words themselves.</p>
 <p>Search trees, on the other hand, allow the system to use a term slice (e.g. <code>sta</code> for <code>stack</code> or <code>star</code>) as a node in the tree. The most common search tree is a <strong>binary tree</strong>, where the tree options are split in two. When an algorithm makes it way through the tree is performs logical operations to find the right path. The issue here is that a binary tree needs to be balanced (trees under a single node is equal or differs by one) and when the structure changes, rebalancing becomes an expensive operation. To avoid rebalancing the number of paths can be flexible. Another type of search tree is a <strong>B-tree</strong>. Every node in the B-tree has a number of child nodes in a specific interval, which allows to collapse various levels of the binary tree. This is an advantage as it allows the dictionary to be optimized for being stored in disk, depending on the size of the intervals.</p>
 <figure><img src="../../images/binary_search_tree.png" alt="Binary Search Tree (From Wikipedia)" width="25%"><figcaption>Binary Search Tree (<a href="https://en.wikipedia.org/wiki/Binary_search_tree">Wikipedia</a>)</figcaption></figure><p>Unlike hashing, search trees require characters in the document collection to be ordered. This works for the English language but some issues might arise in other languages.</p>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="../notes-on-information-retrieval-2/" rel="prev" title="How to process index tokens and optimize for fast information retrieval">Previous post</a>
+                <a href="../notes-on-information-retrieval-2/" rel="prev" title="Notes on IR: Processing tokens and optimize for fast retrieval">Previous post</a>
             </li>
             <li class="next">
-                <a href="../notes-on-information-retrieval-3/" rel="next" title="Ensuring tolerant retrieval in your search system">Next post</a>
+                <a href="../notes-on-information-retrieval-3/" rel="next" title="Notes on IR: Tolerant retrieval with text">Next post</a>
             </li>
         </ul></nav></aside></article></div>
 			<div class="footer">        <footer id="footer"><p>Contents © 2023         <a href="mailto:sebastianmont@duck.com">Sebastian Montero</a></p>
