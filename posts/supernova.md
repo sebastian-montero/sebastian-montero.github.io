@@ -11,45 +11,45 @@
 
 #### v1
 
-Ojos de supernova, alma estatica
-Mátame con tu voz eléctrica
-Déjame ciego con tu color especial
+Ojos de supernova, alma estatica  
+Mátame con tu voz eléctrica  
+Déjame ciego con tu color especial  
 Y vacío como tu calor espacial
 
-Deseo radiactivo
-Amor explosivo
-Oscuridad profunda
+Deseo radiactivo  
+Amor explosivo  
+Oscuridad profunda  
 En vos, estrellada
 
-Atracción cósmica
-Necesito espacio
-Cuando entro en tu orbita
+Atracción cósmica  
+Necesito espacio  
+Cuando entro en tu orbita  
 Y quemo despacio
 
-Solo el sol sabe saborear tu explosión
-Fusión e Ilusión
+Solo el sol sabe saborear tu explosión  
+Fusión e Ilusión  
 Todo para un romance de ficción
 
 #### v2
 
-Ojos de supernova, alma estatica
-Mátame con tu voz eléctrica
-Déjame ciego con tu color especial
+Ojos de supernova, alma estatica  
+Mátame con tu voz eléctrica  
+Déjame ciego con tu color especial  
 Y vacío sin tu calor espacial
 
-Oscuridad profunda
-En vos, estrellada
-Te veo desde lejos
+Oscuridad profunda  
+En vos, estrellada  
+Te veo desde lejos  
 En esta noche despejada
 
-Ojos de supernova, señal celestial
-Marco mi camino
+Ojos de supernova, señal celestial  
+Marco mi camino  
 Con mi deseo explosivo
 
-Tu gravedad me atrae
-Pero entro en tu órbita
+Tu gravedad me atrae  
+Pero entro en tu órbita  
 Y quemo despacio
 
-Ojos de supernova, alma ardiente
-Solo el sol sabe saborear tu explosión
+Ojos de supernova, alma ardiente  
+Solo el sol sabe saborear tu explosión  
 Todo para una fusión con fricción
