@@ -1,5 +1,5 @@
 <!--
-.. title: Notes on IR: Optimizing a dictionary structure for search
+.. title: #5 Optimizing a dictionary structure for search
 .. slug: notes-on-information-retrieval-3-dictionaries
 .. date: 2023-03-16 23:38:28 UTC
 .. tags: information retrieval, textbook, dictionary, search

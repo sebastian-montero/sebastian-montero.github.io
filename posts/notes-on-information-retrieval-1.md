@@ -1,5 +1,5 @@
 <!--
-.. title: Notes on IR: Boolean retrieval and inverse indexes
+.. title: #3 Boolean retrieval and inverse indexes
 .. slug: notes-on-information-retrieval-1
 .. date: 2023-03-14 23:20:00 UTC
 .. tags: information retrieval, textbook, boolean retrieval, inverse index,

@@ -388,10 +388,9 @@ article.post-text .entry-content .figure
 	display: inline-block;
 	padding: 5px 14px;
 	background-color: #fff;
-	border: 1px solid #ddd;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
-	border-radius: 15px;
+	border-radius: 10px;
 }
 
 .pager li > a:hover,
@@ -584,10 +583,10 @@ section h3 {
 .backlink + h3.title { margin-top: 0; }
 
 
-article.post-text h3.entry-title {margin: 0px; margin-top: 4%;}
+article.post-text h3.entry-title {margin: 0px; margin-top: 1%;}
 
 article.post-text h3.entry-title a,
-article.post-link h3.entry-title a { color: black; font-size: 130%;}
+article.post-link h3.entry-title a { color: black; font-size: 110%;}
 
 article.post-text h3.entry-title a:hover,
 article.post-text h3.entry-title a:focus { color: rgba(65, 105, 225, 1);  }

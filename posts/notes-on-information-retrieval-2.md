@@ -1,5 +1,5 @@
 <!--
-.. title: Notes on IR: Processing tokens and optimize for fast retrieval
+.. title: #4 Processing tokens and optimizing for fast retrieval
 .. slug: notes-on-information-retrieval-2
 .. date: 2023-03-16 17:18:00 UTC
 .. tags: information retrieval, textbook, tokens, index terms, postings list

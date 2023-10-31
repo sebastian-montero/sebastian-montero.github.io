@@ -1,7 +1,7 @@
 <!--
-.. title: Notes on IR: Compressing an index
+.. title: #8 Index compression
 .. slug: notes-on-information-retrieval-5
-.. date: 2023-07-29 20:56:00 UTC
+.. date: 2023-10-29 20:56:00 UTC
 .. tags: information retrieval, textbook, indexing, compression
 .. category: Notes on Information Retrieval
 .. link:
@@ -46,8 +46,6 @@ Now we will see different dictionary data structures that achieve high compressi
 
 The simplest data structure for a dictionary is using strings and sort the vocabulary lexicographically. We can store the dictionary in an array of string entries allocating ~20 bytes for each term, ~4 bytes for document frequency and ~4 bytes for the pointer to its postings list. In other words, we replace long terms with short identifiers which are more compact to encode and to handle.
 
-[TO FINISH BLOCKED STORAGE SECTION]
-
 ## Postings file compression
 
 Another way of compressing data is compressing the postings file directly. We can use a different and more efficient representation of the posting file that uses fewer than 20 bits per document and sort items per frequency. The idea of this approach is ensuring that the gaps between finding documents are the shortest they can be - frequent terms will have small gaps, while more disperse terms will have a fixed, predictable size. To ensure we can do this, we need to use `variable encoding` using bytewise compression and bitwise compression.
@@ -55,5 +53,3 @@ Another way of compressing data is compressing the postings file directly. We ca
 `Variable byte encoding` uses an integral number of bytes to encode a gap. The last 7 bits of the byte are used to encode part of the gap, the first bit is a continuation. Then the search code will know where terms stop or start. This process has a lot more detail in the [Variable byte code](https://nlp.stanford.edu/IR-book/html/htmledition/variable-byte-codes-1.html) section. This section goes into detail on why VB encoding is a god tradeoff between time and space.
 
 If disk space is a scare resource we can use better compression ratios by using bit-level encodings with `gamma` and `delta` codes.
-
-[TO FINISH GAMMA CODES]

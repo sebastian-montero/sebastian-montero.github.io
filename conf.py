@@ -19,8 +19,8 @@ import time
 BLOG_AUTHOR = "Sebastian Montero"  # (translatable)
 BLOG_TITLE = "SM"  # (translatable)
 SITE_URL = ""
-BLOG_EMAIL = "sebastianmont@duck.com"
-BLOG_DESCRIPTION = "My pod in the matrix."  # (translatable)
+BLOG_EMAIL = "me@sebastianmontero.com"
+BLOG_DESCRIPTION = "My space in the matrix."  # (translatable)
 
 #
 DEFAULT_LANG = "en"
@@ -59,11 +59,13 @@ NAVIGATION_LINKS = {
         ('/', 'about', ''),
         ('/posts/', 'blog', ''),
         ('/music/', 'music', ''),
+        ('/books/', 'books', ''),
         ('/categories/', 'tags', ''),
         ('/archive.html', 'archive', ''),
-        ('https://twitter.com/sebastianmxnt', '', 'fab fa-twitter'),
+        
         ('https://www.linkedin.com/in/sebastianmontero/', '', 'fab fa-linkedin'),
         ('https://github.com/sebastian-montero', '', 'fab fa-github'),
+        ('https://twitter.com/sebastianmxnt', '', 'fab fa-twitter'),
     )
 }
 

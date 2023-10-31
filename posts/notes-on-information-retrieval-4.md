@@ -1,5 +1,5 @@
 <!--
-.. title: Notes on IR: Building an inverted indexes and other types of indexes
+.. title: #7 Building an inverted indexes and other types of indexes
 .. slug: notes-on-information-retrieval-4
 .. date: 2023-07-29 20:56:00 UTC
 .. tags: information retrieval, textbook, indexing
