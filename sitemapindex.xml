@@ -14,6 +14,10 @@
   <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>/categories/cat_poetry.xml</loc>
+  <lastmod>2023-10-31T21:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>/categories/cat_programming.xml</loc>
   <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
@@ -54,6 +58,10 @@
   <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>/categories/poetry.xml</loc>
+  <lastmod>2023-10-31T21:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>/categories/postings-list.xml</loc>
   <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
@@ -87,10 +95,10 @@
  </sitemap>
  <sitemap>
   <loc>/rss.xml</loc>
-  <lastmod>2023-10-31T19:58:00Z</lastmod>
+  <lastmod>2023-10-31T21:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/sitemap.xml</loc>
-  <lastmod>2023-10-31T21:29:00Z</lastmod>
+  <lastmod>2023-10-31T21:40:00Z</lastmod>
  </sitemap>
 </sitemapindex>
