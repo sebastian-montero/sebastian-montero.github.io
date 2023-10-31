@@ -3,7 +3,7 @@
 .. slug: building-this-website
 .. date: 2023-03-13 16:09:57 UTC
 .. tags: meta, web development
-.. category:
+.. category: programming
 .. link:
 .. description:
 .. type: text

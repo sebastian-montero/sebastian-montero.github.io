@@ -3,7 +3,7 @@
 .. slug: learning-rust
 .. date: 2023-10-30 22:58:11 UTC
 .. tags: Rust
-.. category:
+.. category: programming
 .. link:
 .. description: Learning rust
 .. type: text

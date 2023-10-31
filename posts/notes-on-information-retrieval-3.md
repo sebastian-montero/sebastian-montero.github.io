@@ -3,7 +3,7 @@
 .. slug: notes-on-information-retrieval-3
 .. date: 2023-03-21 00:26:00 UTC
 .. tags: information retrieval, textbook, tolerant retrieval
-.. category: Notes on Information Retrieval
+.. category: information retrieval
 .. link:
 .. description: Creating a tolerant retrieval system that supports wildcards, errors and alternate spellings.
 .. type: text

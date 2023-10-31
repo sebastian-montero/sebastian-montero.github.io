@@ -3,7 +3,7 @@
 .. slug: notes-on-information-retrieval-4
 .. date: 2023-07-29 20:56:00 UTC
 .. tags: information retrieval, textbook, indexing
-.. category: Notes on Information Retrieval
+.. category: information retrieval
 .. link:
 .. description: Step-by-step walkthrough to create a searchable index.
 .. type: text

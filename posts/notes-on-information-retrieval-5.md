@@ -3,7 +3,7 @@
 .. slug: notes-on-information-retrieval-5
 .. date: 2023-10-29 20:56:00 UTC
 .. tags: information retrieval, textbook, indexing, compression
-.. category: Notes on Information Retrieval
+.. category: information retrieval
 .. link:
 .. description: Techniques for index compression.
 .. type: text

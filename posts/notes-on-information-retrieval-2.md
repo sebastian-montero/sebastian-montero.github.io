@@ -3,7 +3,7 @@
 .. slug: notes-on-information-retrieval-2
 .. date: 2023-03-16 17:18:00 UTC
 .. tags: information retrieval, textbook, tokens, index terms, postings list
-.. category: Notes on Information Retrieval
+.. category: information retrieval
 .. link:
 .. description: How to go from raw data sequences into index terms and optimizing the postings list data structure for faster retrieval.
 .. type: text
