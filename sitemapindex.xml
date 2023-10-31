@@ -18,8 +18,16 @@
   <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>/categories/cat_recipes.xml</loc>
+  <lastmod>2023-10-31T19:53:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>/categories/compression.xml</loc>
   <lastmod>2023-10-31T00:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/costa-rica.xml</loc>
+  <lastmod>2023-10-31T19:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/dictionary.xml</loc>
@@ -50,6 +58,10 @@
   <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>/categories/recipe.xml</loc>
+  <lastmod>2023-10-31T19:53:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>/categories/rust.xml</loc>
   <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
@@ -75,10 +87,10 @@
  </sitemap>
  <sitemap>
   <loc>/rss.xml</loc>
-  <lastmod>2023-10-31T00:57:00Z</lastmod>
+  <lastmod>2023-10-31T19:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/sitemap.xml</loc>
-  <lastmod>2023-10-31T09:39:00Z</lastmod>
+  <lastmod>2023-10-31T19:53:00Z</lastmod>
  </sitemap>
 </sitemapindex>
