@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="description" content="Learning rust">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getting Rusty 🦀 </title>
+<title>#9 Rust 🦀 </title>
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -16,7 +16,7 @@
 <link rel="canonical" href="posts/learning-rust/">
 <!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sebastian Montero">
 <meta property="og:site_name" content="SM">
-<meta property="og:title" content="Getting Rusty 🦀">
+<meta property="og:title" content="#9 Rust 🦀">
 <meta property="og:url" content="posts/learning-rust/">
 <meta property="og:description" content="Learning rust">
 <meta property="og:type" content="article">
@@ -63,6 +63,10 @@
                 <span class="menuitemtext">music</span>
                 <span class="menuitemicon"><i class=""></i></span>
             </a>    
+            <a class="active navbaritem" href="../../books/" title="books (active)">
+                <span class="menuitemtext">books</span>
+                <span class="menuitemicon"><i class=""></i></span>
+            </a>    
             <a class="active navbaritem" href="../../categories/" title="tags (active)">
                 <span class="menuitemtext">tags</span>
                 <span class="menuitemicon"><i class=""></i></span>
@@ -86,9 +90,6 @@
 
 
 
-            <a class="active navbaritem-social" href="https://twitter.com/sebastianmxnt" title=" (active)">
-            <span><i class="fab fa-twitter"></i></span>
-            </a>
 
             <a class="active navbaritem-social" href="https://www.linkedin.com/in/sebastianmontero/" title=" (active)">
             <span><i class="fab fa-linkedin"></i></span>
@@ -96,6 +97,10 @@
 
             <a class="active navbaritem-social" href="https://github.com/sebastian-montero" title=" (active)">
             <span><i class="fab fa-github"></i></span>
+            </a>
+
+            <a class="active navbaritem-social" href="https://twitter.com/sebastianmxnt" title=" (active)">
+            <span><i class="fab fa-twitter"></i></span>
             </a>
 
     
@@ -111,7 +116,7 @@
 			</a>
 		</div>
 
-	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Getting Rusty 🦀</a></h3>
+	</section><section class="page-content"><div class="content" rel="main"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h3 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">#9 Rust 🦀</a></h3>
 
         <div class="metadata">
             <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2023-10-30T22:58:11Z" itemprop="datePublished" title="2023-10-30 22:58">2023-10-30 22:58</time></a></p>
@@ -125,10 +130,10 @@
 
         </div>
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <p>I decided I want to learn <a href="https://www.rust-lang.org">Rust</a>.</p>
+    <p>I decided I want to learn <a href="https://www.rust-lang.org">Rust</a> 🦀.</p>
 <p>The programming language I am most familiar with is Python. As I work in the machine learning and data domain, it is normal that we use Python every day due to the large ecosystem that has been built for data processing and ML.</p>
 <p>However, after getting a lot of experience building data pipelines and learning how to structure code using OOP design patters from senior colleagues, I got interested in coding as an engineering practice, where software can be built using different components and pieces that can come together to build a large system.</p>
-<p>After this realization, O started researching into different languages like <a href="https://go.dev">Go</a>, <a href="https://www.scala-lang.org">Scala</a> and <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>, but they all appeared too have things I didn't like. I disliked the minimalist approach to Go, the verbosity of Java, and the small community of Scala. Java and Scala rely on the JVM; even though this is not a deal-breaker it does feel like they are bloated. Out of those three languages, Scala was honestly my favorite, specially because of the overlap with my professional work as a data-person; however it does feel like Scala is becoming less relevant and less talked about, specially as Python's ecosystem grows stronger.</p>
+<p>After this realization, I started researching into different languages like <a href="https://go.dev">Go</a>, <a href="https://www.scala-lang.org">Scala</a> and <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>, but they all appeared too have things I didn't like. I disliked the minimalist approach to Go, the verbosity of Java, and the small community of Scala. Java and Scala rely on the JVM; even though this is not a deal-breaker it does feel like they are bloated. Out of those three languages, Scala was honestly my favorite, specially because of the overlap with my professional work as a data-person; however it does feel like Scala is becoming less relevant and less talked about, specially as Python's ecosystem grows stronger.</p>
 <p>Enter Rust. Rust has everything that these other languages don't have or just does it better.</p>
 <ul>
 <li>Build tool: after my experience using Scala's SBT and Go's built in utils, I realized how useful a build tool is, and Rust's Cargo is an excellent example.</li>
@@ -142,10 +147,10 @@
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="../notes-on-information-retrieval-4/" rel="prev" title="Notes on IR: Building an inverted indexes and other types of indexes">Previous post</a>
+                <a href="../notes-on-information-retrieval-5/" rel="prev" title="#8 Index compression">Previous post</a>
             </li>
         </ul></nav></aside></article></div>
-			<div class="footer">        <footer id="footer"><p>Contents © 2023         <a href="mailto:sebastianmont@duck.com">Sebastian Montero</a></p>
+			<div class="footer">        <footer id="footer"><p>Contents © 2023         <a href="mailto:me@sebastianmontero.com">Sebastian Montero</a></p>
             
         </footer>
 </div>

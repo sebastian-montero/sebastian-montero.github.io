@@ -27,7 +27,7 @@ I created Waves in Garageband. It started off with a very simple chord progressi
 
 |
 
-Kafka
+On the shore
 '''''''''''''
 .. soundcloud:: 1467477916
     :width: 350

@@ -1,5 +1,5 @@
 <!--
-.. title: Notes on IR: Tolerant retrieval with text
+.. title: #6 Tolerant retrieval with text
 .. slug: notes-on-information-retrieval-3
 .. date: 2023-03-21 00:26:00 UTC
 .. tags: information retrieval, textbook, tolerant retrieval
