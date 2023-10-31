@@ -7,74 +7,82 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>/categories/boolean-retrieval.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>/categories/cat_information-retrieval.xml</loc>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/cat_notes-on-information-retrieval.xml</loc>
   <lastmod>2023-10-30T23:40:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>/categories/cat_programming.xml</loc>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>/categories/compression.xml</loc>
-  <lastmod>2023-10-30T23:40:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/dictionary.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/index-terms.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/indexing.xml</loc>
-  <lastmod>2023-10-30T23:40:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/information-retrieval.xml</loc>
-  <lastmod>2023-10-30T23:40:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/inverse-index.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/meta.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/postings-list.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/rust.xml</loc>
-  <lastmod>2023-10-30T23:40:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/search.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/textbook.xml</loc>
-  <lastmod>2023-10-30T23:40:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/tokens.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/tolerant-retrieval.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/web-development.xml</loc>
-  <lastmod>2023-10-30T23:37:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/rss.xml</loc>
-  <lastmod>2023-10-31T00:09:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/sitemap.xml</loc>
-  <lastmod>2023-10-31T00:09:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </sitemap>
 </sitemapindex>

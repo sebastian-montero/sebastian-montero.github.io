@@ -25,15 +25,23 @@
  </url>
  <url>
   <loc>/categories/</loc>
-  <lastmod>2023-10-30T23:29:00Z</lastmod>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/boolean-retrieval/</loc>
   <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
+  <loc>/categories/cat_information-retrieval/</loc>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
+ </url>
+ <url>
   <loc>/categories/cat_notes-on-information-retrieval/</loc>
   <lastmod>2023-07-29T20:53:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/categories/cat_programming/</loc>
+  <lastmod>2023-10-31T00:15:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/compression/</loc>
@@ -144,9 +152,5 @@
   <loc>/posts/notes-on-information-retrieval-5/</loc>
   <lastmod>2023-10-30T23:29:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-5/" />
- </url>
- <url>
-  <loc>/recipes/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
 </urlset>

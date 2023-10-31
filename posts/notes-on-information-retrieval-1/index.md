@@ -3,7 +3,7 @@
 .. slug: notes-on-information-retrieval-1
 .. date: 2023-03-14 23:20:00 UTC
 .. tags: information retrieval, textbook, boolean retrieval, inverse index,
-.. category: Notes on Information Retrieval
+.. category: information retrieval
 .. link:
 .. description: Introduction to information retrieval, boolean retrieval and inverse indexes.
 .. type: text
