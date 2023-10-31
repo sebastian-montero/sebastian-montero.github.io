@@ -114,7 +114,7 @@
  </url>
  <url>
   <loc>/posts/</loc>
-  <lastmod>2023-10-31T19:53:00Z</lastmod>
+  <lastmod>2023-10-31T20:00:00Z</lastmod>
  </url>
  <url>
   <loc>/posts/10-ml-research/</loc>
@@ -135,10 +135,6 @@
   <loc>/posts/hello-world/</loc>
   <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/hello-world/" />
- </url>
- <url>
-  <loc>/posts/index-1.html</loc>
-  <lastmod>2023-10-31T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>/posts/learning-rust/</loc>
