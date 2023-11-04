@@ -17,9 +17,21 @@ Music
 | All my tracks are currently hosted in `Soundcloud <https://soundcloud.com/sebastianmxnt>`_. 
 |
 
+
+
+Knives
+'''''''''''''
+Knives was built only using Ableton Note. For this track, I was experimenting with Note's drum and keyboard UIs and track composition. I really like the synth 'solo' near the end as it really changes the mood of the song. I want to further experiment on this musical idea by transferring the song to Ableton Cloud and make it available in Live.
+
+.. soundcloud:: 1656591795
+    :width: 350
+    :height: 100
+
+|
+
 Waves
 '''''''''''''
-I created Waves in Garageband. It started off with a very simple chord progression in the key of A minor. I then added a rhythm section with drums and baseline around it. From here I added a vintage synth called `Classic House Sequence` that adds some more musical texture to the song. For me, the cherry on top of this song is the addition of female vocals and a short guitar solo. These are called `Midnight Moves Vocal 01` and `Midnight Moves Lead Guitar`, respectively in Garageband. I think they add a lot of depth to the song. Waves has 5 versions where you can hear the evolution of the song all are posted in SoundCloud. The artwork is Gerhard Richter's Seascapes which also inspired the name of the song.
+I created Waves in Garageband. It started off with a very simple chord progression in the key of A minor. I then added a rhythm section with drums and baseline around it. From here I added a vintage synth called `Classic House Sequence` that adds some more musical texture to the song. Waves has 5 versions in Soundcloud where you can hear the evolution of the track. The artwork is Gerhard Richter's Seascapes which also inspired the name of the song.
 
 .. soundcloud:: 1532043145
     :width: 350
@@ -28,6 +40,8 @@ I created Waves in Garageband. It started off with a very simple chord progressi
 |
 
 On the shore
+
+On the shore / Kafka is named after the book Kafka on the Shore by Haruki Murakami. It gives me the feeling of wanderlusting (and maybe getting into trouble?) in unexplored cities with a chill and edgy vibe similar to the book's protagonist. 
 '''''''''''''
 .. soundcloud:: 1467477916
     :width: 350
@@ -36,6 +50,8 @@ On the shore
 |
 
 Winter
+
+Winter was one of my first tracks build with my Arturia Keystep-37. This track is purely a musical composition exercise of putting together different melodies and harmonies.
 '''''''''''''
 .. soundcloud:: 1467477628
     :width: 350
