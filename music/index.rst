@@ -41,7 +41,7 @@ I created Waves in Garageband. It started off with a very simple chord progressi
 
 On the shore
 '''''''''''''
-On the shore / Kafka is named after the book Kafka on the Shore by Haruki Murakami. It gives me the feeling of wanderlusting (and maybe getting into trouble?) in unexplored cities with a chill and edgy vibe similar to the book's protagonist. 
+On the shore is named after the book Kafka on the Shore by Haruki Murakami. It gives me the feeling of wanderlusting (and maybe getting into trouble?) in unexplored cities with a chill and edgy vibe similar to the book's protagonist. 
 
 .. soundcloud:: 1467477916
     :width: 350
