@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>/</loc>
-  <lastmod>2023-10-31T00:41:00Z</lastmod>
+  <lastmod>2023-11-12T20:14:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="index.html" />
  </url>
  <url>
@@ -16,7 +16,7 @@
  </url>
  <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-10-31T21:40:00Z</lastmod>
+  <lastmod>2023-11-12T21:00:00Z</lastmod>
  </url>
  <url>
   <loc>/books/</loc>
@@ -114,6 +114,11 @@
  <url>
   <loc>/categories/web-development/</loc>
   <lastmod>2023-07-29T20:53:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/meet/</loc>
+  <lastmod>2023-11-12T20:14:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="meet/" />
  </url>
  <url>
   <loc>/music/</loc>
