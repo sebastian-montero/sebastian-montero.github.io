@@ -17,9 +17,9 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Sebastian Montero"  # (translatable)
-BLOG_TITLE = "SM"  # (translatable)
+BLOG_TITLE = "Sebastian Montero"  # (translatable)
 SITE_URL = ""
-BLOG_EMAIL = "me@sebastianmontero.com"
+BLOG_EMAIL = ""
 BLOG_DESCRIPTION = "My space in the matrix."  # (translatable)
 
 #
@@ -57,15 +57,19 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ('/', 'about', ''),
+         ('/music/', 'music', ''),
         ('/posts/', 'blog', ''),
-        ('/music/', 'music', ''),
         ('/books/', 'books', ''),
-        ('/categories/', 'tags', ''),
-        ('/archive.html', 'archive', ''),
+        ('/meet/', 'chat', ''),
+        # ('/categories/', 'tags', ''),
+        
+        # ('/archive.html', 'archive', ''),
+        
         
         ('https://www.linkedin.com/in/sebastianmontero/', '', 'fab fa-linkedin'),
         ('https://github.com/sebastian-montero', '', 'fab fa-github'),
         ('https://twitter.com/sebastianmxnt', '', 'fab fa-twitter'),
+        ('/rss.xml', '', 'fa fa-rss'),
     )
 }
 
