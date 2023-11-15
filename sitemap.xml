@@ -16,7 +16,7 @@
  </url>
  <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-11-12T21:00:00Z</lastmod>
+  <lastmod>2023-11-15T18:35:00Z</lastmod>
  </url>
  <url>
   <loc>/books/</loc>
@@ -25,7 +25,7 @@
  </url>
  <url>
   <loc>/categories/</loc>
-  <lastmod>2023-10-31T21:40:00Z</lastmod>
+  <lastmod>2023-11-15T18:35:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/boolean-retrieval/</loc>
@@ -60,6 +60,10 @@
   <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
+  <loc>/categories/film/</loc>
+  <lastmod>2023-11-15T18:35:00Z</lastmod>
+ </url>
+ <url>
   <loc>/categories/index-terms/</loc>
   <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
@@ -80,6 +84,10 @@
   <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
+  <loc>/categories/moodflix/</loc>
+  <lastmod>2023-11-15T18:35:00Z</lastmod>
+ </url>
+ <url>
   <loc>/categories/poetry/</loc>
   <lastmod>2023-10-31T21:40:00Z</lastmod>
  </url>
@@ -90,6 +98,10 @@
  <url>
   <loc>/categories/recipe/</loc>
   <lastmod>2023-10-31T19:53:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/categories/recommednation-systems/</loc>
+  <lastmod>2023-11-15T18:35:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/rust/</loc>
@@ -127,7 +139,7 @@
  </url>
  <url>
   <loc>/posts/</loc>
-  <lastmod>2023-10-31T21:40:00Z</lastmod>
+  <lastmod>2023-11-15T18:35:00Z</lastmod>
  </url>
  <url>
   <loc>/posts/10-ml-research/</loc>
@@ -153,6 +165,11 @@
   <loc>/posts/learning-rust/</loc>
   <lastmod>2023-10-30T23:29:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/learning-rust/" />
+ </url>
+ <url>
+  <loc>/posts/moodflix/</loc>
+  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="posts/moodflix/" />
  </url>
  <url>
   <loc>/posts/notes-on-information-retrieval-1/</loc>

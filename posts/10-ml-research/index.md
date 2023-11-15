@@ -1,4 +1,3 @@
-
 <!--
 .. title: #10 ML Research & Other Papers
 .. slug: 10-ml-research
@@ -13,10 +12,11 @@
 This is a non-exhaustive list of paper I have read and papers I would like to read in the future.
 This is is a growing list and will be updated regularly. This page is automatically generated from my [Zotero](https://www.zotero.org/) library using a python script.
 <br />
-Last updated: __2023-10-31 00:57:02 UTC__
+Last updated: **2023-10-31 00:57:02 UTC**
 <br />
 
 ### To Read
+
 - [Off the Beaten Path: Let's Replace Term-Based Retrieval with k-NN Search](http://arxiv.org/abs/1610.10001) - Leonid Boytsov, David Novak, Yury Malkov, Eric Nyberg
 - [ANN-Benchmarks: A Benchmarking Tool for Approximate Nearest Neighbor Algorithms](http://arxiv.org/abs/1807.05614) - Martin Aumüller, Erik Bernhardsson, Alexander Faithfull
 - [Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs](http://arxiv.org/abs/1603.09320) - Yu A. Malkov, D. A. Yashunin
@@ -25,6 +25,7 @@ Last updated: __2023-10-31 00:57:02 UTC__
 - [Reducing the Dimensionality of Data with Neural Networks](http://www.jstor.org/stable/3846811) - G. E. Hinton, R. R. Salakhutdinov
 
 ### Interesting Papers
+
 - [Modeling Task Relationships in Multi-task Learning with Multi-gate Mixture-of-Experts](https://dl.acm.org/doi/10.1145/3219819.3220007) - Jiaqi Ma, Zhe Zhao, Xinyang Yi, Jilin Chen, Lichan Hong, Ed H. Chi
 - [SimClusters: Community-Based Representations for Heterogeneous Recommendations at Twitter](https://dl.acm.org/doi/10.1145/3394486.3403370) - Venu Satuluri, Yao Wu, Xun Zheng, Yilei Qian, Brian Wichers, Qieyun Dai, Gui Ming Tang, Jerry Jiang, Jimmy Lin
 - [Talent Search and Recommendation Systems at LinkedIn: Practical Challenges and Lessons Learned](http://arxiv.org/abs/1809.06481) - Sahin Cem Geyik, Qi Guo, Bo Hu, Cagri Ozcaglar, Ketan Thakkar, Xianren Wu, Krishnaram Kenthapadi
