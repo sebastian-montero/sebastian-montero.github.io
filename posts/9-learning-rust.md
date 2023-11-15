@@ -1,5 +1,5 @@
 <!--
-.. title: #9 Rust 🦀
+.. title: #9 Learning Rust (?)
 .. slug: learning-rust
 .. date: 2023-10-30 22:58:11 UTC
 .. tags: Rust
