@@ -19,7 +19,7 @@
  </sitemap>
  <sitemap>
   <loc>/categories/cat_programming.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2023-11-15T18:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/cat_recipes.xml</loc>
@@ -39,7 +39,7 @@
  </sitemap>
  <sitemap>
   <loc>/categories/film.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2023-11-15T18:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/index-terms.xml</loc>
@@ -63,7 +63,7 @@
  </sitemap>
  <sitemap>
   <loc>/categories/moodflix.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2023-11-15T18:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/poetry.xml</loc>
@@ -79,11 +79,11 @@
  </sitemap>
  <sitemap>
   <loc>/categories/recommednation-systems.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2023-11-15T18:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/rust.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2023-11-15T18:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/search.xml</loc>
@@ -107,10 +107,10 @@
  </sitemap>
  <sitemap>
   <loc>/rss.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2023-11-15T18:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/sitemap.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2023-11-16T00:18:00Z</lastmod>
  </sitemap>
 </sitemapindex>
