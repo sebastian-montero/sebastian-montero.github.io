@@ -11,7 +11,7 @@
 
 # Books
 
-My book library comes from [Goodreads](https://www.goodreads.com/user/show/158102790-sebastian). Feel free to add me as a friend!
+My book library comes from [Goodreads](https://www.goodreads.com/smxnt). Feel free to connect with me!
 <br />
 <br />
 
