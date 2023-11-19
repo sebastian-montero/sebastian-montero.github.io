@@ -60,16 +60,16 @@ NAVIGATION_LINKS = {
          ('/music/', 'music', ''),
         ('/posts/', 'blog', ''),
         ('/books/', 'books', ''),
+        # ('/socs/', 'links', ''),
         ('/meet/', 'chat', ''),
         # ('/categories/', 'tags', ''),
-        
         # ('/archive.html', 'archive', ''),
         
-        
-        ('https://www.linkedin.com/in/sebastianmontero/', '', 'fab fa-linkedin'),
-        ('https://github.com/sebastian-montero', '', 'fab fa-github'),
         ('https://twitter.com/sebastianmxnt', '', 'fab fa-twitter'),
-        ('/rss.xml', '', 'fa fa-rss'),
+        ('https://github.com/sebastian-montero', '', 'fab fa-github'),
+        ('https://www.linkedin.com/in/sebastianmontero/', '', 'fab fa-linkedin'),
+       
+        # ('/rss.xml', '', 'fa fa-rss'),
     )
 }
 
