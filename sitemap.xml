@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>/</loc>
-  <lastmod>2023-11-19T18:04:00Z</lastmod>
+  <lastmod>2023-11-19T18:29:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="index.html" />
  </url>
  <url>
@@ -15,8 +15,16 @@
   <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
+  <loc>/404.html</loc>
+  <lastmod>2023-11-19T18:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/404/</loc>
+  <lastmod>2023-11-19T18:22:00Z</lastmod>
+ </url>
+ <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-11-19T18:04:00Z</lastmod>
+  <lastmod>2023-12-15T21:13:00Z</lastmod>
  </url>
  <url>
   <loc>/books/</loc>
@@ -128,10 +136,6 @@
   <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
-  <loc>/links/</loc>
-  <lastmod>2023-11-19T17:52:00Z</lastmod>
- </url>
- <url>
   <loc>/meet/</loc>
   <lastmod>2023-11-12T20:14:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="meet/" />
@@ -211,7 +215,8 @@
   <xhtml:link rel="alternate" hreflang="en" href="posts/supernova/" />
  </url>
  <url>
-  <loc>/socs/</loc>
-  <lastmod>2023-11-19T17:53:00Z</lastmod>
+  <loc>/socials/</loc>
+  <lastmod>2023-11-19T18:12:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="socials/" />
  </url>
 </urlset>
