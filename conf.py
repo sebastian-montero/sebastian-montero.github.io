@@ -58,7 +58,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ('/', 'home', ''),
          ('/music/', 'music', ''),
-        ('/posts/', 'blog', ''),
+        # ('/posts/', 'blog', ''),
         ('/books/', 'books', ''),
         # ('/socs/', 'links', ''),
         ('/meet/', 'chat', ''),
