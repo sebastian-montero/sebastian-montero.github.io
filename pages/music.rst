@@ -42,6 +42,7 @@ I created Waves in Garageband. It started with a very simple chord progression i
 On the shore
 '''''''''''''
 I named On the Shore after the book Kafka on the Shore by Haruki Murakami. It gives me the feeling of wanderlust (and getting into trouble) in unexplored cities. I like the chill and edgy vibe of the song, similar to the book's protagonist.  
+
 .. soundcloud:: 1467477916
     :width: 350
     :height: 100
@@ -51,6 +52,7 @@ I named On the Shore after the book Kafka on the Shore by Haruki Murakami. It gi
 Winter
 '''''''''''''
 Winter was one of the first tracks wrote with my Arturia Keystep-37. This track is a musical composition exercise. All I tried in this track was putting together different melodies and harmonies.
+
 .. soundcloud:: 1467477628
     :width: 350
     :height: 100
