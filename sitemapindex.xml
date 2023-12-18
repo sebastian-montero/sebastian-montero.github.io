@@ -6,14 +6,6 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>/categories/boolean-retrieval.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/cat_information-retrieval.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>/categories/cat_poetry.xml</loc>
   <lastmod>2023-12-18T02:21:00Z</lastmod>
  </sitemap>
@@ -22,40 +14,8 @@
   <lastmod>2023-12-18T02:21:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>/categories/cat_recipes.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/compression.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/costa-rica.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/dictionary.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>/categories/film.xml</loc>
   <lastmod>2023-12-18T02:21:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/index-terms.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/indexing.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/information-retrieval.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/inverse-index.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/meta.xml</loc>
@@ -70,36 +30,12 @@
   <lastmod>2023-12-18T02:21:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>/categories/postings-list.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/recipe.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>/categories/recommednation-systems.xml</loc>
   <lastmod>2023-12-18T02:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/rust.xml</loc>
   <lastmod>2023-12-18T02:21:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/search.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/textbook.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/tokens.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>/categories/tolerant-retrieval.xml</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>/categories/web-development.xml</loc>
@@ -111,6 +47,6 @@
  </sitemap>
  <sitemap>
   <loc>/sitemap.xml</loc>
-  <lastmod>2023-12-18T02:21:00Z</lastmod>
+  <lastmod>2023-12-18T02:22:00Z</lastmod>
  </sitemap>
 </sitemapindex>

@@ -16,7 +16,7 @@
  </url>
  <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-12-18T02:21:00Z</lastmod>
+  <lastmod>2023-12-18T02:22:00Z</lastmod>
  </url>
  <url>
   <loc>/books/</loc>
@@ -25,15 +25,7 @@
  </url>
  <url>
   <loc>/categories/</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/boolean-retrieval/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/cat_information-retrieval/</loc>
-  <lastmod>2023-10-31T00:15:00Z</lastmod>
+  <lastmod>2023-12-18T02:21:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/cat_poetry/</loc>
@@ -44,40 +36,8 @@
   <lastmod>2023-10-31T00:15:00Z</lastmod>
  </url>
  <url>
-  <loc>/categories/cat_recipes/</loc>
-  <lastmod>2023-10-31T19:53:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/compression/</loc>
-  <lastmod>2023-10-30T23:29:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/costa-rica/</loc>
-  <lastmod>2023-10-31T19:53:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/dictionary/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
- </url>
- <url>
   <loc>/categories/film/</loc>
   <lastmod>2023-11-15T18:35:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/index-terms/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/indexing/</loc>
-  <lastmod>2023-07-29T20:55:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/information-retrieval/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/inverse-index/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/meta/</loc>
@@ -92,36 +52,12 @@
   <lastmod>2023-10-31T21:40:00Z</lastmod>
  </url>
  <url>
-  <loc>/categories/postings-list/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/recipe/</loc>
-  <lastmod>2023-10-31T19:53:00Z</lastmod>
- </url>
- <url>
   <loc>/categories/recommednation-systems/</loc>
   <lastmod>2023-11-15T18:35:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/rust/</loc>
   <lastmod>2023-10-30T23:29:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/search/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/textbook/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/tokens/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
- </url>
- <url>
-  <loc>/categories/tolerant-retrieval/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/web-development/</loc>
@@ -142,17 +78,9 @@
   <lastmod>2023-11-15T18:35:00Z</lastmod>
  </url>
  <url>
-  <loc>/posts/10-ml-research/</loc>
-  <lastmod>2023-10-31T00:52:00Z</lastmod>
- </url>
- <url>
   <loc>/posts/building-this-website/</loc>
   <lastmod>2023-07-29T20:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/building-this-website/" />
- </url>
- <url>
-  <loc>/posts/gallopinto-recipe/</loc>
-  <lastmod>2023-10-31T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>/posts/hello-world/</loc>
