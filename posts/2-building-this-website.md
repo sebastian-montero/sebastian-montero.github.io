@@ -9,14 +9,14 @@
 .. type: text
 -->
 
-This is going to be a bit of a meta post about how I built this website.
+This is going to be a meta post about how I built this website.
 
-My previous website was a one page static website that closely resembles the `about` section of this current website. At the time I was learning React and I wanted to to practice building a dynamic website that eventually could be a kind of website/web app hybrid. I initially hosted this in Firebase thinking that I could one day use other Firebase features to implement into this mystical and abstract web app I had in my mind. Of course this did not happen.
+My previous website was a one-page static site that resembled the `about` section of this site. When I built the previous version, I was learning React. I built it as an exercise for building dynamic websites that could become a website/web app hybrid. I used to host the old site in Firebase with the hopes of using other Firebase features down the line.
 
-Over time I just kept the website as it was until a few months ago, when I wanted to update the data in it. I had to recreate the repository, download the React and Firebase tool-kits, authenticate, etc. just to update the text of my, now outdated, site website. Something had to change, I just didn't know where to start.
+I kept the website as it was until a few months ago when I wanted to update the information on it on a new computer. At that moment, I stumbled across some development barriers. I had to clone the repository and download the React and Firebase toolkits to update my static text. After this process, I realised something had to change, but I didn't know where to start.
 
-Last week I came across [Nikola](https://getnikola.com/) and decided to spend the whole weekend installing, tweaking and setting this current site up. I quickly realized that a few hours of work go a long way - Nikola provides a great infrastructure to write blogs, create pages (that I used to share my music!), and a very easy deployment path relying on GitHub pages. The hours I spent setting this up are totally worth it.
+Last week I came across [Nikola](https://getnikola.com/) (a static website generator). After a quick read, I decided to spend a whole weekend learning Nikola and setting this site up. I realised that a few hours of work in Nikola goes a long way. With this tool, I had a great infrastructure to write blogs, create pages and deploy to GitHub Pages. The hours I spent setting this up were worth it.
 
-This type of work reminds me of [black triangles](https://rampantgames.com/blog/?p=7745), large infrastructure efforts that enable the creation of tools (and in this case content) for the future.
+This work reminds me of the [black triangles](https://rampantgames.com/blog/?p=7745) blog. This blog explains how large infrastructure efforts enable the creation of tools for the future. In my case, spending time setting this site up enables me to easily write and publish content.
 
-Thanks god I am not using my previous React monstrosity, now I am dealing with HTML templates and CSS - which even though doesn't make things better, it provides a great building ground for the things I wanted to do in the first place: a fast and easy way to write and share with the internet.
+Now, instead of using React files, I am dealing with simpler HTML templates. This set up provides a great building ground for my original goal: a fast and easy way to share content online.
