@@ -21,7 +21,7 @@ Music
 
 Knives
 '''''''''''''
-Knives was built only using Ableton Note. For this track, I was experimenting with Note's drum and keyboard UIs and track composition. I really like the synth 'solo' near the end as it really changes the mood of the song. I want to further experiment on this musical idea by transferring the song to Ableton Cloud and make it available in Live.
+I composed Knives using Ableton Note. For this track, I was experimenting with Note's UIs and track composition features. In this track, I like the synth 'solo' near the end as it changes the mood of the song. In the future, I want to further experiment with this track by transferring it to Ableton Cloud. This would allow me to keep editing in Ableton Live.
 
 .. soundcloud:: 1656591795
     :width: 350
@@ -31,7 +31,7 @@ Knives was built only using Ableton Note. For this track, I was experimenting wi
 
 Waves
 '''''''''''''
-I created Waves in Garageband. It started off with a very simple chord progression in the key of A minor. I then added a rhythm section with drums and baseline around it. From here I added a vintage synth called `Classic House Sequence` that adds some more musical texture to the song. Waves has 5 versions in Soundcloud where you can hear the evolution of the track. The artwork is Gerhard Richter's Seascapes which also inspired the name of the song.
+I created Waves in Garageband. It started with a very simple chord progression in the key of A minor. I then added a rhythm section with drums and a baseline around it. Later, I added a vintage synth called `Classic House Sequence`. This synth adds some more musical texture to the song. Waves has 5 versions on Soundcloud where you can hear the evolution of the track. The artwork is Gerhard Richter's Seascapes which also inspired the name of the song.
 
 .. soundcloud:: 1532043145
     :width: 350
@@ -41,8 +41,7 @@ I created Waves in Garageband. It started off with a very simple chord progressi
 
 On the shore
 '''''''''''''
-On the shore is named after the book Kafka on the Shore by Haruki Murakami. It gives me the feeling of wanderlusting (and maybe getting into trouble?) in unexplored cities with a chill and edgy vibe similar to the book's protagonist. 
-
+I named On the Shore after the book Kafka on the Shore by Haruki Murakami. It gives me the feeling of wanderlust (and getting into trouble) in unexplored cities. I like the chill and edgy vibe of the song, similar to the book's protagonist.  
 .. soundcloud:: 1467477916
     :width: 350
     :height: 100
@@ -51,8 +50,7 @@ On the shore is named after the book Kafka on the Shore by Haruki Murakami. It g
 
 Winter
 '''''''''''''
-Winter was one of my first tracks build with my Arturia Keystep-37. This track is purely a musical composition exercise of putting together different melodies and harmonies.
-
+Winter was one of the first tracks wrote with my Arturia Keystep-37. This track is a musical composition exercise. All I tried in this track was putting together different melodies and harmonies.
 .. soundcloud:: 1467477628
     :width: 350
     :height: 100
