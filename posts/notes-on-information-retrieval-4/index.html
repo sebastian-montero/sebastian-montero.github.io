@@ -161,14 +161,7 @@
 <p>Dynamic indexing comes in when the document collection changes over time and is not static. The previous examples work under the assumption that the document collection is static which work for collections that change infrequently or never. The fastest way to create a dynamic index is to periodically reconstruct the whole index from scratch if the changes over time are small and if the final use case accepts that limitation.</p>
 <p>An approach to having a dynamic index is to use an <code>auxiliary index</code> next to your main index. Queries are run on both indexes are results are merged. When the auxiliary index becomes too large we can merge it into the main index. The best way to merge indexes it to extend the postings list, however this is not always feasible for the end user.</p>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
-<li class="previous">
-                <a href="../notes-on-information-retrieval-3/" rel="prev" title="#6 Tolerant retrieval with text">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../notes-on-information-retrieval-5/" rel="next" title="#8 Index compression">Next post</a>
-            </li>
-        </ul></nav></aside></article></div>
+    <aside class="postpromonav"><nav></nav></aside></article></div>
 			<div class="footer">        <footer id="footer"><p>Contents © 2023         <a href="mailto:">Sebastian Montero</a></p>
             
         </footer>

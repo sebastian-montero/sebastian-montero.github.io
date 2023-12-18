@@ -7,6 +7,7 @@
 .. link:
 .. description: How to go from raw data sequences into index terms and optimizing the postings list data structure for faster retrieval.
 .. type: text
+.. status: private
 -->
 
 > This is a blog series on Information Retrieval covering the first chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers **Chapter 2: The term vocabulary and postings lists**.

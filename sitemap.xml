@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>/</loc>
-  <lastmod>2023-11-19T18:29:00Z</lastmod>
+  <lastmod>2023-12-15T21:13:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="index.html" />
  </url>
  <url>
@@ -15,16 +15,8 @@
   <lastmod>2023-07-29T20:53:00Z</lastmod>
  </url>
  <url>
-  <loc>/404.html</loc>
-  <lastmod>2023-11-19T18:30:00Z</lastmod>
- </url>
- <url>
-  <loc>/404/</loc>
-  <lastmod>2023-11-19T18:22:00Z</lastmod>
- </url>
- <url>
   <loc>/archive.html</loc>
-  <lastmod>2023-12-15T21:13:00Z</lastmod>
+  <lastmod>2023-12-18T02:21:00Z</lastmod>
  </url>
  <url>
   <loc>/books/</loc>
@@ -152,7 +144,6 @@
  <url>
   <loc>/posts/10-ml-research/</loc>
   <lastmod>2023-10-31T00:52:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/10-ml-research/" />
  </url>
  <url>
   <loc>/posts/building-this-website/</loc>
@@ -162,7 +153,6 @@
  <url>
   <loc>/posts/gallopinto-recipe/</loc>
   <lastmod>2023-10-31T19:53:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/gallopinto-recipe/" />
  </url>
  <url>
   <loc>/posts/hello-world/</loc>
@@ -178,36 +168,6 @@
   <loc>/posts/moodflix/</loc>
   <lastmod>2023-11-15T18:35:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/moodflix/" />
- </url>
- <url>
-  <loc>/posts/notes-on-information-retrieval-1/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-1/" />
- </url>
- <url>
-  <loc>/posts/notes-on-information-retrieval-2/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-2/" />
- </url>
- <url>
-  <loc>/posts/notes-on-information-retrieval-3-dictionaries/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-3-dictionaries/" />
- </url>
- <url>
-  <loc>/posts/notes-on-information-retrieval-3/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-3/" />
- </url>
- <url>
-  <loc>/posts/notes-on-information-retrieval-4/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-4/" />
- </url>
- <url>
-  <loc>/posts/notes-on-information-retrieval-5/</loc>
-  <lastmod>2023-10-30T23:29:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="posts/notes-on-information-retrieval-5/" />
  </url>
  <url>
   <loc>/posts/supernova/</loc>

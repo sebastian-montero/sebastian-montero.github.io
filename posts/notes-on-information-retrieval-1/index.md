@@ -7,9 +7,10 @@
 .. link:
 .. description: Introduction to information retrieval, boolean retrieval and inverse indexes.
 .. type: text
+.. status: private
 -->
 
-> This is a blog series on Information Retrieval covering the first chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html). This post covers **Chapter 1: Boolean retrieval**.
+> This is a blog series on Information Retrieval. It covers the chapters of the textbook [Introduction to Information Retrieval](https://nlp.stanford.edu/IR-book/information-retrieval-book.html) book. This post covers Chapter 1: Boolean retrieval.
 
 <br />
 ## What is Information Retrieval?

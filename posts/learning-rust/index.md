@@ -9,23 +9,26 @@
 .. type: text
 -->
 
-I decided I want to learn [Rust](https://www.rust-lang.org) 🦀.
+I decided to try [Rust](https://www.rust-lang.org) 🦀.
 
-The programming language I am most familiar with is Python. As I work in the machine learning and data domain, it is normal that we use Python every day due to the large ecosystem that has been built for data processing and ML.
+Currently, the programming language I am most familiar with is Python. Due to my career, getting good at Python became second nature as it has a great ecosystem for data and ML.
 
-However, after getting a lot of experience building data pipelines and learning how to structure code using OOP design patters from senior colleagues, I got interested in coding as an engineering practice, where software can be built using different components and pieces that can come together to build a large system.
+A few months ago I got involved in a data engineering-heavy project. As part of this project, I had to learn OOP design patterns. This got me interested in improving my engineering practices to build large systems.
 
-After this realization, I started researching into different languages like [Go](https://go.dev), [Scala](https://www.scala-lang.org) and [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>), but they all appeared too have things I didn't like. I disliked the minimalist approach to Go, the verbosity of Java, and the small community of Scala. Java and Scala rely on the JVM; even though this is not a deal-breaker it does feel like they are bloated. Out of those three languages, Scala was honestly my favorite, specially because of the overlap with my professional work as a data-person; however it does feel like Scala is becoming less relevant and less talked about, specially as Python's ecosystem grows stronger.
+Even though Python is great, other languages have a stronger focus on performance. This led me to research Go, Java and Scala. Looking into these languages there were a few things that I disliked from each. I disliked the minimalist approach to writing Go code, the verbosity of Java, and the small community of Scala. Out of these three languages, I preferred Scala. In the data industry, Scala is extensively used. Yet, it does feel that the language is becoming more irrelevant as Python grows stronger.
 
-Enter Rust. Rust has everything that these other languages don't have or just does it better.
+Enter Rust. For me, it feels like Rust has everything these other languages but better.
 
-- Build tool: after my experience using Scala's SBT and Go's built in utils, I realized how useful a build tool is, and Rust's Cargo is an excellent example.
-- Compiled: Rust is statically typed and complies to binary
+- Build tool: After my experience using Scala's SBT and Go's built-in toolkit, I realized how useful a build tool is. Rust ships with Cargo, which is a prime example of a modern and easy-to-use build tool.
+
+- Compiled: Rust is statically typed and complies to binary.
+
 - Community: Rust's message is all about being welcome and empowering new users
-- Lightweight: Rust is easy to install. Cargo provides all of the requirements to create a project, test, format, compile your code and more.
 
-Even though I don't see Rust replacing Python in my day to day, I do see it as a language for personal software projects that don't involve ML.
+- Lightweight: Rust is easy to install. Cargo provides all the requirements to create, test, format, and compile your project.
 
-I have started working on small project and courses to understand how Rust works. The first project I built is [gpwd](https://github.com/sebastian-montero/gpwd), a lightweight CLI password generator - nothing fancy.
+Rust will not replace Python in my daily workflow. However, I do see it as a language for personal software projects that don't involve ML.
 
-My goal now is to create a ML library built on Rust that is blazing fast and has Python bindings. I am inclined to implement one of the vector search algorithms such as [HNSW](https://arxiv.org/abs/1603.09320), but I'll se how this turns out.
+Recently. have started working on small projects and courses to understand how Rust works. The first project I built was [gpwd](https://github.com/sebastian-montero/gpwd), a lightweight CLI password generator. This is nothing fancy but a nice intro to writing Rust.
+
+My dream case scenario of learning Rust is to build an ML library to solve developer problems. Rust would allow me to build a blazing-fast tool with Python bindings to help the ML community.

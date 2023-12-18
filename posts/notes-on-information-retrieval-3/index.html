@@ -154,14 +154,7 @@
 <p>In a retrieval system, we might want to first look into isolated-term correction if it identifies an issue with the query, but if there are a small number of documents returned without a any correction or after isolated-term corrections, we might want the system to do context-sensitive correction. To do this we need to provide alternative spellings for all the terms being searched and try to substitute them in the query. This operation can be computationally expensive so we could use simple heuristics like looking at the most frequent alternative spelling only or look at bi-word statistics and find what words are usually used together.</p>
 <p>Another form of correction is the phonetic corrections. This type of correction requires a specialized index and which considers how terms sound. To build a phonetic search index, we need to create a <code>phonetic hash</code> that map similar word sounds to the same hash. Phonetic hashing is collectively known as <strong>soundex</strong> algorithms. At the most basic level a soundex algorithm will turn every indexable term into a hash form and build a soundex index from that, then do the same for query terms and finally use the soundex index to see if there is a match to the soundex query. Even though we are not going too much in the detail of soundex algorithms, they work very well, specially with names. A caveat of this indexes, however, is that they are alphabet dependent.</p>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
-<li class="previous">
-                <a href="../notes-on-information-retrieval-3-dictionaries/" rel="prev" title="#5 Optimizing a dictionary structure for search">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../notes-on-information-retrieval-4/" rel="next" title="#7 Building an inverted indexes and other types of indexes">Next post</a>
-            </li>
-        </ul></nav></aside></article></div>
+    <aside class="postpromonav"><nav></nav></aside></article></div>
 			<div class="footer">        <footer id="footer"><p>Contents © 2023         <a href="mailto:">Sebastian Montero</a></p>
             
         </footer>

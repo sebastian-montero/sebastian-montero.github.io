@@ -1,5 +1,5 @@
 <!--
-.. title: #12 Supernova (Poema)
+.. title: #10 Supernova (Poema)
 .. slug: supernova
 .. date: 2023-10-31 21:39:31 UTC
 .. tags: poetry
