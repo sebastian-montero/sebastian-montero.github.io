@@ -56,11 +56,11 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ('/', 'home', ''),
-        #  ('/music/', 'music', ''),
-        # ('/posts/', 'blog', ''),
+        ('/', '', ''),
+        #  ('/music/', 'sounds', ''),
+        # ('/posts/', 'words', ''),
         # ('/books/', 'books', ''),
-        # ('/meet/', 'chat', ''),
+        # ('/meet/', 'meet', ''),
 
          # ('/socs/', 'links', ''),
 
