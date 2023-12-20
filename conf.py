@@ -57,11 +57,13 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ('/', 'home', ''),
-         ('/music/', 'music', ''),
-        ('/posts/', 'blog', ''),
-        ('/books/', 'books', ''),
-        # ('/socs/', 'links', ''),
-        ('/meet/', 'chat', ''),
+        #  ('/music/', 'music', ''),
+        # ('/posts/', 'blog', ''),
+        # ('/books/', 'books', ''),
+        # ('/meet/', 'chat', ''),
+
+         # ('/socs/', 'links', ''),
+
         # ('/categories/', 'tags', ''),
         # ('/archive.html', 'archive', ''),
         
