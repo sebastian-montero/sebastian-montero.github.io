@@ -56,22 +56,17 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ('/', '', ''),
-        #  ('/music/', 'sounds', ''),
-        # ('/posts/', 'words', ''),
-        # ('/books/', 'books', ''),
-        # ('/meet/', 'meet', ''),
-
-         # ('/socs/', 'links', ''),
-
+        ('/', 'about', ''),
+         ('/music/', 'music', ''),
+        ('/posts/', 'posts', ''),
+        ('https://www.goodreads.com/smxnt/', 'books', ''),
+        ('/meet/', 'chat', ''),
         # ('/categories/', 'tags', ''),
-        # ('/archive.html', 'archive', ''),
         
         ('https://twitter.com/sebastianmxnt', '', 'fab fa-twitter'),
         ('https://github.com/sebastian-montero', '', 'fab fa-github'),
         ('https://www.linkedin.com/in/sebastianmontero/', '', 'fab fa-linkedin'),
-       
-        # ('/rss.xml', '', 'fa fa-rss'),
+        ('/rss.xml', '', 'fa fa-rss'),
     )
 }
 
