@@ -1,5 +1,5 @@
 <!--
-.. title: #2 How did I build this website?
+.. title: How did I build this website?
 .. slug: building-this-website
 .. date: 2023-03-13 16:09:57 UTC
 .. tags: meta, web development

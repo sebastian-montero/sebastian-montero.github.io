@@ -1,5 +1,5 @@
 <!--
-.. title: #10 Supernova (Poema)
+.. title: Supernova
 .. slug: supernova
 .. date: 2023-10-31 21:39:31 UTC
 .. tags: poetry
@@ -9,7 +9,7 @@
 .. type: text
 -->
 
-#### v1
+#### 1
 
 Ojos de supernova, alma estatica  
 Mátame con tu voz eléctrica  
@@ -30,7 +30,7 @@ Solo el sol sabe saborear tu explosión
 Fusión e Ilusión  
 Todo para un romance de ficción
 
-#### v2
+#### 2
 
 Ojos de supernova, alma estatica  
 Mátame con tu voz eléctrica  
