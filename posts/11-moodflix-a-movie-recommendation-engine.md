@@ -1,5 +1,5 @@
 <!--
-.. title: #11 Moodflix, a movie recommendation engine
+.. title: Moodflix, a movie recommendation engine
 .. slug: moodflix
 .. date: 2023-11-15 18:29:35 UTC
 .. tags: film, moodflix, recommednation systems
