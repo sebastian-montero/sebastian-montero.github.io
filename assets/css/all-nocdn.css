@@ -38,18 +38,22 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-  font-size: 1.5em;
-  margin: 0em 0;
-  color: black
+
+
+
+@media all and (min-width: 1300px) {
+  h1, p, ul {
+    color: black;
+    font-size: 0.8em;
+    margin-right: 45%;
+  }
 }
-h2 {
-  margin: 0em 0;
-  color: black
-}
-p {
-  margin: 0em 0;
-  color: black
+
+@media all {
+  h1, p, ul {
+    color: black;
+    font-size: 0.8em;
+  }
 }
 
 /* Grouping content
@@ -1342,7 +1346,7 @@ sub,
 sup
 {
 	position: relative;
-	font-size: 60%;
+	font-size: 50%;
 	line-height: 0;
 	vertical-align: baseline;
 }
@@ -1882,7 +1886,7 @@ section h3 {
 }
 
 .tagindex h2 {
-	color: black; font-size: 140%
+	color: black; font-size: 100%
 }
 
 .backlink { margin-top: 6px; }
