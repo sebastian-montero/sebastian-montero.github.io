@@ -7,104 +7,106 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>/</loc>
-  <lastmod>2023-12-15T21:13:00Z</lastmod>
+  <lastmod>2024-03-27T23:47:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="index.html" />
  </url>
  <url>
   <loc>/2023/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/archive.html</loc>
-  <lastmod>2024-02-07T14:41:00Z</lastmod>
+  <lastmod>2024-03-27T23:43:00Z</lastmod>
  </url>
  <url>
   <loc>/books/</loc>
-  <lastmod>2023-10-30T23:44:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="books/" />
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/</loc>
-  <lastmod>2023-12-18T02:21:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/cat_poetry/</loc>
-  <lastmod>2023-10-31T21:40:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/cat_programming/</loc>
-  <lastmod>2023-10-31T00:15:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/film/</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/meta/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/moodflix/</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/poetry/</loc>
-  <lastmod>2023-10-31T21:40:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/recommednation-systems/</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/rust/</loc>
-  <lastmod>2023-10-30T23:29:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/categories/web-development/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>/dep_home/</loc>
+  <lastmod>2024-03-27T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>/meet/</loc>
-  <lastmod>2023-11-12T20:14:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="meet/" />
  </url>
  <url>
   <loc>/music/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="music/" />
  </url>
  <url>
   <loc>/posts/</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
  <url>
   <loc>/posts/building-this-website/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/building-this-website/" />
  </url>
  <url>
   <loc>/posts/hello-world/</loc>
-  <lastmod>2023-07-29T20:53:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/hello-world/" />
  </url>
  <url>
   <loc>/posts/learning-rust/</loc>
-  <lastmod>2023-10-30T23:29:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/learning-rust/" />
  </url>
  <url>
   <loc>/posts/moodflix/</loc>
-  <lastmod>2023-11-15T18:35:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/moodflix/" />
  </url>
  <url>
   <loc>/posts/supernova/</loc>
-  <lastmod>2023-10-31T21:40:00Z</lastmod>
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="posts/supernova/" />
  </url>
  <url>
   <loc>/socials/</loc>
-  <lastmod>2023-11-19T18:12:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="socials/" />
+  <lastmod>2024-03-27T23:40:00Z</lastmod>
  </url>
 </urlset>
