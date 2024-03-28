@@ -33,7 +33,7 @@ sub,
 sup
 {
 	position: relative;
-	font-size: 60%;
+	font-size: 50%;
 	line-height: 0;
 	vertical-align: baseline;
 }
@@ -573,7 +573,7 @@ section h3 {
 }
 
 .tagindex h2 {
-	color: black; font-size: 140%
+	color: black; font-size: 100%
 }
 
 .backlink { margin-top: 6px; }
