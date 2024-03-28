@@ -1,4 +1,4 @@
-#!/Users/sebastianmontero/Desktop/website-v2/.venv/bin/python3.11
+#!/Users/sebastian.montero/personal/sebastian-montero.github.io/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -1,4 +1,4 @@
-#!/Users/sebastianmontero/Desktop/website-v2/.venv/bin/python3.11
+#!/Users/sebastian.montero/personal/sebastian-montero.github.io/.venv/bin/python
 
 # Author:
 # Contact: grubert@users.sf.net
@@ -15,7 +15,7 @@ man page writer to output from ReStructuredText source.
 import locale
 try:
     locale.setlocale(locale.LC_ALL, '')
-except:
+except Exception:
     pass
 
 from docutils.core import publish_cmdline, default_description

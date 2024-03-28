@@ -1,6 +1,6 @@
-#!/Users/sebastianmontero/Desktop/website-v2/.venv/bin/python3.11
+#!/Users/sebastian.montero/personal/sebastian-montero.github.io/.venv/bin/python
 
-# $Id: rst2latex.py 8956 2022-01-20 10:11:44Z milde $
+# $Id: rst2latex.py 9115 2022-07-28 17:06:24Z milde $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -11,7 +11,7 @@ A minimal front end to the Docutils Publisher, producing LaTeX.
 try:
     import locale
     locale.setlocale(locale.LC_ALL, '')
-except:
+except Exception:
     pass
 
 from docutils.core import publish_cmdline

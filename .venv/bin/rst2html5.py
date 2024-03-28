@@ -1,4 +1,4 @@
-#!/Users/sebastianmontero/Desktop/website-v2/.venv/bin/python3.11
+#!/Users/sebastian.montero/personal/sebastian-montero.github.io/.venv/bin/python
 # :Copyright: © 2015 Günter Milde.
 # :License: Released under the terms of the `2-Clause BSD license`_, in short:
 #
