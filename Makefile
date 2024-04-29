@@ -16,6 +16,8 @@ run:
 fmt:
 	goimports -w ./cmd
 	gofmt -w ./cmd
+	goimports -w ./pkg
+	gofmt -w ./pkg
 
 lint:
 	staticcheck ./cmd

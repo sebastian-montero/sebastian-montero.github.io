@@ -2,15 +2,14 @@ package template
 
 import (
 	"bytes"
-	"flag"
 	"fmt"
-	"github.com/russross/blackfriday/v2"
 	"html/template"
-	"io/ioutil"
 	"os"
+
+	"github.com/sebastian-montero/ssg/pkg/page"
 )
 
-func applyTemplate(page PageType, tmplPath string) string {
+func ApplyTemplate(page page.PageType, tmplPath string) string {
 	tmpl, err := template.ParseFiles(tmplPath)
 	if err != nil {
 		fmt.Println("Error parsing template", err)
@@ -25,4 +24,3 @@ func applyTemplate(page PageType, tmplPath string) string {
 
 	return out.String()
 }
-

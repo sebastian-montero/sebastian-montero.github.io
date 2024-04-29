@@ -5,6 +5,10 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+
+	"github.com/sebastian-montero/ssg/pkg/markdown"
+	"github.com/sebastian-montero/ssg/pkg/page"
+	"github.com/sebastian-montero/ssg/pkg/template"
 )
 
 func saveHTML(content string, filename string) error {
@@ -30,9 +34,9 @@ func main() {
 		os.Exit(1)
 	}
 
-	var markdownBytes []byte = markdown.loadMarkdownFromFile(*markdownPath)
-	var htmlStr string = markdown.markdownToHTML(markdownBytes)
-	var page PageType = page.buildPageStruct(*title, htmlStr)
-	var outStr string = template.applyTemplate(page, *tmplPath)
+	var markdownBytes []byte = markdown.LoadMarkdownFromFile(*markdownPath)
+	var htmlStr string = markdown.MarkdownToHTML(markdownBytes)
+	var page page.PageType = page.BuildPageStruct(*title, htmlStr)
+	var outStr string = template.ApplyTemplate(page, *tmplPath)
 	saveHTML(outStr, *outPath)
 }
