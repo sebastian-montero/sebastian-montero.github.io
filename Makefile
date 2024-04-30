@@ -11,10 +11,10 @@ clean:
 	rm -rf bin/*
 
 run:
-	go run cmd/main.go -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "My Page"
+	go run cmd/main.go -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "SM"
 
 exec:
-	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "My Page"
+	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "SM"
 
 fmt:
 	goimports -w ./cmd
