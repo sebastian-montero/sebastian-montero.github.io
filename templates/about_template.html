@@ -4,69 +4,69 @@
     <title>{{.Title}}</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <style> 
-    body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.3;
-}
-a {
-    font-weight: bold; /* Makes the text bold */
-    text-decoration: none; /* Removes underline */
-}
-a:hover {
-    color: rebeccapurple; /* Light blue color */
-}
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding: 10px 0; /* Uniform padding */
-    align-items: center; /* Center items vertically */
-}
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    margin: 15px; /* Reduced margin for smaller screens */
-}
-.content {
-    margin-top: 30px;
-    padding: 2%;
-    width: 100%;
-    box-sizing: border-box;
-}
-@media (min-width: 768px) {
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100px;
+        body, html {
+        margin: 0;
+        padding: 0;
         height: 100%;
-        flex-direction: column;
-        align-items: flex-end;  /* Align items to the right */
-        padding: 20px;
-        justify-content: flex-start;  /* Align items to the top */
-        padding-top: 100px;
-    }
-    .sidebar a {
-        margin: 20px 0;
-        font-size: 20px; /* Maintain font size or adjust as necessary */
-    }
-    .content {
-        margin-left: 150px;  /* Sidebar width */
-        margin-top: 0;  /* Reset top margin */
-        width: 65%; /* Adjust content width */
-        padding: 10px; /* Larger padding */
-    }
-}
+        font-family: 'Arial', sans-serif;
+        line-height: 1.3;
+        }
+        a {
+            font-weight: bold; /* Makes the text bold */
+            text-decoration: none; /* Removes underline */
+        }
+        a:hover {
+            color: rebeccapurple; /* Light blue color */
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding: 10px 0; /* Uniform padding */
+            align-items: center; /* Center items vertically */
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 15px; /* Reduced margin for smaller screens */
+        }
+        .content {
+            margin-top: 30px;
+            padding: 2%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100%;
+                flex-direction: column;
+                align-items: flex-end;  /* Align items to the right */
+                padding: 20px;
+                justify-content: flex-start;  /* Align items to the top */
+                padding-top: 100px;
+            }
+            .sidebar a {
+                margin: 20px 0;
+                font-size: 20px; /* Maintain font size or adjust as necessary */
+            }
+            .content {
+                margin-left: 150px;  /* Sidebar width */
+                margin-top: 0;  /* Reset top margin */
+                width: 65%; /* Adjust content width */
+                padding: 10px; /* Larger padding */
+            }
+        }
     </style>
 </head>
 <body>
