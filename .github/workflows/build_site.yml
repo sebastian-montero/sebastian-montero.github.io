@@ -13,5 +13,5 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v2-beta
     - name: build 
-      run: make
+      run: make build-site
       

@@ -2,6 +2,13 @@
 
 all: build exec
 
+build-site:
+	@echo "Building site..."
+	mkdir -p bin
+	go build -o bin/ssg cmd/main.go
+	mkdir -p public
+	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "SM"
+
 build:
 	@echo "Building..."
 	mkdir -p bin
