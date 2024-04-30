@@ -13,6 +13,9 @@ clean:
 run:
 	go run cmd/main.go -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "My Page"
 
+exec:
+	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "My Page"
+
 fmt:
 	goimports -w ./cmd
 	gofmt -w ./cmd

@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
 
 	"github.com/sebastian-montero/ssg/pkg/page"
@@ -14,7 +13,7 @@ import (
 func saveHTML(content string, filename string) error {
 	data := []byte(content)
 
-	err := ioutil.WriteFile(filename, data, 0644) // 0644 provides read/write permissions for owner and read for others
+	err := os.WriteFile(filename, data, 0644) // 0644 provides read/write permissions for owner and read for others
 	if err != nil {
 		fmt.Println("Error saving HTML file", err)
 		os.Exit(1)

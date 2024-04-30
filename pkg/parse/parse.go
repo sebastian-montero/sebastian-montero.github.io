@@ -2,7 +2,6 @@ package parse
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"regexp"
 	"strings"
@@ -11,7 +10,7 @@ import (
 )
 
 func LoadMarkdownFromFile(filePath string) []byte {
-	content, err := ioutil.ReadFile(filePath)
+	content, err := os.ReadFile(filePath)
 	if err != nil {
 		fmt.Println("Error loading markdown file", err)
 		os.Exit(1)
