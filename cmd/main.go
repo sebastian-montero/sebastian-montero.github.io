@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/sebastian-montero/ssg/pkg/markdown"
 	"github.com/sebastian-montero/ssg/pkg/page"
+	"github.com/sebastian-montero/ssg/pkg/parse"
 	"github.com/sebastian-montero/ssg/pkg/template"
 )
 
@@ -34,9 +34,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	var markdownBytes []byte = markdown.LoadMarkdownFromFile(*markdownPath)
-	var htmlStr string = markdown.MarkdownToHTML(markdownBytes)
-	var page page.PageType = page.BuildPageStruct(*title, htmlStr)
+	var markdownBytes []byte = parse.LoadMarkdownFromFile(*markdownPath)
+	var htmlStr string = parse.MarkdownToHTML(markdownBytes)
+	var sidebarStr string = parse.ParseSidebar(htmlStr)
+
+	var page page.PageType = page.BuildPageStruct(*title, htmlStr, sidebarStr)
 	var outStr string = template.ApplyTemplate(page, *tmplPath)
 	saveHTML(outStr, *outPath)
 }

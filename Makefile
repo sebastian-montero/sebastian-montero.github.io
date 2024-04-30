@@ -11,7 +11,7 @@ clean:
 	rm -rf bin/*
 
 run:
-	go run cmd/main.go -md ./content/page.md -tmpl ./templates/template.html -out ./public/index.html -title "My Page"
+	go run cmd/main.go -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "My Page"
 
 fmt:
 	goimports -w ./cmd
