@@ -1,72 +1,73 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 <head>
     <title>SM</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <style> 
-    body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.3;
-}
-a {
-    font-weight: bold;  
-    text-decoration: none;  
-}
-a:hover {
-    color: rebeccapurple;  
-}
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding: 10px 0;  
-    align-items: center;  
-}
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    margin: 15px;  
-}
-.content {
-    margin-top: 30px;
-    padding: 2%;
-    width: 100%;
-    box-sizing: border-box;
-}
-@media (min-width: 768px) {
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100px;
+        body, html {
+        margin: 0;
+        padding: 0;
         height: 100%;
-        flex-direction: column;
-        align-items: flex-end;   
-        padding: 20px;
-        justify-content: flex-start;   
-        padding-top: 100px;
-    }
-    .sidebar a {
-        margin: 20px 0;
-        font-size: 20px;  
-    }
-    .content {
-        margin-left: 150px;   
-        margin-top: 0;   
-        width: 65%;  
-        padding: 10px;  
-    }
-}
+        font-family: 'Arial', sans-serif;
+        line-height: 1.3;
+        }
+        a {
+            font-weight: bold;  
+            text-decoration: none;  
+        }
+        a:hover {
+            color: rebeccapurple;  
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding: 10px 0;  
+            align-items: center;  
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 15px;  
+        }
+        .content {
+            margin-top: 30px;
+            padding: 2%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100%;
+                flex-direction: column;
+                align-items: flex-end;   
+                padding: 20px;
+                justify-content: flex-start;   
+                padding-top: 100px;
+            }
+            .sidebar a {
+                margin: 20px 0;
+                font-size: 20px;  
+            }
+            .content {
+                margin-left: 150px;   
+                margin-top: 0;   
+                width: 65%;  
+                padding: 10px;  
+            }
+        }
     </style>
 </head>
 <body>
