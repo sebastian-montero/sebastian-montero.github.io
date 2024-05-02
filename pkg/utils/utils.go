@@ -1,22 +1,17 @@
-package parse
+package utils
 
 import (
+	"bytes"
 	"fmt"
+	"html/template"
 	"os"
 	"regexp"
 	"strings"
 
 	"github.com/russross/blackfriday/v2"
+	"github.com/sebastian-montero/ssg/pkg/models"
 )
 
-func LoadMarkdownFromFile(filePath string) []byte {
-	content, err := os.ReadFile(filePath)
-	if err != nil {
-		fmt.Println("Error loading markdown file", err)
-		os.Exit(1)
-	}
-	return content
-}
 
 func MarkdownToHTML(input []byte) string {
 	var htmlBytes []byte = blackfriday.Run(input)
@@ -60,3 +55,20 @@ func ParseSidebar(content string) string {
 
 	return htmlBuilder.String()
 }
+
+func ApplyTemplate(page models.PageHTMLType, tmplPath string) string {
+	tmpl, err := template.ParseFiles(tmplPath)
+	if err != nil {
+		fmt.Println("Error parsing template", err)
+		os.Exit(1)
+	}
+
+	var out bytes.Buffer
+	if err := tmpl.Execute(&out, page); err != nil {
+		fmt.Println("Error executing template", err)
+		os.Exit(1)
+	}
+
+	return out.String()
+}
+

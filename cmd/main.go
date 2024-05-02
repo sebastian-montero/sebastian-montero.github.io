@@ -5,21 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sebastian-montero/ssg/pkg/page"
-	"github.com/sebastian-montero/ssg/pkg/parse"
-	"github.com/sebastian-montero/ssg/pkg/template"
+	"github.com/sebastian-montero/ssg/pkg/models"
+	"github.com/sebastian-montero/ssg/pkg/utils"
 )
-
-func saveHTML(content string, filename string) error {
-	data := []byte(content)
-
-	err := os.WriteFile(filename, data, 0644) // 0644 provides read/write permissions for owner and read for others
-	if err != nil {
-		fmt.Println("Error saving HTML file", err)
-		os.Exit(1)
-	}
-	return nil
-}
 
 func main() {
 	markdownPath := flag.String("md", "", "Path to markdown file")
@@ -33,11 +21,16 @@ func main() {
 		os.Exit(1)
 	}
 
-	var markdownBytes []byte = parse.LoadMarkdownFromFile(*markdownPath)
-	var htmlStr string = parse.MarkdownToHTML(markdownBytes)
-	var sidebarStr string = parse.ParseSidebar(htmlStr)
+	var markdownBytes []byte = utils.LoadMarkdownFromFile(*markdownPath)
+	var htmlStr string = utils.MarkdownToHTML(markdownBytes)
+	var sidebarStr string = utils.ParseSidebar(htmlStr)
 
-	var page page.PageType = page.BuildPageStruct(*title, htmlStr, sidebarStr)
-	var outStr string = template.ApplyTemplate(page, *tmplPath)
-	saveHTML(outStr, *outPath)
+	page := models.PageType{
+		Title:   *title,
+		Content: htmlStr,
+		Sidebar: sidebarStr,
+	}
+
+	var outStr string = utils.ApplyTemplate(page.ToHTML(), *tmplPath)
+	utils.SaveHTML(outStr, *outPath)
 }
