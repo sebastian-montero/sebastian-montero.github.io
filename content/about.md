@@ -24,6 +24,6 @@ Previous work:
 - **Moodflix** Independent project: movie recommendation engine that uses LLM encoding and static vector indexes to find movies based the user's mood. ([link](https://moodflix.streamlit.app)).
 - **OSS contributions** Open source software contributions to _pyg-team/pytorch_geometric_ and _openai/chatgpt-retrieval-plugin_.
 
-Outside of work I also like: music production, cinema and brazilian jiu jitsu.
+Outside of work I also like: [music production](https://soundcloud.com/smxnt), cinema and brazilian jiu jitsu.
 
 If you have any questions or would like to chat, please reach out in any of my socials.
