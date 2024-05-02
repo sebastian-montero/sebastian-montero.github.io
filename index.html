@@ -1,1 +1,114 @@
-<meta http-equiv="refresh" content="0; url=https://sebastian-montero.github.io/public/index.html">
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+    <title>Sebastian Montero</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <style> 
+        body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.4;
+        }
+        a { 
+            color: blue;
+            font-weight: bold;  
+            text-decoration: none;  
+        }
+        a:hover {
+            color: darkblue;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding: 10px 0;  
+            align-items: center;  
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;  
+        }
+        .content {
+            margin-top: 30px;
+            padding: 2%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 30px;
+                height: 100%;
+                flex-direction: column;
+                align-items: center;   
+                padding: 10px;
+                justify-content: flex-start;   
+            }
+            .sidebar a {
+                margin: 10px 0;
+                font-size: 20px;  
+            }
+            .content {
+                margin-left: 10%;   
+                margin-top: 0;   
+                width: 600px;  
+                padding: 10px;  
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="mailto:me@sebastianmontero.com"><i class="fas fa-envelope"></i></a><a href="https://www.linkedin.com/in/sebastianmontero/"><i class="fab fa-linkedin-in"></i></a><a href="https://github.com/sebastian-montero"><i class="fab fa-github"></i></a><a href="https://twitter.com/sebastianmxnt"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <div class="content">
+        <!--
+fas fa-envelope: mailto:me@sebastianmontero.com
+fab fa-linkedin-in: https://www.linkedin.com/in/sebastianmontero/
+fab fa-github:  https://github.com/sebastian-montero
+fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
+-->
+
+<h2>Sebastian Montero Paris</h2>
+
+<p>I am a senior machine learning engineer at <a href="https://beamery.com/about-us/">Beamery</a> working on deep learning models for recommendation systems.</p>
+
+<p>Projects at Beamery:</p>
+
+<ul>
+<li><strong>Talent match recommendation system</strong> Built Beamery&rsquo;s first talent recommendation system for candidate-to-job matching using latent embedding representations generated from our proprietary graph neural network model. Implemented distributed data processing pipelines that transform raw candidate data into vector representations and load them into a search engine for real-time querying.</li>
+<li><strong>Skills inference research</strong> Research and development of our skill inference model based on people&rsquo;s experiences. The final version used a Recurrent Neural Networks to learn representatins of sequential job experiences with a Mixture of Experts neural network architecture that predicts a relevant skills for a given candidate profile.</li>
+<li><strong>Talent entity recommendation system</strong> Built a cross-entity recommendation model to surface HR entities from different types based on source entities (e.g. skills-&gt;skill, job-&gt;skill, industry-&gt;skill, etc).</li>
+<li><strong>Candidate engagement model</strong> Research and development of candiatate-to-recruiter engagement prediction model using historical interactions and tree-based methods.</li>
+<li><strong>Talent tasks evaluation server</strong> Built our AI evaluation suite to benchmark internal and external models across various talent entity representation tasks.</li>
+</ul>
+
+<p>Previous work:</p>
+
+<ul>
+<li><strong>McKinsey &amp; Company&rsquo;s SILA</strong> Worked as a Research Analyst on McK&rsquo;s Startup and Investment Landscape Analytics (SILA) solution to generate networks of start-up ecosystems based on natural language processing of company information. Insights were used by clients to understand startup landscape and investment trends across verticals and industries for their M&amp;A strategy.</li>
+<li><strong>McKinsey &amp; Company&rsquo;s Patent Analytics</strong> Worked as a Research Analyst on McK&rsquo;s Patent Analytics solution to predict innovation trends across client&rsquo;s industries using publication history and natural language processing.</li>
+<li><strong>Moodflix</strong> Independent project: movie recommendation engine that uses LLM encoding and static vector indexes to find movies based the user&rsquo;s mood. (<a href="https://moodflix.streamlit.app">link</a>).</li>
+<li><strong>OSS contributions</strong> Open source software contributions to _pyg-team/pytorch<em>geometric</em> and <em>openai/chatgpt-retrieval-plugin</em>.</li>
+</ul>
+
+<p>Outside of work I also like: <a href="https://soundcloud.com/smxnt/popular-tracks">music production</a>, cinema and brazilian jiu jitsu.</p>
+
+<p>If you have any questions or would like to chat, please reach out in any of my socials.</p>
+
+    </div>
+</body>
+</html>

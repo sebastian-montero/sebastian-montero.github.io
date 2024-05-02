@@ -20,11 +20,11 @@ clean:
 
 run:
 	@echo "Run..."
-	go run cmd/main.go -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "Sebastian Montero"
+	go run cmd/main.go -md ./content/about.md -tmpl ./templates/about_template.html -out ./index.html -title "Sebastian Montero"
 
 exec:
 	@echo "Run..."
-	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./public/index.html -title "Sebastian Montero"
+	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./index.html -title "Sebastian Montero"
 
 fmt:
 	@echo "Running gofmt..."

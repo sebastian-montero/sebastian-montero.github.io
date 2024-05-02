@@ -1,8 +1,8 @@
 <!--
-fas fa-envelope: mailto:smonteroparis@iclod.com
-fab fa-linkedin-in : https://www.linkedin.com/in/sebastianmontero/
+fas fa-envelope: mailto:me@sebastianmontero.com
+fab fa-linkedin-in: https://www.linkedin.com/in/sebastianmontero/
 fab fa-github:  https://github.com/sebastian-montero
-fa-brands fa-x-twitter : https://twitter.com/sebastianmxnt
+fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 -->
 
 ## Sebastian Montero Paris
