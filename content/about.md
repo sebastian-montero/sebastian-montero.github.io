@@ -7,7 +7,7 @@ fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 
 ## Sebastian Montero Paris
 
-I am a senior machine learning engineer at [Beamery](https://beamery.com/about-us/) working on deep learning models for recommendation systems.
+I am a senior machine learning engineer at [Beamery](https://beamery.com/about-us/) working on deep learning models for recommendation systems. I'm a Costa Rican currently living in London, United Kingdom. 
 
 Projects at Beamery:
 
