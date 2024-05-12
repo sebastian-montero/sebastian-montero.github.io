@@ -14,19 +14,19 @@ body {
 
 header {
     flex: 1;
-    max-width: 450px;
+    max-width: 300px;
     background-color: #f7f7f7;
-    padding: 10px;
+    padding: 20px;
 }
 
 h1 { font-size: 45px; }
-.definition-box { font-size: 95%;}
+.definition-box { font-size: 90%;}
 
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    gap: 20px;
     flex: 3;
     width: 100%;
 }
@@ -105,7 +105,7 @@ h1 { font-size: 45px; }
     }
 
     .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 5px;
     }
 
