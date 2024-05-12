@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>brutalist ldn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <meta name="description" content="Explore a curated gallery of Brutalist architecture images with detailed descriptions and locations on an interactive map.">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>brutalism</h1>
+            <p><em>/ˈbruːtəlɪz(ə)m/</em></p>
+            <ol>
+                <li>cruelty and savageness.</li>
+                <li>a stark style of functionalist architecture, especially of the 1950s and 1960s, characterized by the use of steel and concrete in massive blocks.</li>
+            </ol>
+            <p><b>brutalist ldn</b> is a photography project by <a href="https://www.sebastianmontero.com">Sebastian Montero Paris</a> to capture images of brutalist architecture in London and around the world.</p>
+            
+        </header>
+        
+        <div class="gallery" id="gallery">
+            <img src="images/image1.jpg" alt="Image 1 Title" 
+                 data-title="Image 1 Title" 
+                 data-description="Description for Image 1."
+                 data-latitude="37.7749"
+                 data-longitude="-122.4194">
+        </div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="imageTitle"></h2>
+            <p id="imageDescription"></p>
+            <div id="map" style="height: 300px;"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const gallery = document.getElementById('gallery');
+
+            gallery.addEventListener('click', function (event) {
+                if (event.target.tagName === 'IMG') {
+                    const img = event.target;
+                    showModal({
+                        title: img.getAttribute('data-title'),
+                        description: img.getAttribute('data-description'),
+                        latitude: parseFloat(img.getAttribute('data-latitude')),
+                        longitude: parseFloat(img.getAttribute('data-longitude'))
+                    });
+                }
+            });
+
+            const modal = document.getElementById('modal');
+            const span = document.getElementsByClassName('close')[0];
+
+            span.onclick = function () {
+                modal.style.display = 'none';
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+
+            function showModal(image) {
+                document.getElementById('imageTitle').innerText = image.title;
+                document.getElementById('imageDescription').innerText = image.description;
+                modal.style.display = 'block';
+
+                const map = L.map('map').setView([image.latitude, image.longitude], 13);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+                L.marker([image.latitude, image.longitude]).addTo(map);
+            }
+        });
+    </script>
+</body>
+</html>
