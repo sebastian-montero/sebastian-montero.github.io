@@ -23,3 +23,17 @@ func (p PageType) ToHTML() PageHTMLType {
 		Sidebar: template.HTML(p.Sidebar),
 	}
 }
+
+type GalleryType struct {
+	Images string
+}
+
+type GalleryHTMLType struct {
+	Images template.HTML
+}
+
+func (g GalleryType) ToHTML() GalleryHTMLType {
+	return GalleryHTMLType{
+		Images: template.HTML(g.Images),
+	}
+}

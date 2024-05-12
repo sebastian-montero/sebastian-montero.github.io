@@ -3,3 +3,14 @@ images:
     title: "Image 1 Title"
     lat: 40.7128
     long: -74.0060
+    description: "Image 1 Description"
+  - path: "images/image2.jpg"
+    title: "Image 2 Title"
+    lat: 40.7128
+    long: -74.0060
+    description: "Image 1 Description"
+  - path: "images/image3.jpg"
+    title: "Image 2 Title"
+    lat: 40.7128
+    long: -74.0060
+    description: "Image 1 Description"

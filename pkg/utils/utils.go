@@ -4,12 +4,13 @@ import (
 	"bytes"
 	"fmt"
 	"html/template"
+	"log"
 	"os"
 	"regexp"
 	"strings"
 
 	"github.com/russross/blackfriday/v2"
-	"github.com/sebastian-montero/ssg/pkg/models"
+	"gopkg.in/yaml.v2"
 )
 
 
@@ -56,7 +57,7 @@ func ParseSidebar(content string) string {
 	return htmlBuilder.String()
 }
 
-func ApplyTemplate(page models.PageHTMLType, tmplPath string) string {
+func ApplyTemplate(page interface{}, tmplPath string) string {
 	tmpl, err := template.ParseFiles(tmplPath)
 	if err != nil {
 		fmt.Println("Error parsing template", err)
@@ -72,3 +73,37 @@ func ApplyTemplate(page models.PageHTMLType, tmplPath string) string {
 	return out.String()
 }
 
+type Image struct {
+    Path        string  `yaml:"path"`
+    Description string  `yaml:"description"`
+    Title       string  `yaml:"title"`
+    Latitude    float64 `yaml:"lat"`
+    Longitude   float64 `yaml:"long"`
+}
+
+type Images struct {
+    Images []Image `yaml:"images"`
+}
+
+func ParseImages(content string) string {
+	var imagesData Images
+    err := yaml.Unmarshal([]byte(content), &imagesData)
+    if err != nil {
+        log.Fatalf("error: %v", err)
+    }
+
+	var htmlTags strings.Builder
+	for _, image := range imagesData.Images {
+        html := fmt.Sprintf(`
+	<img src="%s"
+        data-title="%s" 
+        data-description="%s"
+        data-latitude="%f"
+        data-longitude="%f"
+        data-fullsrc="%s">`,
+            image.Path, image.Title, image.Description, image.Latitude, image.Longitude, image.Path)
+		htmlTags.WriteString(html)
+		htmlTags.WriteString("\n")
+    }
+	return htmlTags.String() 
+}

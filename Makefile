@@ -15,6 +15,11 @@ run:
 	@echo "Run..."
 	go run cmd/main.go -md ./content/about.md -tmpl ./templates/about_template.html -out ./index.html -title "Sebastian Montero"
 
+run-gallery:
+	@echo "Run..."
+	go run cmd/gallery/gallery.go -img content/brutalism/data.yaml -tmpl templates/brutalist_template.html -out content/brutalism/index.html
+
+
 exec:
 	@echo "Run..."
 	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./index.html -title "Sebastian Montero"
