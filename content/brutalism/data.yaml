@@ -1,6 +1,5 @@
 images:
   - path: "images/image1.jpg"
     title: "Image 1 Title"
-    description: "Description for Image 1."
     lat: 40.7128
     long: -74.0060
