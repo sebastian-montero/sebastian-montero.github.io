@@ -1,16 +1,61 @@
 images:
-  - path: "images/image1.jpg"
-    title: "Image 1 Title"
-    lat: 40.7128
-    long: -74.0060
-    description: "Image 1 Description"
-  - path: "images/image2.jpg"
-    title: "Image 2 Title"
-    lat: 40.7128
-    long: -74.0060
-    description: "Image 1 Description"
-  - path: "images/image3.jpg"
-    title: "Image 2 Title"
-    lat: 40.7128
-    long: -74.0060
-    description: "Image 1 Description"
+  - path: "images/IMG_2319.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2321.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2322.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2323.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2324.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2326.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2327.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2328.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2329.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2330.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2331.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
+  - path: "images/IMG_2332.jpeg"
+    title: "Barbican Centre"
+    lat: 51.5202
+    long: -0.0938
+    description: ""
