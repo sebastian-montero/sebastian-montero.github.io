@@ -4,11 +4,9 @@ fab fa-linkedin-in: https://www.linkedin.com/in/sebastianmontero/
 fab fa-github:  https://github.com/sebastian-montero
 fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 -->
+## Hi! My name is Sebastian.
 
-## Sebastian Montero Paris
-
-I am a senior machine learning engineer at [Beamery](https://beamery.com/about-us/), specializing in search and recommendation systems that leverage deep learning and generative AI. Originally from Costa Rica, I lived in Madrid, Spain in 2019, before relocating to London, UK in 2020, where I now reside.
-
+I am a senior machine learning engineer at [Beamery](https://beamery.com/about-us/), specializing in search and recommendation systems that leverage deep learning and generative AI. Originally from Costa Rica, I lived in Madrid, Spain from 2018-19, before relocating to London, UK in 2019, where I now reside.
 
 My projects at Beamery include:
 
