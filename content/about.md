@@ -11,6 +11,7 @@ I am a senior machine learning engineer at [Beamery](https://beamery.com/about-u
 
 
 My projects at Beamery include:
+
 - **AI Talent Match**: Built Beamery's talent recommendation system using a coupled GNN-LM architecture, grounded with our proprietary knowledge graph (KG). For prod, I developed distributed data processing ETL pipelines to index tens of millions of candidate documents in our vector search engine.
 - **Skills Inference Model**: R&D of Beamery's skill inference model, leveraging people's experiences with an RNN and MoE architecture.
 - **Multi-entity Recommendation Model**: R&D of Beamery's multi-entity recommendation model, using GNN for node embedding representations.
@@ -19,6 +20,7 @@ My projects at Beamery include:
 
 
 Previous work and other projects:
+
 - **McKinsey & Company's Startup & Investment Analytics**: Worked with Fortune 500 clients to generate NLP-based networks of startup ecosystems. These reports were used to analyze startup landscapes and investment trends, informing clients' M&A strategies.
 - **McKinsey & Company's Patent Analytics**: Worked with Fortune 500 clients to map innovation trends across various industries using patent publications and NLP-based techniques.
 - **Moodflix**: In this personal project, I developed a movie recommendation engine that leverages LLM encoding and static vector indexes to suggest films based on the user's mood. ([link](https://moodflix.streamlit.app))
@@ -27,9 +29,10 @@ Previous work and other projects:
 
 
 Outside of work, I also enjoy:
+
 - Playing guitar and [music production](https://soundcloud.com/smxnt/popular-tracks)
 - Running a movie club with 10 active members
-- Practicing street film photography and architecture photography
+- Practicing street film photography and [brutalist architecture photography](/brutalism)
 - Practicing Brazilian Jiu-Jitsu
 
 If you have any questions or would like to chat, feel free to reach out through any of my socials
