@@ -37,7 +37,6 @@ h1 { font-size: 45px; }
     object-fit: cover;
     display: block;
     margin: 0 auto;
-    cursor: pointer;
 }
 
 .modal {

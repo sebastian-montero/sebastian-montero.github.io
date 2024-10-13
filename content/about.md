@@ -7,23 +7,29 @@ fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 
 ## Sebastian Montero Paris
 
-I am a senior machine learning engineer at [Beamery](https://beamery.com/about-us/) working on deep learning models for recommendation systems. I'm a Costa Rican currently living in London, United Kingdom. 
+I am a senior machine learning engineer at [Beamery](https://beamery.com/about-us/), specializing in search and recommendation systems that leverage deep learning and generative AI. Originally from Costa Rica, I lived in Madrid, Spain in 2019, before relocating to London, UK in 2020, where I now reside.
 
-Projects at Beamery:
 
-- **Talent match recommendation system** Built Beamery's first talent recommendation system for candidate-to-job matching using latent embedding representations generated from our proprietary graph neural network model. Implemented distributed data processing pipelines that transform raw candidate data into vector representations and load them into a search engine for real-time querying.
-- **Skills inference research** Research and development of our skill inference model based on people's experiences. The final version used a Recurrent Neural Networks to learn representatins of sequential job experiences with a Mixture of Experts neural network architecture that predicts a relevant skills for a given candidate profile. 
-- **Talent entity recommendation system** Built a cross-entity recommendation model to surface HR entities from different types based on source entities (e.g. skills->skill, job->skill, industry->skill, etc).
-- **Candidate engagement model** Research and development of candiatate-to-recruiter engagement prediction model using historical interactions and tree-based methods.
-- **Talent tasks evaluation server** Built our AI evaluation suite to benchmark internal and external models across various talent entity representation tasks.
+My projects at Beamery include:
+- **AI Talent Match**: Built Beamery's talent recommendation system using a coupled GNN-LM architecture, grounded with our proprietary knowledge graph (KG). For prod, I developed distributed data processing ETL pipelines to index tens of millions of candidate documents in our vector search engine.
+- **Skills Inference Model**: R&D of Beamery's skill inference model, leveraging people's experiences with an RNN and MoE architecture.
+- **Multi-entity Recommendation Model**: R&D of Beamery's multi-entity recommendation model, using GNN for node embedding representations.
+- **Candidate Engagement Model**: R&D of Beamery's candidate engagement model, utilizing tree-based models for predictive analytics.
+- **End-to-end BI Solution**: Introduced BI improvements, including Airflow schedulers for ETL pipelines and Tableau for business reporting.
 
-Previous work:
 
-- **McKinsey & Company's SILA** Worked as a Research Analyst on McK's Startup and Investment Landscape Analytics (SILA) solution to generate networks of start-up ecosystems based on natural language processing of company information. Insights were used by clients to understand startup landscape and investment trends across verticals and industries for their M&A strategy. 
-- **McKinsey & Company's Patent Analytics** Worked as a Research Analyst on McK's Patent Analytics solution to predict innovation trends across client's industries using publication history and natural language processing.
-- **Moodflix** Independent project: movie recommendation engine that uses LLM encoding and static vector indexes to find movies based the user's mood. ([link](https://moodflix.streamlit.app)).
-- **OSS contributions** Open source software contributions to _pyg-team/pytorch_geometric_ and _openai/chatgpt-retrieval-plugin_.
+Previous work and other projects:
+- **McKinsey & Company's Startup & Investment Analytics**: Worked with Fortune 500 clients to generate NLP-based networks of startup ecosystems. These reports were used to analyze startup landscapes and investment trends, informing clients' M&A strategies.
+- **McKinsey & Company's Patent Analytics**: Worked with Fortune 500 clients to map innovation trends across various industries using patent publications and NLP-based techniques.
+- **Moodflix**: In this personal project, I developed a movie recommendation engine that leverages LLM encoding and static vector indexes to suggest films based on the user's mood. ([link](https://moodflix.streamlit.app))
+- **BlogLog**: In this personal project, I developed a blog-based social app that enables users to save and rate blogs. Users can follow their friends to view and save their reading activity, fostering a social reading experience.
+- **OSS Contributions**: Contributed to open source projects such as _pyg-team/pytorch_geometric_ and _openai/chatgpt-retrieval-plugin_.
 
-Outside of work I also like: [music production](https://soundcloud.com/smxnt/popular-tracks), cinema and brazilian jiu jitsu. Lately, I've also been taking pictures of  [brutalist architecture](/brutalism) around London.
 
-If you have any questions or would like to chat, please reach out in any of my socials.
+Outside of work, I also enjoy:
+- Playing guitar and [music production](https://soundcloud.com/smxnt/popular-tracks)
+- Running a movie club with 10 active members
+- Practicing street film photography and architecture photography
+- Practicing Brazilian Jiu-Jitsu
+
+If you have any questions or would like to chat, feel free to reach out through any of my socials
