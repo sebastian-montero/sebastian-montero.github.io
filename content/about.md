@@ -1,36 +1,39 @@
 <!--
-fas fa-envelope: mailto:me@sebastianmontero.com
+fas fa-envelope: mailto:quinone.sectors0x@icloud.com
 fab fa-linkedin-in: https://www.linkedin.com/in/sebastianmontero/
 fab fa-github:  https://github.com/sebastian-montero
 fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 -->
-## Hi! My name is Sebastian.
+## Hi! My name is Sebastian
 
-I am a senior machine learning engineer at [Beamery](https://beamery.com/about-us/), specializing in search and recommendation systems that leverage deep learning and generative AI. Originally from Costa Rica, I lived in Madrid, Spain from 2018-19, before relocating to London, UK in 2019, where I now reside.
+Welcome to my website! I’m an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I’m not working, building or hacking, I enjoy staying active and diving into creative projects.
 
-My projects at Beamery include:
+I work as a senior machine learning engineer/data scientist at [Beamery](https://beamery.com/about-us/), specializing in search and recommendation systems that leverage deep learning and generative AI. 
 
-- **AI Talent Match**: Built Beamery's talent recommendation system using a coupled GNN-LM architecture, grounded with our proprietary knowledge graph (KG). For prod, I developed distributed data processing ETL pipelines to index tens of millions of candidate documents in our vector search engine.
-- **Skills Inference Model**: R&D of Beamery's skill inference model, leveraging people's experiences with an RNN and MoE architecture.
-- **Multi-entity Recommendation Model**: R&D of Beamery's multi-entity recommendation model, using GNN for node embedding representations.
-- **Candidate Engagement Model**: R&D of Beamery's candidate engagement model, utilizing tree-based models for predictive analytics.
-- **End-to-end BI Solution**: Introduced BI improvements, including Airflow schedulers for ETL pipelines and Tableau for business reporting.
+<br/>
+At Beamery, I have led the research and development of several projects, including:
 
+- The first **talent recommendation system** using a coupled GNN-LM architecture, powered by a proprietary knowledge graph (KG), with distributed ETL pipelines to index tens of millions of candidate documents in a vector search engine.
+- A **multi-entity recommendation engine** that leverages GNNs for node embedding retrieval.
+- A **skill inference model** utilizing a coupled RNN-to-MoE architecture to re-rank inferred skills from individuals' experiences.
+- A **candidate engagement model** that utilizes tree-based models for predictive analytics to improve candidate interaction strategies.
+- The first **end-to-end BI solution**, introducing improvements such as Airflow schedulers for ETL pipelines and Tableau for business reporting.
 
-Previous work and other projects:
+<br/>
+My previous work and other projects can be found below:
 
-- **McKinsey & Company's Startup & Investment Analytics**: Worked with Fortune 500 clients to generate NLP-based networks of startup ecosystems. These reports were used to analyze startup landscapes and investment trends, informing clients' M&A strategies.
-- **McKinsey & Company's Patent Analytics**: Worked with Fortune 500 clients to map innovation trends across various industries using patent publications and NLP-based techniques.
-- **Moodflix**: In this personal project, I developed a movie recommendation engine that leverages LLM encoding and static vector indexes to suggest films based on the user's mood. ([link](https://moodflix.streamlit.app))
-- **BlogLog**: In this personal project, I developed a blog-based social app that enables users to save and rate blogs. Users can follow their friends to view and save their reading activity, fostering a social reading experience.
-- **OSS Contributions**: Contributed to open source projects such as _pyg-team/pytorch_geometric_ and _openai/chatgpt-retrieval-plugin_.
+- Worked as a Research Analyst at **McKinsey & Company**, advising Fortune 500 clients on their M&A strategies with NLP-based analytic solutions that map startup ecosystems and patent publications to uncover investment and innovation trends.
+- Developed **Moodflix**, a movie recommendation engine that uses LLM encoding and static vector indexes to suggest films based on the user's mood. (link)
+- Developed **BlogLog**, a blog-based social app that allows users to save and rate blogs while following friends to track and engage with their reading activity, creating a shared social reading experience.
+- Contributed to open source projects including PyTorch Geometric and OpenAI's retrieval plugin.
 
-
-Outside of work, I also enjoy:
+<br/>
+I also enjoy:
 
 - Playing guitar and [music production](https://soundcloud.com/smxnt/popular-tracks)
 - Running a movie club with 10 active members
-- Practicing street film photography and [brutalist architecture photography](/brutalism)
-- Practicing Brazilian Jiu-Jitsu
+- Shooting street film photography and [brutalist architecture photography](/brutalism)
+- Grappling and BJJ
+- If it is not too cold, sailing or swimming
 
-If you have any questions or would like to chat, feel free to reach out through any of my socials
+If you would like to chat, please reach out through any of my socials. I rotate my email with Hide My Email to avoid spam so in case you reach out, I'll reply with my actual email. 🛰️
