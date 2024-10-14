@@ -8,10 +8,7 @@ fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 
 I’m an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I’m not working, building or hacking, I enjoy staying active and diving into creative projects.
 
-I work as a senior machine learning engineer/data scientist at [Beamery](https://beamery.com/about-us/), specializing in search and recommendation systems that leverage deep learning and generative AI. 
-
-<br/>
-At Beamery, I have led the research and development of several greenfield projects, including:
+I work as a senior machine learning engineer/data scientist building [Beamery](https://beamery.com/about-us/)'s deep learning capabilities and recommendation systems. During my tenure at Beamery, I have led the research and development of several greenfield projects:
 
 - The first **talent recommendation system** using a coupled GNN-LM architecture, powered by a proprietary knowledge graph (KG), with distributed ETL pipelines to index tens of millions of candidate documents in a vector search engine.
 - A **multi-entity recommendation engine** that leverages GNNs for node embedding retrieval.
