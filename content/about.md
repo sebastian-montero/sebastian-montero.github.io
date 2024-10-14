@@ -28,12 +28,6 @@ My previous work and other projects can be found below:
 - Contributed to open source projects including PyTorch Geometric and OpenAI's retrieval plugin.
 
 <br/>
-I also enjoy:
-
-- Playing guitar and [music production](https://soundcloud.com/smxnt/popular-tracks)
-- Running a movie club with 10 active members
-- Shooting street film photography and [brutalist architecture photography](/brutalism)
-- Grappling and BJJ
-- If it is not too cold, sailing or swimming
+Apart from work, I also enjoy [music production](https://soundcloud.com/smxnt/popular-tracks), running a small movie club, [film street photography](/brutalism) and practising submission grappling.  
 
 If you would like to chat, please reach out through any of my socials. I rotate my email with Hide My Email to avoid spam so in case you reach out, I'll reply with my actual email. 🛰️
