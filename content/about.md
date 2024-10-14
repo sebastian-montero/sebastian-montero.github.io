@@ -11,7 +11,7 @@ Welcome to my website! I’m an engineer curious about how technology can change
 I work as a senior machine learning engineer/data scientist at [Beamery](https://beamery.com/about-us/), specializing in search and recommendation systems that leverage deep learning and generative AI. 
 
 <br/>
-At Beamery, I have led the research and development of several projects, including:
+At Beamery, I have led the research and development of several greenfield projects, including:
 
 - The first **talent recommendation system** using a coupled GNN-LM architecture, powered by a proprietary knowledge graph (KG), with distributed ETL pipelines to index tens of millions of candidate documents in a vector search engine.
 - A **multi-entity recommendation engine** that leverages GNNs for node embedding retrieval.
@@ -22,12 +22,12 @@ At Beamery, I have led the research and development of several projects, includi
 <br/>
 My previous work and other projects can be found below:
 
-- Worked as a Research Analyst at **McKinsey & Company**, advising Fortune 500 clients on their M&A strategies with NLP-based analytic solutions that map startup ecosystems and patent publications to uncover investment and innovation trends.
-- Developed **Moodflix**, a movie recommendation engine that uses LLM encoding and static vector indexes to suggest films based on the user's mood. (link)
+- Worked at **McKinsey & Company**, advising Fortune 500 clients on their M&A strategies with NLP-based analytic solutions that map startup ecosystems and patent publications to uncover investment and innovation trends.
+- Developed **Moodflix**, a movie recommendation engine that uses LLM encoding and static vector indexes to suggest films based on the user's mood. [here](https://moodflix.streamlit.app)
 - Developed **BlogLog**, a blog-based social app that allows users to save and rate blogs while following friends to track and engage with their reading activity, creating a shared social reading experience.
 - Contributed to open source projects including PyTorch Geometric and OpenAI's retrieval plugin.
 
 <br/>
-Apart from work, I also enjoy [music production](https://soundcloud.com/smxnt/popular-tracks), running a small movie club, [film street photography](/brutalism) and practising submission grappling.  
+Apart from work, I also enjoy [music production](https://soundcloud.com/smxnt/popular-tracks), [film street photography](/brutalism), practising submission grappling, and running a small movie club.
 
 If you would like to chat, please reach out through any of my socials. I rotate my email with Hide My Email to avoid spam so in case you reach out, I'll reply with my actual email. 🛰️
