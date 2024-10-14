@@ -12,6 +12,8 @@
         font-family: 'Trebuchet MS', sans-serif;
         line-height: 1.4;
         font-size: medium;
+        text-align: justify;
+        text-justify: inter-character;
         }
         a { 
             color: blue;
@@ -40,12 +42,12 @@
             margin: 10px; /* Reduced margin for smaller screens */
         }
         .content {
-            margin-top: 30px;
+            margin-top: 10px;
             padding: 3%;
             width: 100%;
             box-sizing: border-box;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 800px) {
             .sidebar {
                 position: fixed;
                 top: 0;
@@ -62,10 +64,12 @@
                 font-size: 20px; /* Maintain font size or adjust as necessary */
             }
             .content {
-                margin-left: 60px;  /* Sidebar width */
+                margin-left: 6%;  /* Sidebar width */
                 margin-top: 0;  /* Reset top margin */
-                width: 768px; /* Adjust content width */
+                width: 810px; /* Adjust content width */
                 padding: 10px; /* Larger padding */
+                text-align: justify;
+                text-justify: inter-character;
             }
         }
     </style>

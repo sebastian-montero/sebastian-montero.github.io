@@ -6,7 +6,7 @@ fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 -->
 ## Hi! My name is Sebastian
 
-Welcome to my website! I’m an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I’m not working, building or hacking, I enjoy staying active and diving into creative projects.
+I’m an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I’m not working, building or hacking, I enjoy staying active and diving into creative projects.
 
 I work as a senior machine learning engineer/data scientist at [Beamery](https://beamery.com/about-us/), specializing in search and recommendation systems that leverage deep learning and generative AI. 
 
@@ -20,7 +20,7 @@ At Beamery, I have led the research and development of several greenfield projec
 - The first **end-to-end BI solution**, introducing improvements such as Airflow schedulers for ETL pipelines and Tableau for business reporting.
 
 <br/>
-My previous work and other projects can be found below:
+In the past I have:
 
 - Worked at **McKinsey & Company**, advising Fortune 500 clients on their M&A strategies with NLP-based analytic solutions that map startup ecosystems and patent publications to uncover investment and innovation trends.
 - Developed **Moodflix**, a movie recommendation engine that uses LLM encoding and static vector indexes to suggest films based on the user's mood. [here](https://moodflix.streamlit.app)
@@ -30,4 +30,4 @@ My previous work and other projects can be found below:
 <br/>
 Apart from work, I also enjoy [music production](https://soundcloud.com/smxnt/popular-tracks), [film street photography](/brutalism), practising submission grappling, and running a small movie club.
 
-If you would like to chat, please reach out through any of my socials. I rotate my email with Hide My Email to avoid spam so in case you reach out, I'll reply with my actual email. 🛰️
+If you would like to chat, please reach out through any of my socials. I rotate my this website's email to avoid spam so if you reach out, I'll reply with my real email. 🛰️
