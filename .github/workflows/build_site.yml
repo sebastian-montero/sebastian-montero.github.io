@@ -14,7 +14,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: '1.23'
+          go-version: '1.20'
           
       - name: Install dependencies
         run: go mod download
@@ -36,7 +36,13 @@ jobs:
           git config user.name 'GitHub Action'
           git config user.email 'action@github.com'
           git add .
-          git commit -m "Auto-commit changes after build" || echo "No changes to commit"
+          git commit -m "Auto-commit build" || echo "No changes to commit"
+
+      - name: Push changes
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/OWNER/REPOSITORY_NAME.git
           git push origin main
 
       - name: Build site
