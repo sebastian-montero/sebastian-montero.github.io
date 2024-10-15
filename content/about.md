@@ -4,7 +4,7 @@ fab fa-linkedin-in: https://www.linkedin.com/in/sebastianmontero/
 fab fa-github:  https://github.com/sebastian-montero
 fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 -->
-## Hi! My name is Sebastian
+## Hi! My name is [Sebastian]().
 
 I'm an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I'm not working, building or hacking, I enjoy staying active and diving into creative projects.
 
