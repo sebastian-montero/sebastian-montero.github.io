@@ -15,6 +15,19 @@
         text-align: justify;
         text-justify: inter-character;
         }
+        .bold {
+            font-size: 10vw;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 2vw; /* Responsive letter-spacing */
+            text-shadow: 
+                0.1vw 0.1vw dodgerblue,   /* First shadow */
+                -0.1vw -0.1vw crimson;   /* Second shadow */
+            transition: text-shadow 0.1s ease; /* Smooth transition for shadow */
+        }
         a { 
             color: slateblue;
             text-decoration: none; /* Removes underline */
