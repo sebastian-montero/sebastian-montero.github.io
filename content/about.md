@@ -28,3 +28,5 @@ In the past I have:
 Apart from work, I also enjoy music production [[7]](https://soundcloud.com/smxnt/popular-tracks), film street photography [[8]](/brutalism), practising submission grappling, and running a small movie club [[9]](https://letterboxd.com/smxnt/list/viking-movie-club/).
 
 If you would like to chat, please reach out through any of my socials. I rotate my this website's email to avoid spam so if you reach out, I'll reply with my real email.
+
+this is a test

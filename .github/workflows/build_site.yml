@@ -44,6 +44,3 @@ jobs:
           git config user.email 'action@github.com'
           git commit -am "Auto-commit build" || echo "No changes to commit"
           git push
-
-      - name: Build site
-        run: make build-site
