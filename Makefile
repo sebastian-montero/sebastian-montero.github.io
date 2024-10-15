@@ -13,7 +13,7 @@ clean:
 
 run:
 	@echo "Run..."
-	go run cmd/main.go -md ./content/about.md -tmpl ./templates/about_template.html -out ./index.html -title "Sebastian Montero"
+	go run cmd/main.go -md ./content/about.md -tmpl ./templates/about_template.html -out ./index.html -title "SMP"
 
 run-gallery:
 	@echo "Run..."
@@ -22,7 +22,7 @@ run-gallery:
 
 exec:
 	@echo "Run..."
-	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./index.html -title "Sebastian Montero"
+	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./index.html -title "SMP"
 
 fmt:
 	@echo "Running gofmt..."

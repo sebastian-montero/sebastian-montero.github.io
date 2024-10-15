@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 <head>
-    <title>Sebastian Montero</title>
+    <title>SMP</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <style> 
         body, html {
@@ -16,11 +16,11 @@
         text-justify: inter-character;
         }
         a { 
-            color: blue;
+            color: slateblue;
             text-decoration: none;  
         }
         a:hover {
-            color: darkblue;
+            color: darkslateblue;
         }
         .sidebar {
             position: fixed;
@@ -28,46 +28,38 @@
             left: 0;
             width: 100%;
             height: 20px;
-            background-color: black;
+            background-color: white;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             padding: 10px 0;  
             align-items: center;  
+            border-bottom: 1px solid slateblue;
         }
         .sidebar a {
-            color: white;
+            color: darkslateblue;
             text-decoration: none;
             font-size: 20px;
             margin: 10px;  
         }
         .content {
             margin-top: 10px;
-            padding: 5%;
+            padding: 6%;
             width: 100%;
             box-sizing: border-box;
         }
-        @media (min-width: 800px) {
-            .sidebar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 30px;
-                height: 100%;
-                flex-direction: column;
-                align-items: center;   
-                padding: 10px;
-                justify-content: flex-start;   
+        @media (min-width: 730px) {
+            .container {
+                display: flex;
+                justify-content: center;   
+                align-items: center;       
+                min-height: 100vh;         
+                padding: 15px;             
+                box-sizing: border-box;    
             }
-            .sidebar a {
-                margin: 10px 0;
-                font-size: 20px;  
-            }
-            .content {
-                margin-left: 70px;   
-                margin-top: 0;   
-                width: 810px;  
-                padding: 10px;  
+                .content {
+                width: 700px;              
+                padding: 10px;             
                 text-align: justify;
                 text-justify: inter-character;
             }
@@ -75,11 +67,13 @@
     </style>
 </head>
 <body>
+
     <div class="sidebar">
         <a href="mailto:quinone.sectors0x@icloud.com"><i class="fas fa-envelope"></i></a><a href="https://www.linkedin.com/in/sebastianmontero/"><i class="fab fa-linkedin-in"></i></a><a href="https://github.com/sebastian-montero"><i class="fab fa-github"></i></a><a href="https://twitter.com/sebastianmxnt"><i class="fa-brands fa-x-twitter"></i></a>
     </div>
-    <div class="content">
-        <!--
+    <div class="container">
+        <div class="content">
+            <!--
 fas fa-envelope: mailto:quinone.sectors0x@icloud.com
 fab fa-linkedin-in: https://www.linkedin.com/in/sebastianmontero/
 fab fa-github:  https://github.com/sebastian-montero
@@ -88,7 +82,7 @@ fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 
 <h2>Hi! My name is Sebastian</h2>
 
-<p>I’m an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I’m not working, building or hacking, I enjoy staying active and diving into creative projects <a href="https://knockout-labs.github.io">🛰️</a>.</p>
+<p>I&rsquo;m an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I&rsquo;m not working, building or hacking, I enjoy staying active and diving into creative projects.</p>
 
 <p>I work as a senior machine learning engineer/data scientist building Beamery&rsquo;s <a href="https://beamery.com/about-us/">[1]</a> deep learning capabilities and recommendation systems. During my tenure at Beamery, I have led the research and development of several greenfield projects:</p>
 
@@ -115,6 +109,7 @@ Apart from work, I also enjoy music production <a href="https://soundcloud.com/s
 
 <p>If you would like to chat, please reach out through any of my socials. I rotate my this website&rsquo;s email to avoid spam so if you reach out, I&rsquo;ll reply with my real email.</p>
 
+        </div>
     </div>
 </body>
 </html>

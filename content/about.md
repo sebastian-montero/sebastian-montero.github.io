@@ -6,7 +6,7 @@ fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 -->
 ## Hi! My name is Sebastian
 
-I’m an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I’m not working, building or hacking, I enjoy staying active and diving into creative projects [🛰️](https://knockout-labs.github.io).
+I'm an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I'm not working, building or hacking, I enjoy staying active and diving into creative projects.
 
 I work as a senior machine learning engineer/data scientist building Beamery's [[1]](https://beamery.com/about-us/) deep learning capabilities and recommendation systems. During my tenure at Beamery, I have led the research and development of several greenfield projects:
 
