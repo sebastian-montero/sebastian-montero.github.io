@@ -13,7 +13,6 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-
 func MarkdownToHTML(input []byte) string {
 	var htmlBytes []byte = blackfriday.Run(input)
 	var htmlStr string = string(htmlBytes)
@@ -74,36 +73,36 @@ func ApplyTemplate(page interface{}, tmplPath string) string {
 }
 
 type Image struct {
-    Path        string  `yaml:"path"`
-    Description string  `yaml:"description"`
-    Title       string  `yaml:"title"`
-    Latitude    float64 `yaml:"lat"`
-    Longitude   float64 `yaml:"long"`
+	Path        string  `yaml:"path"`
+	Description string  `yaml:"description"`
+	Title       string  `yaml:"title"`
+	Latitude    float64 `yaml:"lat"`
+	Longitude   float64 `yaml:"long"`
 }
 
 type Images struct {
-    Images []Image `yaml:"images"`
+	Images []Image `yaml:"images"`
 }
 
 func ParseImages(content string) string {
 	var imagesData Images
-    err := yaml.Unmarshal([]byte(content), &imagesData)
-    if err != nil {
-        log.Fatalf("error: %v", err)
-    }
+	err := yaml.Unmarshal([]byte(content), &imagesData)
+	if err != nil {
+		log.Fatalf("error: %v", err)
+	}
 
 	var htmlTags strings.Builder
 	for _, image := range imagesData.Images {
-        html := fmt.Sprintf(`
+		html := fmt.Sprintf(`
 	<img src="%s"
         data-title="%s" 
         data-description="%s"
         data-latitude="%f"
         data-longitude="%f"
         data-fullsrc="%s">`,
-            image.Path, image.Title, image.Description, image.Latitude, image.Longitude, image.Path)
+			image.Path, image.Title, image.Description, image.Latitude, image.Longitude, image.Path)
 		htmlTags.WriteString(html)
 		htmlTags.WriteString("\n")
-    }
-	return htmlTags.String() 
+	}
+	return htmlTags.String()
 }

@@ -1,6 +1,6 @@
-.PHONY: build clean
+.PHONY: build clean fmt exec all
 
-all: build exec
+all: fmt build exec
 
 build:
 	@echo "Building..."
@@ -19,9 +19,8 @@ run-gallery:
 	@echo "Run..."
 	go run cmd/gallery/gallery.go -img content/brutalism/data.yaml -tmpl templates/brutalist_template.html -out content/brutalism/index.html
 
-
 exec:
-	@echo "Run..."
+	@echo "Executing..."
 	./bin/ssg -md ./content/about.md -tmpl ./templates/about_template.html -out ./index.html -title "SMP"
 
 fmt:
@@ -34,7 +33,3 @@ fmt:
 lint:
 	@echo "Running lint..."
 	staticcheck ./cmd
-
-# # Run test
-# test:
-# 	go test ./...
