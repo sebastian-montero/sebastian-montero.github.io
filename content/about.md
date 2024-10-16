@@ -6,12 +6,12 @@ fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 -->
 ## Hi! My name is **Sebastian**.
 
-I'm an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London, where I currently live. When I'm not working, building or hacking, I enjoy staying active and diving into creative projects.
+I'm an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London in 2019, where I currently live. When I'm not working, building, or hacking, I enjoy diving into creative projects and staying active.
 
-I work as a senior machine learning engineer/data scientist building Beamery's [[1]](https://beamery.com/about-us/) deep learning capabilities and recommendation systems. During my tenure at Beamery, I have led the research and development of several greenfield projects:
+I work as a senior machine learning engineer/data scientist building Beamery's [[1]](https://beamery.com/about-us/) deep learning capabilities and recommendation systems. During my tenure at Beamery, I have led the research and development of several greenfield projects, including:
 
-- The first **talent recommendation system** [[2]](https://beamery.com/resources/sourcing/uncover-top-talent-fast-with-ai-talent-match) using a coupled GNN-LM architecture, powered by a proprietary knowledge graph (KG), with distributed ETL pipelines to index tens of millions of candidate documents in a vector search engine.
-- A **multi-entity recommendation engine** that leverages GNNs for node embedding retrieval.
+- The first **talent recommendation system** [[2]](https://beamery.com/resources/sourcing/uncover-top-talent-fast-with-ai-talent-match) using a coupled GNN-LM architecture as it's core matching model, powered by our proprietary knowledge graph (KG). The system uses distributed ETL pipelines to index tens of millions of vectorized candidate documents and other data in a search engine.
+- A **multi-entity recommendation engine** utilizing GNNs for entity matching and retrieval across various interconnected talent attributes.
 - A **skill inference model** utilizing a coupled RNN-to-MoE architecture to re-rank inferred skills from individuals' experiences.
 - A **candidate engagement model** that utilizes tree-based models for predictive analytics to improve candidate interaction strategies.
 - The first **end-to-end BI solution**, introducing improvements such as Airflow schedulers for ETL pipelines and Tableau for business reporting.
@@ -27,4 +27,4 @@ In the past I have:
 <br/>
 Apart from work, I also enjoy music production [[7]](https://soundcloud.com/smxnt/popular-tracks), film street photography [[8]](/brutalism), practising submission grappling, and running a small movie club [[9]](https://letterboxd.com/smxnt/list/viking-movie-club/).
 
-If you would like to chat, please reach out through any of my socials. I rotate my this website's email to avoid spam so if you reach out, I'll reply with my real email.
+If you would like to chat, please reach out through any of my socials. I rotate this website's email to avoid spam so if you reach out, I'll reply with my real email.
