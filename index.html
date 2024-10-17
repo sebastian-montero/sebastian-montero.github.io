@@ -15,13 +15,28 @@
         text-align: justify;
         text-justify: inter-character;
         }
-        a { 
-            color: slategray;
-            text-decoration: none;  
+
+        .content a {
+        text-decoration: none;
+        white-space: nowrap;
+        position: relative;
+        color: black;
         }
-        a:hover {
-            color: darkslategray;
+        .content a:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 66%;
+            left: -0.1em;
+            right: -0.1em;
+            bottom: 0;
+            transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+            background-color: rgba(112, 128, 144, 0.4);
         }
+            a:hover:after {
+            top: 0%;
+        }
+            
         .sidebar {
             position: fixed;
             top: 0;
@@ -57,7 +72,7 @@
                 padding: 15px;             
                 box-sizing: border-box;    
             }
-                .content {
+            .content {
                 width: 700px;              
                 padding: 10px;             
                 text-align: justify;
@@ -84,28 +99,28 @@ fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
 
 <p>I&rsquo;m an engineer curious about how technology can change our lives for the better. Originally from Costa Rica, I spent some time in Madrid before moving to London in 2019, where I currently live. When I&rsquo;m not working, building, or hacking, I enjoy diving into creative projects and staying active.</p>
 
-<p>I work as a senior machine learning engineer/data scientist building Beamery&rsquo;s <a href="https://beamery.com/about-us/">[1]</a> deep learning capabilities and recommendation systems. During my tenure at Beamery, I have led the research and development of several greenfield projects, including:</p>
+<p>I work as a senior machine learning engineer/data scientist building <a href="https://beamery.com/about-us/">Beamery</a>&rsquo;s deep learning capabilities and recommendation systems. During my tenure at Beamery, I have led the research and development of several greenfield projects, including:</p>
 
 <ul>
-<li>The first <strong>talent recommendation system</strong> <a href="https://beamery.com/resources/sourcing/uncover-top-talent-fast-with-ai-talent-match">[2]</a> using a coupled GNN-LM architecture as it&rsquo;s core matching model, powered by our proprietary knowledge graph (KG). The system uses distributed ETL pipelines to index tens of millions of vectorized candidate documents and other data in a search engine.</li>
-<li>A <strong>multi-entity recommendation engine</strong> utilizing GNNs for entity matching and retrieval across various interconnected talent attributes.</li>
-<li>A <strong>skill inference model</strong> utilizing a coupled RNN-to-MoE architecture to re-rank inferred skills from individuals&rsquo; experiences.</li>
-<li>A <strong>candidate engagement model</strong> that utilizes tree-based models for predictive analytics to improve candidate interaction strategies.</li>
-<li>The first <strong>end-to-end BI solution</strong>, introducing improvements such as Airflow schedulers for ETL pipelines and Tableau for business reporting.</li>
+<li>The first <a href="https://beamery.com/resources/sourcing/uncover-top-talent-fast-with-ai-talent-match">talent recommendation system</a> using a coupled GNN-LM architecture as it&rsquo;s core matching model, powered by our proprietary knowledge graph (KG). The system uses distributed ETL pipelines to index tens of millions of vectorized candidate documents and other data in a search engine.</li>
+<li>A multi-entity recommendation engine utilizing GNNs for entity matching and retrieval across various interconnected talent attributes.</li>
+<li>A skill inference model utilizing a coupled RNN-to-MoE architecture to re-rank inferred skills from individuals&rsquo; experiences.</li>
+<li>A candidate engagement model that utilizes tree-based models for predictive analytics to improve candidate interaction strategies.</li>
+<li>The first end-to-end BI solution, introducing improvements such as Airflow schedulers for ETL pipelines and Tableau for business reporting.</li>
 </ul>
 
 <p><br/>
 In the past I have:</p>
 
 <ul>
-<li>Worked at <strong>McKinsey &amp; Company</strong> <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/start-me-up-where-mobility-investments-are-going">[3]</a>, advising Fortune 500 clients on their M&amp;A strategies with NLP-based analytic solutions that map startup ecosystems and patent publications to uncover investment and innovation trends.</li>
-<li>Developed <strong>Moodflix</strong> <a href="https://moodflix.streamlit.app">[4]</a>, a movie recommendation engine that uses LLM encoding and static vector indexes to suggest films based on the user&rsquo;s mood.</li>
-<li>Developed <strong>BlogLog</strong>, a blog-based social app that allows users to save and rate blogs while following friends to track and engage with their reading activity, creating a shared social reading experience.</li>
-<li>Contributed to open source projects like PyTorch Geometric <a href="https://github.com/sebastian-montero/pytorch_geometric">[5]</a> and OpenAI&rsquo;s ChatGPT retrieval plugin  <a href="https://github.com/sebastian-montero/chatgpt-retrieval-plugin">[6]</a>.</li>
+<li>Worked at McKinsey &amp; Company developing the <a href="https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/start-me-up-where-mobility-investments-are-going">SILA analytics solution</a> to advise Fortune 500 clients on their M&amp;A strategies using startup ecosystems and patent publications.</li>
+<li>Developed <a href="https://moodflix.streamlit.app">Moodflix</a>, a movie recommendation engine that uses LLM encoding and static vector indexes to suggest films based on the user&rsquo;s mood.</li>
+<li>Developed BlogLog, a blog-based social app that allows users to save and rate blogs while following friends to track and engage with their reading activity, creating a shared social reading experience.</li>
+<li>Contributed to open source projects like <a href="https://github.com/sebastian-montero/pytorch_geometric">PyTorch Geometric</a> and OpenAI&rsquo;s <a href="https://github.com/sebastian-montero/chatgpt-retrieval-plugin">ChatGPT retrieval plugin</a>.</li>
 </ul>
 
 <p><br/>
-Apart from work, I also enjoy music production <a href="https://soundcloud.com/smxnt/popular-tracks">[7]</a>, film street photography <a href="/brutalism">[8]</a>, practising submission grappling, and running a small movie club <a href="https://letterboxd.com/smxnt/list/viking-movie-club/">[9]</a>.</p>
+Apart from work, I also enjoy <a href="https://soundcloud.com/smxnt/popular-tracks">music production</a>, <a href="/brutalism">film street photography</a>, practising submission grappling, and running a small <a href="https://letterboxd.com/smxnt/list/viking-movie-club/">movie club</a>.</p>
 
 <p>If you would like to chat, please reach out through any of my socials. I rotate this website&rsquo;s email to avoid spam so if you reach out, I&rsquo;ll reply with my real email.</p>
 
