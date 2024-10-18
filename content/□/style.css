@@ -1,0 +1,18 @@
+html, body { 
+    background: rgb(7,20,23); 
+    margin: 0; 
+    font-family: monospace;
+    color: rgb(84, 211, 237);
+    font-size: 12px; 
+    height: 100vh; /* Make sure the body takes full height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    line-height: 1.2;
+  }
+  
+  a { color: rgb(205,105,63); }
+  
+  div {
+    max-width: 500px;
+    padding: 1rem;
+  }
