@@ -33,7 +33,11 @@ p {
 }
 
 .header img {
-  width: 50%;
+  width: 70%;
+  max-width: 300px;
+  height: auto; /* Ensures the image keeps its aspect ratio */
+  display: block; /* Prevents the image from being inline and potentially wrapping */
+  margin: 0 auto; /* Centers the image horizontally */
 }
 
 .hell {
