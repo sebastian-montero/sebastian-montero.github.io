@@ -5,14 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>sm</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
   <div>
     <div class="header"> 
-    <image src="./whoareyou.jpeg" alt="who are you?" width="60%">
+    <image src="./whoareyou.jpeg" alt="who are you?">
     <blockquote><i>who are you? who slips into my robot body and whispers to my ghost?</i></blockquote>
+    <button class="scroll-button" onclick="scrollToBottom()">↓</button>
     </div>
+
+
     <h2>sebastian</h2>
 
     <p>updates <a href="/□/status">here</a></p>
@@ -48,7 +52,14 @@
     </ul>
     <br/>
     <p>also check out my <a href="/□/inferno" class="hell">inferno</a></p>
-
   </div>
 </body>
+<script>
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth' // Smooth scrolling effect
+    });
+  }
+</script>
 </html>
