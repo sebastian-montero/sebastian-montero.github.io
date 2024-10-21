@@ -34,7 +34,7 @@ p {
   align-items: center;
   min-height: 100vh; /* Make sure it takes the full viewport height */
   text-align: center;
-  padding-top: 100px; /* Padding at the top to ensure it's not too low */
+  padding-top: 20px; /* Padding at the top to ensure it's not too low */
 }
 
 .header img {
