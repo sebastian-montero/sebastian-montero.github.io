@@ -1,6 +1,6 @@
 html, body { 
-    background: #0d0221; 
-    margin: 0; 
+    background: black; 
+    margin-bottom: 10%; 
     font-family: monospace;
     color: crimson;
     font-size: 12px; 
@@ -24,6 +24,10 @@ html, body {
     text-justify: inter-character;
   }
 
+  .header {
+    text-align: center;     
+  }
+
   .hell {
-    color: red;
+    color: crimson;
   }
