@@ -38,9 +38,7 @@ p {
 }
 
 .header img {
-  width: 70%;
-  max-width: 300px;
-  min-width: 200px; 
+  height: 20%;
   height: auto; 
   display: block; 
   margin: 0 auto;
