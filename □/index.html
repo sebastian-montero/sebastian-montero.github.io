@@ -11,9 +11,8 @@
 <body>
   <div>
     <div class="header"> 
-    <img src="./whoareyou2.jpeg" alt="who are you?" width="300" style="display: block; margin: 0 auto;">
-    <blockquote><i>who are you? who slips into my robot body and whispers to my ghost?</i></blockquote>
-    <button class="scroll-button" onclick="scrollToBottom()">↓</button>
+      <img src="./whoareyou2.jpeg" alt="who are you?" width="400" style="display: block; margin: 0 auto;">
+      <button id="title" class="scroll-button" onclick="scrollToBottom()"><blockquote><i>who are you? who slips into my robot body and whispers to my ghost?</i></blockquote></button>
     </div>
 
     <h2>sebastian</h2>
@@ -61,5 +60,16 @@
       behavior: 'smooth' // Smooth scrolling effect
     });
   }
+  function updateTextShadow(x, y) {
+      const title = document.getElementById('title');
+      title.style.boxShadow = `${x * 0.01}px ${y * 0.01}px crimson`;
+  }
+  document.addEventListener('mousemove', function(e) {
+      const title = document.getElementById('title');
+      const rect = title.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      updateTextShadow(x, y);
+  });
 </script>
 </html>
