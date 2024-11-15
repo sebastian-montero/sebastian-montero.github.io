@@ -20,7 +20,7 @@ I work as a senior machine learning engineer/data scientist building [Beamery](h
 In the past I have:
 
 - Worked at McKinsey & Company developing the [SILA analytics solution](https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/start-me-up-where-mobility-investments-are-going) to advise Fortune 500 clients on their M&A strategies using startup ecosystems and patent publications.
-- Developed [Moodflix](https://moodflix.streamlit.app), a movie recommendation engine that uses LLM encoding and static vector indexes to suggest films based on the user's mood.
+- Developed Moodflix, a movie recommendation engine that uses LLM encoding and static vector indexes to suggest films based on the user's mood.
 - Developed BlogLog, a blog-based social app that allows users to save and rate blogs while following friends to track and engage with their reading activity, creating a shared social reading experience.
 - Contributed to open source projects like [PyTorch Geometric](https://github.com/sebastian-montero/pytorch_geometric) and OpenAI's [ChatGPT retrieval plugin](https://github.com/sebastian-montero/chatgpt-retrieval-plugin).
 
