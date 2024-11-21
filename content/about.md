@@ -2,7 +2,7 @@
 fas fa-envelope: mailto:quinone.sectors0x@icloud.com
 fab fa-linkedin-in: https://www.linkedin.com/in/sebastianmontero/
 fab fa-github:  https://github.com/sebastian-montero
-fa-brands fa-x-twitter: https://twitter.com/sebastianmxnt
+fa-brands fa-bluesky: https://bsky.app/profile/seb.incendia.dev
 -->
 ## Hi! My name is **Sebastian**.
 
