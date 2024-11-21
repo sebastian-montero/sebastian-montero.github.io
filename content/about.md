@@ -25,6 +25,6 @@ Past work and other projects:
 - Contributed to open source projects like [PyTorch Geometric](https://github.com/sebastian-montero/pytorch_geometric) and OpenAI's [ChatGPT retrieval plugin](https://github.com/sebastian-montero/chatgpt-retrieval-plugin).
 
 <br/>
-Apart from work, I also enjoy [music production](https://soundcloud.com/smxnt/popular-tracks), [film street photography](/brutalism), practising submission grappling, and running a small [movie club](https://letterboxd.com/smxnt/list/viking-movie-club/).
+Apart from work, I also enjoy [music production](https://soundcloud.com/smxnt/popular-tracks), [film street photography](/brutalism) and running a small [movie club](https://letterboxd.com/smxnt/list/viking-movie-club/). I'm also a blue belt in brazilian jiu-jitsu.
 
 If you would like to chat, please reach out through any of my socials. I rotate this website's email to avoid spam so if you reach out, I'll reply with my real email.
