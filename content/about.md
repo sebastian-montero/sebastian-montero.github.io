@@ -5,12 +5,12 @@ fab fa-github:  https://github.com/sebastian-montero
 -->
 **Hello, my name is Sebastian.**
 
-I am an engineer from Costa Rica working in deep learning and recommendation systems. I currently live in London, UK.
+I am an engineer from Costa Rica working in deep learning, recsys and agentic systems. I currently live in London, UK.
 
-I work as a senior machine learning scientist, building Beamery’s AI capabilities. During my tenure at the company, I developed multiple greenfield R&D projects, including Beamery’s first talent recommendation system, and worked on other AI features that rely on state-of-the-art deep learning architectures such as QLoRA for fine-tuning language models, graph neural networks, recurrent neural networks, and mixture-of-experts models.
+Currently, I'm a Lead ML/AI Engineer building Beamery’s AI capabilities. At Beamery, I have led several R&D projects, including the company's first talent recommendation system, engagement and skill inference deep learning models, fine-tuning large language models, and more.
 
-In the past, I worked on McKinsey & Company’s Startup and Investment Landscape Analytics team, advising clients on their M&A strategies by leveraging startup ecosystems and patent publications. I have also built several applications, including a movie recommendation system based on the user's vibes, a personalized blog aggregator and classifier, and a real-time writing tool. Additionally, I have made open-source contributions.
+In the past, I worked on McKinsey & Company’s Startup and Investment Landscape Analytics team to advise clients on their M&A strategies using NLP.
 
-Apart from work, I enjoy music production, film photography, and running a small movie club. I’m also a blue belt in Brazilian Jiu-Jitsu.
+In my free time, I have built several apps, including a movie recommendation system based on the user's mood, a personalized blog aggregator, and a real-time creative writing tool. Apart from work, I enjoy music production, film photography, and running a small movie club. I’m also a blue belt in brazilian jiu-jitsu.
 
 If you would like to chat, please reach out through any of my socials.
