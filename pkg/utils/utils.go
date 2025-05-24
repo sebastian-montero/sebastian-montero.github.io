@@ -50,7 +50,11 @@ func ParseSidebar(content string) string {
 	}
 	var htmlBuilder strings.Builder
 	for _, key := range orderedKeys {
-		htmlBuilder.WriteString(`<a href="` + iconMap[key] + `"><i class="` + key + `"></i></a>`)
+		if strings.HasPrefix(key, "fa ") {
+			htmlBuilder.WriteString(`<a href="` + iconMap[key] + `"><i class="` + key + `"></i></a>`)
+		} else {
+			htmlBuilder.WriteString(`<a href="` + iconMap[key] + `">` + key + `</a>`)
+		}
 	}
 
 	return htmlBuilder.String()

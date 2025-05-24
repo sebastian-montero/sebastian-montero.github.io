@@ -3,55 +3,41 @@
 <html>
 <head>
     <title>{{.Title}}</title>
-    <!-- Preload fonts for better performance -->
-    <link rel="preload" href="/fonts/regular.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/wim-inspo.ttf" as="font" type="font/ttf" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Wim Inspo';
+            src: url('fonts/wim-inspo.ttf') format('truetype'); /* Changed to relative path */
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: 'Patrick Hand SC', sans-serif;
-            line-height: 1.6;
-            font-size: 22px;
-            color: rgba(255, 255, 255, 0.6);
-            font-weight: 400;
+            font-family: 'Wim Inspo', sans-serif;
+            line-height: 2;
+            font-size: 12px;
+            color: rgba(255, 255, 255,0.9);
+            font-weight: 600;
+            text-shadow: 
+                1px 0px 1px rgba(172, 41, 127), 
+                -1px 0px 1px rgba(67, 150, 181); 
         }
         
         body {
             background-color: black;
+            background-image: url('img/space.png');
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: cover;
+            background-size: 50%; /* Changed from contain to 50% */
             background-position: center;
             transition: color 0.2s ease;
         }
 
-        body.day-mode {
-            color: rgba(0, 0, 0, 0.5);
-            font-weight: 400;
-        }
-        
-        body.day-mode h1, 
-        body.day-mode h2, 
-        body.day-mode h3 {
-            color: rgba(0, 0, 0, 0.6);
-            font-weight: 600;
-        }
-        
-        body.day-mode .content a {
-            color: rgba(0, 0, 0, 0.8);
-            border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-        }
-        
-        body.day-mode .content a:hover {
-            border-color: rgba(0, 0, 0, 0.9);
-        }
-        
         .content a {
         text-decoration: none;
         position: relative;
@@ -96,7 +82,7 @@
         .sidebar a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 10px;
             margin: 0 15px;
             transition: color 0.3s;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -106,56 +92,6 @@
         .sidebar a:hover {
             color: #ffffff;
             opacity: 0.8;
-        }
-        
-        .time-button {
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            cursor: pointer;
-            opacity: 0;
-        }
-        
-        .time-dropdown {
-            position: absolute;
-            top: 45px;
-            left: 15px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            padding: 10px 0;
-            display: none;
-            flex-direction: column;
-            min-width: 150px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        .time-dropdown.active {
-            display: flex;
-        }
-        
-        .time-option {
-            display: flex;
-            align-items: center;
-            padding: 8px 15px;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        
-        .time-option:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        
-        .time-option.active {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        
-        .time-option i {
-            margin-right: 10px;
-            width: 20px;
-            text-align: center;
         }
         
         .container {
@@ -172,7 +108,7 @@
             width: 90%;
             max-width: 700px;
             box-sizing: border-box;
-            text-align: justify;
+            /* text-align: justify; */
             margin-left: auto;
             margin-right: auto;
         }
@@ -196,38 +132,13 @@
                 text-align: left;
             }
         }
-        
-        body.day-mode .sidebar a,
-        body.day-mode .time-button {
-            color: rgba(0, 0, 0, 0.7);
-            text-shadow: none;
-        }
-        
-        body.day-mode .sidebar a:hover,
-        body.day-mode .time-button:hover {
-            color: rgba(0, 0, 0, 0.9);
-        }
     </style>
 </head>
 <body>
 
     <div class="sidebar">
         <div class="sidebar-left">
-            <div class="time-button" id="timeToggle"></div>
-            <div class="time-dropdown" id="timeDropdown">
-                <div class="time-option" data-time="0">
-                    0
-                </div>
-                <div class="time-option" data-time="1">
-                    1
-                </div>
-                <div class="time-option" data-time="2">
-                   2
-                </div>
-                <div class="time-option" data-time="3">
-                3
-                </div>
-            </div>
+            <!-- Removed time-button and time-dropdown -->
         </div>
         <div class="sidebar-right">
             {{.Sidebar}}
@@ -253,97 +164,13 @@
                 });
             }
             
-            const timeToggle = document.getElementById('timeToggle');
-            const timeDropdown = document.getElementById('timeDropdown');
-            const timeOptions = document.querySelectorAll('.time-option');
-            
-            // Background images for different times of day
-            const backgrounds = {
-                0: 'img/sunrise.png',    // Morning
-                1: 'img/day.png',        // Afternoon
-                2: 'img/sunset.png',     // Evening
-                3: 'img/night.png'       // Night
-            };
-            
-            // Initialize based on current time
-            setTimeBasedBackground();
-            
-            // Toggle time dropdown
-            timeToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                timeDropdown.classList.toggle('active');
-            });
-            
-            // Close dropdown when clicking elsewhere
-            document.addEventListener('click', function() {
-                timeDropdown.classList.remove('active');
-            });
-            
-            // Prevent dropdown from closing when clicked
-            timeDropdown.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-            
-            // Set up time option click handlers
-            timeOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    const timeValue = parseInt(this.getAttribute('data-time'));
-                    updateBackground(timeValue);
-                    updateActiveOption(timeValue);
-                    timeDropdown.classList.remove('active');
-                });
-            });
-            
-            // Update background based on time of day
-            function setTimeBasedBackground() {
-                const hour = new Date().getHours();
-                let timeValue;
-                
-                // Define time periods and set slider position
-                if (hour >= 5 && hour < 7) {
-                    // Sunrise (5 AM - 6:59 AM)
-                    timeValue = 0;
-                } else if (hour >= 7 && hour < 17) {
-                    // Day (7 AM - 4:59 PM)
-                    timeValue = 1;
-                } else if (hour >= 17 && hour < 19) {
-                    // Sunset (5 PM - 6:59 PM)
-                    timeValue = 2;
-                } else {
-                    // Night (7 PM - 4:59 AM)
-                    timeValue = 3;
-                }
-                
-                updateBackground(timeValue);
-                updateActiveOption(timeValue);
-            }
-            
-            // Update background based on selected time
-            function updateBackground(timeValue) {
-                const backgroundImage = backgrounds[timeValue];
-                document.body.style.backgroundImage = `url('${backgroundImage}')`;
-                
-                // Toggle day mode for better text visibility
-                if (timeValue === 1) {
-                    document.body.classList.add('day-mode');
-                } else {
-                    document.body.classList.remove('day-mode');
-                }
-            }
-            
-            // Update active time option
-            function updateActiveOption(activeIndex) {
-                timeOptions.forEach(option => {
-                    option.classList.remove('active');
-                });
-                
-                timeOptions[activeIndex].classList.add('active');
-            }
-            
-            // Update background every hour in automatic mode
-            setInterval(function() {
-                setTimeBasedBackground();
-            }, 3600000);
+            // Ensure body background is black (already set in CSS)
+            // document.body.style.backgroundColor = 'black'; // This line can be removed if CSS handles it
+
+            // Removed timeToggle, timeDropdown, timeOptions, backgrounds object
+            // Removed setTimeBasedBackground, updateBackground, updateActiveOption functions
+            // Removed event listeners for timeToggle, document click, timeDropdown click, timeOptions click
+            // Removed setInterval call
         });
     </script>
 </body>
