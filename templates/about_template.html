@@ -19,22 +19,16 @@
             padding: 0;
             height: 100%;
             font-family: 'Wim Inspo', sans-serif;
-            line-height: 2;
-            font-size: 12px;
+            line-height: 1.8;
+            font-size: 10px;
             color:black;
-            font-weight: 600;
-        }
-        
-        body {
-            background-color: white;
-            transition: color 0.2s ease;
+            text-align: justify;
         }
 
         .content a {
         text-decoration: none;
         position: relative;
         color: black;
-        font-weight: 500;
         border-bottom: 2px solid black;
         }
         
@@ -47,8 +41,8 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 20px;
-            background-color: rgba(35, 84, 152, 0);
+            height: 5px;
+            background-color: white;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -86,17 +80,17 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding-top: 80px;
+            padding-top: 20px;
             padding-left: 5%;
         }
         
         .content {
             margin-top: 20px;
             padding: 30px;
-            width: 90%;
+            width: 100%;
             max-width: 700px;
             box-sizing: border-box;
-            /* text-align: justify; */
+            text-align: justify;
             margin-left: auto;
             margin-right: auto;
         }
@@ -117,7 +111,6 @@
             .content {
                 width: 700px;
                 padding: 40px;
-                text-align: left;
             }
         }
     </style>
@@ -139,111 +132,5 @@
         </div>
     </div>
 
-    <script>
-        // Font loading detection
-        document.addEventListener('DOMContentLoaded', function() {
-            // Check if fonts are loaded
-            if (document.fonts) {
-                document.fonts.ready.then(function() {
-                    console.log('Fonts have loaded');
-                    document.documentElement.classList.add('fonts-loaded');
-                }).catch(function(err) {
-                    console.log('Font loading error:', err);
-                });
-            }
-            
-            const contentTypedKey = 'contentHasBeenTyped';
-
-            function typeOutTextNodes(elementSelector, startDelay) {
-                const container = document.querySelector(elementSelector);
-                if (!container) return;
-
-                const textNodesToAnimate = [];
-
-                function collectTextNodes(el) {
-                    el.childNodes.forEach(node => {
-                        if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim().length > 0) {
-                            textNodesToAnimate.push({
-                                node: node,
-                                originalText: node.nodeValue,
-                                currentIndex: 0
-                            });
-                            node.nodeValue = ''; 
-                        } else if (node.nodeType === Node.ELEMENT_NODE) {
-                            if (node.tagName.toLowerCase() !== 'script' && node.tagName.toLowerCase() !== 'style') {
-                                collectTextNodes(node); 
-                            }
-                        }
-                    });
-                }
-                
-                if (localStorage.getItem(contentTypedKey) !== 'true') {
-                    collectTextNodes(container); 
-                }
-
-
-                if (textNodesToAnimate.length === 0 && localStorage.getItem(contentTypedKey) !== 'true') {
-                    // If there was nothing to clear (e.g. empty .content initially) but we still need to mark as "typed"
-                    // or if content was already there and we are skipping animation.
-                    // This case might not be strictly necessary if {{.Content}} always has text.
-                    // However, if we cleared text and found nothing, we still need to proceed to set the flag later.
-                } else if (localStorage.getItem(contentTypedKey) === 'true') {
-                    // If already typed, do nothing, text is server-rendered.
-                    return;
-                }
-
-
-                setTimeout(() => {
-                    let currentNodeIndex = 0;
-                    let currentTextNode = textNodesToAnimate.length > 0 ? textNodesToAnimate[currentNodeIndex] : null;
-
-                    function typeCharacter() {
-                        if (!currentTextNode) { 
-                            localStorage.setItem(contentTypedKey, 'true');
-                            return;
-                        }
-
-                        if (currentTextNode.currentIndex < currentTextNode.originalText.length) {
-                            currentTextNode.node.nodeValue += currentTextNode.originalText[currentTextNode.currentIndex];
-                            currentTextNode.currentIndex++;
-                            const charTypingSpeed = Math.floor(Math.random() * 21) + 5; // Random speed: 10ms to 30ms
-                            setTimeout(typeCharacter, charTypingSpeed);
-                        } else {
-                            currentNodeIndex++;
-                            if (currentNodeIndex < textNodesToAnimate.length) {
-                                currentTextNode = textNodesToAnimate[currentNodeIndex];
-                                const nextNodeDelay = Math.floor(Math.random() * 21) + 5; 
-                                setTimeout(typeCharacter, nextNodeDelay); 
-                            } else {
-                                currentTextNode = null; 
-                                localStorage.setItem(contentTypedKey, 'true');
-                            }
-                        }
-                    }
-                    if(currentTextNode) { // Only start typing if there's something to type
-                       typeCharacter(); 
-                    } else if (localStorage.getItem(contentTypedKey) !== 'true') {
-                        // If there was no text to type out (e.g. {{.Content}} was empty)
-                        // but we haven't set the flag, set it now.
-                        localStorage.setItem(contentTypedKey, 'true');
-                    }
-                }, startDelay);
-            }
-
-            if (localStorage.getItem(contentTypedKey) === 'true') {
-                // Content was typed previously, server-rendered content will show.
-            } else {
-                typeOutTextNodes('.content', 0); 
-            }
-            
-            // Ensure body background is black (already set in CSS)
-            // document.body.style.backgroundColor = 'black'; // This line can be removed if CSS handles it
-
-            // Removed timeToggle, timeDropdown, timeOptions, backgrounds object
-            // Removed setTimeBasedBackground, updateBackground, updateActiveOption functions
-            // Removed event listeners for timeToggle, document click, timeDropdown click, timeOptions click
-            // Removed setInterval call
-        });
-    </script>
 </body>
 </html>
