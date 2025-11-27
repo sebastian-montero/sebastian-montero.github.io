@@ -4,9 +4,13 @@ tw: https://x.com/sebastianmxnt
 in: https://www.linkedin.com/in/sebastianmontero/
 gh:  https://github.com/sebastian-montero
 -->
-**Hello, my name is Sebastian.**
+**Lead AI/ML Engineer** building intelligent systems at scale.
 
-I am from Costa Rica living in London, UK. I work as a Lead AI/ML Enginner building deep learning models, recommendation systems and AI systems. In my free time, I enjoy hacking, music production, film photography and traveling. I’m also a blue belt in BJJ. 
+Based in London, originally from Costa Rica. I architect and deploy production machine learning systems, specializing in deep learning models, recommendation engines, and end-to-end AI infrastructure.
 
-If you would like to chat, please reach out through any of my socials.
+My work spans the full ML lifecycle—from research and experimentation to production deployment and optimization. I'm passionate about pushing the boundaries of what's possible with AI while maintaining a strong focus on real-world impact.
+
+Outside of engineering, I'm into security research, music production, analog photography, and Brazilian Jiu-Jitsu. Always exploring, always learning.
+
+Let's connect.
 
