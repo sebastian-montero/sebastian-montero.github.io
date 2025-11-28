@@ -20,6 +20,12 @@
             line-height: 1.6;
             font-size: 14px;
             -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: #000000;
+            color: #ffffff;
         }
 
         .container {
@@ -35,6 +41,7 @@
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: -0.015rem;
+            align-items: center;
         }
 
         .nav a {
@@ -43,7 +50,34 @@
             transition: opacity 0.2s;
         }
 
+        .dark-mode .nav a {
+            color: #ffffff;
+        }
+
         .nav a:hover {
+            opacity: 0.6;
+        }
+
+        .theme-toggle {
+            margin-left: auto;
+            background: none;
+            border: 1px solid #000000;
+            color: #000000;
+            padding: 6px 12px;
+            font-family: 'IBM Plex Mono', 'Courier New', monospace;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: -0.015rem;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .dark-mode .theme-toggle {
+            border-color: #ffffff;
+            color: #ffffff;
+        }
+
+        .theme-toggle:hover {
             opacity: 0.6;
         }
 
@@ -54,6 +88,10 @@
             letter-spacing: -0.16rem;
             margin-bottom: 32px;
             color: #000000;
+        }
+
+        .dark-mode h1 {
+            color: #ffffff;
         }
 
         .content {
@@ -68,6 +106,10 @@
             color: #000000;
         }
 
+        .dark-mode .content p {
+            color: #ffffff;
+        }
+
         .content strong {
             font-weight: 600;
         }
@@ -76,6 +118,10 @@
             color: #000000;
             text-decoration: underline;
             transition: opacity 0.2s;
+        }
+
+        .dark-mode .content a {
+            color: #ffffff;
         }
 
         .content a:hover {
@@ -95,6 +141,7 @@
 
             .nav {
                 margin-bottom: 40px;
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -103,6 +150,10 @@
     <div class="container">
         <div class="nav">
             {{.Sidebar}}
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <span class="light-mode-text">Dark</span>
+                <span class="dark-mode-text" style="display: none;">Light</span>
+            </button>
         </div>
 
         <h1>Sebastian Montero</h1>
@@ -111,5 +162,34 @@
             {{.Content}}
         </div>
     </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const lightModeText = document.querySelector('.light-mode-text');
+        const darkModeText = document.querySelector('.dark-mode-text');
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            lightModeText.style.display = 'none';
+            darkModeText.style.display = 'inline';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                lightModeText.style.display = 'none';
+                darkModeText.style.display = 'inline';
+            } else {
+                localStorage.setItem('theme', 'light');
+                lightModeText.style.display = 'inline';
+                darkModeText.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
