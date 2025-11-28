@@ -1,8 +1,8 @@
 <!--
 mail: mailto:quinone.sectors0x@icloud.com
-tw: https://x.com/sebastianmxnt
-in: https://www.linkedin.com/in/sebastianmontero/
-gh:  https://github.com/sebastian-montero
+x: https://x.com/sebastianmxnt
+linkedin: https://www.linkedin.com/in/sebastianmontero/
+github:  https://github.com/sebastian-montero
 -->
 **Lead AI/ML Engineer** building intelligent systems at scale.
 
