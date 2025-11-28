@@ -1,148 +1,172 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SM</title>
-    <link rel="preload" href="/fonts/wim-inspo.ttf" as="font" type="font/ttf" crossorigin>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Wim Inspo';
-            src: url('fonts/wim-inspo.ttf') format('truetype');  
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body, html {
-            margin: 0;
-            padding: 0;
             height: 100%;
-            font-family: 'Wim Inspo', sans-serif;
-            line-height: 1.8;
-            font-size: 10px;
-            color:black;
-            text-align: justify;
+            font-family: 'IBM Plex Mono', 'Courier New', monospace;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 650px;
+            padding: 60px 20px;
+            margin: 0;
+        }
+
+        .nav {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 60px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: -0.015rem;
+        }
+
+        .nav a {
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .dark-mode .nav a {
+            color: #ffffff;
+        }
+
+        .nav a:hover {
+            opacity: 0.6;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -0.16rem;
+            margin-bottom: 32px;
+            color: #000000;
+        }
+
+        .dark-mode h1 {
+            color: #ffffff;
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        .content p {
+            font-size: 14px;
+            line-height: 1.5;
+            letter-spacing: -0.0175rem;
+            margin-bottom: 16px;
+            color: #000000;
+        }
+
+        .dark-mode .content p {
+            color: #ffffff;
+        }
+
+        .content strong {
+            font-weight: 600;
         }
 
         .content a {
-        text-decoration: none;
-        position: relative;
-        color: black;
-        border-bottom: 2px solid black;
+            color: #000000;
+            text-decoration: underline;
+            transition: opacity 0.2s;
         }
-        
+
+        .dark-mode .content a {
+            color: #ffffff;
+        }
+
         .content a:hover {
-            border-color: black
+            opacity: 0.6;
         }
-            
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background-color: white;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 15px 0;
-            align-items: center;
-            border-bottom: 1px solid black;
-            z-index: 100;
-        }
-        
-        .sidebar-left {
-            margin-left: 15px;
-            width: 40px;
-            height: 40px;
-            position: relative;
-        }
-        
-        .sidebar-right {
-            display: flex;
-        }
-        
-        .sidebar a {
-            color:  black;
-            text-decoration: none;
-            font-size: 10px;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-        
-        .sidebar a:hover {
-            color: darkgray;
-            opacity: 0.8;
-        }
-        
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding-top: 20px;
-            padding-left: 5%;
-        }
-        
-        .content {
-            margin-top: 20px;
-            padding: 30px;
-            width: 100%;
-            max-width: 700px;
-            box-sizing: border-box;
-            text-align: justify;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        h1, h2, h3 {
-            color: rgba(255, 255, 255, 0.95);
-            font-weight: 600;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-            text-align: center;
-        }
-        
-        @media (min-width: 730px) {
+
+        @media (max-width: 768px) {
             .container {
-                padding-left: 10%;
-                padding-right: 0;
+                padding: 40px 20px;
             }
-            
-            .content {
-                width: 700px;
-                padding: 40px;
+
+            h1 {
+                font-size: 28px;
+                letter-spacing: -0.1rem;
+                margin-bottom: 24px;
+            }
+
+            .nav {
+                margin-bottom: 40px;
+                flex-wrap: wrap;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="sidebar">
-        <div class="sidebar-left">
-            
-        </div>
-        <div class="sidebar-right">
-            <a href="mailto:quinone.sectors0x@icloud.com">mail</a><a href="https://x.com/sebastianmxnt">tw</a><a href="https://www.linkedin.com/in/sebastianmontero/">in</a><a href="https://github.com/sebastian-montero">gh</a>
-        </div>
-    </div>
-
     <div class="container">
+        <div class="nav">
+            <a href="mailto:quinone.sectors0x@icloud.com">mail</a><a href="https://x.com/sebastianmxnt">x</a><a href="https://www.linkedin.com/in/sebastianmontero/">linkedin</a><a href="https://github.com/sebastian-montero">github</a>
+        </div>
+
+        <h1>Sebastian Montero</h1>
+
         <div class="content">
             <!--
 mail: mailto:quinone.sectors0x@icloud.com
-tw: https://x.com/sebastianmxnt
-in: https://www.linkedin.com/in/sebastianmontero/
-gh:  https://github.com/sebastian-montero
+x: https://x.com/sebastianmxnt
+linkedin: https://www.linkedin.com/in/sebastianmontero/
+github:  https://github.com/sebastian-montero
 -->
 
-<p><strong>Hello, my name is Sebastian.</strong></p>
+<p><strong>AI Engineer</strong> building intelligent systems at scale.</p>
 
-<p>I am from Costa Rica living in London, UK. I work as a Lead AI/ML Enginner building deep learning models, recommendation systems and AI systems. In my free time, I enjoy hacking, music production, film photography and traveling. I’m also a blue belt in BJJ.</p>
+<p>Based in London, originally from Costa Rica. I build AI and machine learning systems, with experience spanning data science, deep learning, recommendation systems, and LLM &amp; agentic systems.</p>
 
-<p>If you would like to chat, please reach out through any of my socials.</p>
+<p>Right now, I&rsquo;m focused on multi-agent systems. From experimentation and discovery to production deployment, monitoring, and optimization. I&rsquo;m passionate about pushing what&rsquo;s possible with AI while keeping a strong focus on real-world impact.</p>
+
+<p>Outside of engineering, I&rsquo;m into music production, analog photography, and Brazilian Jiu-Jitsu. Always exploring, always learning.</p>
+
+<p>Let&rsquo;s connect.</p>
 
         </div>
     </div>
 
+    <script>
+        
+        const updateTheme = () => {
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (systemPrefersDark) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        };
+
+        
+        updateTheme();
+
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+    </script>
 </body>
 </html>
