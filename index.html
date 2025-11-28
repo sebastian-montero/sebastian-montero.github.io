@@ -41,7 +41,6 @@
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: -0.015rem;
-            align-items: center;
         }
 
         .nav a {
@@ -55,28 +54,6 @@
         }
 
         .nav a:hover {
-            opacity: 0.6;
-        }
-
-        .theme-toggle {
-            margin-left: auto;
-            background: none;
-            border: none;
-            color: #000000;
-            padding: 0;
-            font-family: 'IBM Plex Mono', 'Courier New', monospace;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: -0.015rem;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .dark-mode .theme-toggle {
-            color: #ffffff;
-        }
-
-        .theme-toggle:hover {
             opacity: 0.6;
         }
 
@@ -149,10 +126,6 @@
     <div class="container">
         <div class="nav">
             <a href="mailto:quinone.sectors0x@icloud.com">mail</a><a href="https://x.com/sebastianmxnt">x</a><a href="https://www.linkedin.com/in/sebastianmontero/">linkedin</a><a href="https://github.com/sebastian-montero">github</a>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <span class="light-mode-text">Dark</span>
-                <span class="dark-mode-text" style="display: none;">Light</span>
-            </button>
         </div>
 
         <h1>Sebastian Montero</h1>
@@ -179,35 +152,21 @@ github:  https://github.com/sebastian-montero
     </div>
 
     <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-        const lightModeText = document.querySelector('.light-mode-text');
-        const darkModeText = document.querySelector('.dark-mode-text');
+        
+        const updateTheme = () => {
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (systemPrefersDark) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        };
 
         
-        const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        updateTheme();
 
-        if (currentTheme === 'dark') {
-            body.classList.add('dark-mode');
-            lightModeText.style.display = 'none';
-            darkModeText.style.display = 'inline';
-        }
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-                lightModeText.style.display = 'none';
-                darkModeText.style.display = 'inline';
-            } else {
-                localStorage.setItem('theme', 'light');
-                lightModeText.style.display = 'inline';
-                darkModeText.style.display = 'none';
-            }
-        });
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
     </script>
 </body>
 </html>
