@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SM</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,329 +14,101 @@
 
         body, html {
             height: 100%;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
-            color: #e4e4e7;
-            line-height: 1.7;
-            font-size: 16px;
-            overflow-x: hidden;
-        }
-
-         
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background:
-                radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-         
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 70px;
-            background: rgba(10, 10, 15, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 40px;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .nav-brand {
-            font-size: 20px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 35px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #a1a1aa;
-            text-decoration: none;
+            font-family: 'IBM Plex Mono', 'Courier New', monospace;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
             font-size: 14px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            letter-spacing: 0.3px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transition: width 0.3s ease;
+        .container {
+            max-width: 650px;
+            padding: 60px 20px;
+            margin: 0;
         }
 
-        .nav-links a:hover {
-            color: #ffffff;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-         
-        .main-container {
-            position: relative;
-            z-index: 1;
-            min-height: 100vh;
+        .nav {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 20px 60px;
+            gap: 24px;
+            margin-bottom: 60px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: -0.015rem;
         }
 
-        .content-wrapper {
-            max-width: 800px;
-            width: 100%;
-            margin: 0 auto;
+        .nav a {
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.2s;
         }
 
-         
-        .hero {
-            text-align: center;
-            margin-bottom: 80px;
-            animation: fadeInUp 0.8s ease-out;
+        .nav a:hover {
+            opacity: 0.6;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -0.16rem;
+            margin-bottom: 32px;
+            color: #000000;
         }
 
-        .hero h1 {
-            font-size: 56px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -1.5px;
-        }
-
-        .hero .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-         
         .content {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 50px;
-            backdrop-filter: blur(10px);
-            box-shadow:
-                0 20px 60px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            max-width: 600px;
         }
 
         .content p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #d4d4d8;
-            margin-bottom: 20px;
-            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.5;
+            letter-spacing: -0.0175rem;
+            margin-bottom: 16px;
+            color: #000000;
         }
 
         .content strong {
-            color: #ffffff;
             font-weight: 600;
         }
 
         .content a {
-            color: #8b87ff;
-            text-decoration: none;
-            font-weight: 500;
-            position: relative;
-            transition: color 0.3s ease;
+            color: #000000;
+            text-decoration: underline;
+            transition: opacity 0.2s;
         }
 
         .content a:hover {
-            color: #a5a0ff;
+            opacity: 0.6;
         }
 
-        h1, h2, h3 {
-            color: #ffffff;
-            font-weight: 600;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
-
-        h2 {
-            font-size: 32px;
-            margin-top: 40px;
-        }
-
-        h3 {
-            font-size: 24px;
-            margin-top: 32px;
-        }
-
-         
-        .social-section {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            color: #d4d4d8;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(102, 126, 234, 0.5);
-            transform: translateY(-2px);
-            color: #ffffff;
-        }
-
-        .social-link i {
-            font-size: 16px;
-        }
-
-         
         @media (max-width: 768px) {
-            nav {
-                padding: 0 20px;
+            .container {
+                padding: 40px 20px;
             }
 
-            .nav-brand {
-                font-size: 18px;
-            }
-
-            .nav-links {
-                gap: 20px;
-            }
-
-            .nav-links a {
-                font-size: 13px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-                letter-spacing: -1px;
-            }
-
-            .content {
-                padding: 30px;
-                border-radius: 16px;
-            }
-
-            .content p {
-                font-size: 16px;
-            }
-
-            .main-container {
-                padding: 90px 15px 40px;
-            }
-
-            .social-links {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .social-link {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
+            h1 {
                 font-size: 28px;
+                letter-spacing: -0.1rem;
+                margin-bottom: 24px;
             }
 
-            h2 {
-                font-size: 24px;
+            .nav {
+                margin-bottom: 40px;
             }
-
-            h3 {
-                font-size: 20px;
-            }
-        }
-
-         
-        html {
-            scroll-behavior: smooth;
-        }
-
-         
-        ::selection {
-            background: rgba(102, 126, 234, 0.3);
-            color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-brand">SM</div>
-        <div class="nav-links">
+    <div class="container">
+        <div class="nav">
             <a href="mailto:quinone.sectors0x@icloud.com">mail</a><a href="https://x.com/sebastianmxnt">tw</a><a href="https://www.linkedin.com/in/sebastianmontero/">in</a><a href="https://github.com/sebastian-montero">gh</a>
         </div>
-    </nav>
 
-    <div class="main-container">
-        <div class="content-wrapper">
-            <div class="hero">
-                <h1>Sebastian <span class="gradient-text">Montero</span></h1>
-            </div>
+        <h1>Sebastian Montero</h1>
 
-            <div class="content">
-                <!--
+        <div class="content">
+            <!--
 mail: mailto:quinone.sectors0x@icloud.com
 tw: https://x.com/sebastianmxnt
 in: https://www.linkedin.com/in/sebastianmontero/
@@ -354,7 +125,6 @@ gh:  https://github.com/sebastian-montero
 
 <p>Let&rsquo;s connect.</p>
 
-            </div>
         </div>
     </div>
 </body>
