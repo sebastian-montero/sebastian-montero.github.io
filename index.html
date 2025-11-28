@@ -185,7 +185,10 @@ github:  https://github.com/sebastian-montero
         const darkModeText = document.querySelector('.dark-mode-text');
 
         
-        const currentTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+
         if (currentTheme === 'dark') {
             body.classList.add('dark-mode');
             lightModeText.style.display = 'none';
