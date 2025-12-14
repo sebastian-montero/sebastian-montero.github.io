@@ -247,7 +247,7 @@
             const container = document.getElementById('films-container');
 
             try {
-                const url = `https://letterboxd.com/${LETTERBOXD_USERNAME}/films/`;
+                const url = `https://letterboxd.com/${LETTERBOXD_USERNAME}/films/by/date/`;
                 const html = await fetchWithProxy(url);
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
