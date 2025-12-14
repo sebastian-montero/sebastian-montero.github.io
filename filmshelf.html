@@ -261,6 +261,11 @@
                     filmItems = doc.querySelectorAll('li.griditem');
                 }
 
+                // Debug: log first item's HTML
+                if (filmItems.length > 0) {
+                    console.log('First film item HTML:', filmItems[0].outerHTML);
+                }
+
                 filmItems.forEach(item => {
                     // Try different attribute patterns
                     let posterDiv = item.querySelector('div.film-poster');
@@ -269,6 +274,8 @@
                     if (posterDiv) {
                         title = posterDiv.getAttribute('data-film-name') || '';
                         slug = posterDiv.getAttribute('data-film-slug') || '';
+                        // Check all attributes on posterDiv
+                        console.log('posterDiv attributes:', [...posterDiv.attributes].map(a => `${a.name}="${a.value}"`));
                     }
 
                     // Also check for react-component pattern
@@ -283,6 +290,7 @@
                     // Get poster image - check multiple attributes (lazy loading)
                     const img = item.querySelector('img');
                     if (img) {
+                        console.log('img attributes:', [...img.attributes].map(a => `${a.name}="${a.value}"`));
                         posterUrl = img.getAttribute('src') ||
                                     img.getAttribute('data-src') ||
                                     img.getAttribute('srcset')?.split(' ')[0] || '';
@@ -308,6 +316,8 @@
                         films.push({ title, slug, poster: posterUrl, rating });
                     }
                 });
+
+                console.log('Parsed films:', films);
 
                 renderFilms(films);
             } catch (error) {
