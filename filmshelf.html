@@ -271,7 +271,7 @@
 
                     // Construct full poster URL via image proxy (handles redirects)
                     const letterboxdUrl = posterPath ? `https://letterboxd.com${posterPath}` : '';
-                    const posterUrl = letterboxdUrl ? `https://images.weserv.nl/?url=${encodeURIComponent(letterboxdUrl)}&w=300` : '';
+                    const posterUrl = letterboxdUrl ? `https://wsrv.nl/?url=${letterboxdUrl}&w=300&output=jpg` : '';
 
                     // Get rating
                     let rating = null;
