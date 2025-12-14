@@ -269,8 +269,9 @@
                     const slug = reactDiv.getAttribute('data-item-slug') || '';
                     const posterPath = reactDiv.getAttribute('data-poster-url') || '';
 
-                    // Construct full poster URL
-                    const posterUrl = posterPath ? `https://letterboxd.com${posterPath}` : '';
+                    // Construct full poster URL via image proxy (handles redirects)
+                    const letterboxdUrl = posterPath ? `https://letterboxd.com${posterPath}` : '';
+                    const posterUrl = letterboxdUrl ? `https://images.weserv.nl/?url=${encodeURIComponent(letterboxdUrl)}&w=300` : '';
 
                     // Get rating
                     let rating = null;
