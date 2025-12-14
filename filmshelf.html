@@ -276,8 +276,6 @@
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
 
-                const films = [];
-
                 // Try multiple selector patterns
                 let filmItems = doc.querySelectorAll('li.poster-container');
 
