@@ -269,9 +269,8 @@
                     const slug = reactDiv.getAttribute('data-item-slug') || '';
                     const posterPath = reactDiv.getAttribute('data-poster-url') || '';
 
-                    // Construct full poster URL via image proxy (handles redirects)
-                    const letterboxdUrl = posterPath ? `https://letterboxd.com${posterPath}` : '';
-                    const posterUrl = letterboxdUrl ? `https://wsrv.nl/?url=${letterboxdUrl}&w=300&output=jpg` : '';
+                    // Use Letterboxd poster URL directly (browsers allow cross-origin images)
+                    const posterUrl = posterPath ? `https://letterboxd.com${posterPath}` : '';
 
                     // Get rating
                     let rating = null;
