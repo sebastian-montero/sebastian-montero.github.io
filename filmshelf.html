@@ -325,9 +325,11 @@
                 poster.className = 'movie-poster';
                 if (film.poster) {
                     const img = document.createElement('img');
-                    img.src = film.poster;
+                    // Use wsrv.nl proxy to avoid ORB blocking
+                    img.src = `https://wsrv.nl/?url=${encodeURIComponent(film.poster)}&default=${encodeURIComponent('https://s.ltrbxd.com/static/img/empty-poster-230-aXvPfQ9Q.png')}`;
                     img.alt = film.title;
                     img.loading = 'lazy';
+                    img.onerror = () => { img.style.display = 'none'; };
                     poster.appendChild(img);
                 }
                 card.appendChild(poster);
