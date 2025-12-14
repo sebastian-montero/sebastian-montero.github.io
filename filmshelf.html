@@ -221,111 +221,65 @@
         updateTheme();
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
-        const LETTERBOXD_USERNAME = 'smxnt';
-        const RSS_URL = `https://letterboxd.com/${LETTERBOXD_USERNAME}/rss/`;
-        const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+        // Film data - update this array with your rated films
+        // Format: { title, rating (out of 5), slug (letterboxd URL slug), poster (TMDB poster path) }
+        const films = [
+            // Add your films here. Export from Letterboxd and convert to this format.
+            // Example:
+            // { title: "The Godfather", rating: 5, slug: "the-godfather", poster: "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" },
+        ];
 
-        async function fetchFilms() {
+        const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w342';
+
+        function renderFilms() {
             const container = document.getElementById('films-container');
+            container.innerHTML = '';
 
-            try {
-                const response = await fetch(CORS_PROXY + encodeURIComponent(RSS_URL));
-                if (!response.ok) throw new Error('Failed to fetch');
-
-                const xml = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(xml, 'application/xml');
-
-                const items = doc.querySelectorAll('item');
-                const films = [];
-
-                items.forEach(item => {
-                    const title = item.querySelector('title')?.textContent || '';
-                    const link = item.querySelector('link')?.textContent || '';
-                    const description = item.querySelector('description')?.textContent || '';
-
-                    // Parse letterboxd specific data
-                    const filmTitle = item.querySelector('filmTitle')?.textContent || title.split(',')[0];
-                    const memberRating = item.querySelector('memberRating')?.textContent || '';
-                    const watchedDate = item.querySelector('watchedDate')?.textContent || '';
-
-                    // Extract poster image from description
-                    const imgMatch = description.match(/<img src="([^"]+)"/);
-                    const posterUrl = imgMatch ? imgMatch[1] : '';
-
-                    // Only include diary entries (films watched), not lists
-                    if (filmTitle && watchedDate) {
-                        const rating = memberRating ? parseFloat(memberRating) : null;
-
-                        films.push({
-                            title: filmTitle,
-                            rating: rating,
-                            posterUrl: posterUrl,
-                            link: link
-                        });
-                    }
-                });
-
-                // Sort by most recent
-                films.sort((a, b) => new Date(b.watchedDate) - new Date(a.watchedDate));
-
-                // Render
-                container.innerHTML = '';
-
-                if (films.length === 0) {
-                    container.innerHTML = '<p class="error">no films found</p>';
-                    return;
-                }
-
-                const grid = document.createElement('div');
-                grid.className = 'movies-grid';
-
-                films.forEach(film => {
-                    const card = document.createElement('a');
-                    card.className = 'movie-card';
-                    card.href = film.link;
-                    card.target = '_blank';
-                    card.rel = 'noopener noreferrer';
-                    card.style.textDecoration = 'none';
-                    card.style.color = 'inherit';
-
-                    const poster = document.createElement('div');
-                    poster.className = 'movie-poster';
-                    if (film.posterUrl) {
-                        const img = document.createElement('img');
-                        img.src = film.posterUrl;
-                        img.alt = film.title;
-                        img.loading = 'lazy';
-                        poster.appendChild(img);
-                    }
-                    card.appendChild(poster);
-
-                    const titleEl = document.createElement('div');
-                    titleEl.className = 'movie-title';
-                    titleEl.textContent = film.title;
-                    card.appendChild(titleEl);
-
-                    const ratingEl = document.createElement('div');
-                    ratingEl.className = 'movie-rating';
-                    if (film.rating !== null) {
-                        ratingEl.textContent = `${film.rating}/5`;
-                    } else {
-                        ratingEl.textContent = '—';
-                    }
-                    card.appendChild(ratingEl);
-
-                    grid.appendChild(card);
-                });
-
-                container.appendChild(grid);
-
-            } catch (error) {
-                console.error('Error fetching films:', error);
-                container.innerHTML = '<p class="error">failed to load films</p>';
+            if (films.length === 0) {
+                container.innerHTML = '<p class="error">no films yet</p>';
+                return;
             }
+
+            const grid = document.createElement('div');
+            grid.className = 'movies-grid';
+
+            films.forEach(film => {
+                const card = document.createElement('a');
+                card.className = 'movie-card';
+                card.href = `https://letterboxd.com/film/${film.slug}/`;
+                card.target = '_blank';
+                card.rel = 'noopener noreferrer';
+                card.style.textDecoration = 'none';
+                card.style.color = 'inherit';
+
+                const poster = document.createElement('div');
+                poster.className = 'movie-poster';
+                if (film.poster) {
+                    const img = document.createElement('img');
+                    img.src = TMDB_IMAGE_BASE + film.poster;
+                    img.alt = film.title;
+                    img.loading = 'lazy';
+                    poster.appendChild(img);
+                }
+                card.appendChild(poster);
+
+                const titleEl = document.createElement('div');
+                titleEl.className = 'movie-title';
+                titleEl.textContent = film.title;
+                card.appendChild(titleEl);
+
+                const ratingEl = document.createElement('div');
+                ratingEl.className = 'movie-rating';
+                ratingEl.textContent = film.rating ? `${film.rating}/5` : '—';
+                card.appendChild(ratingEl);
+
+                grid.appendChild(card);
+            });
+
+            container.appendChild(grid);
         }
 
-        fetchFilms();
+        renderFilms();
     </script>
 </body>
 </html>
