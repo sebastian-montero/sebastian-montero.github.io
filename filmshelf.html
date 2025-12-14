@@ -267,10 +267,15 @@
 
                     const title = reactDiv.getAttribute('data-item-name') || '';
                     const slug = reactDiv.getAttribute('data-item-slug') || '';
-                    const posterPath = reactDiv.getAttribute('data-poster-url') || '';
+                    const filmId = reactDiv.getAttribute('data-film-id') || '';
 
-                    // Use Letterboxd poster URL directly (browsers allow cross-origin images)
-                    const posterUrl = posterPath ? `https://letterboxd.com${posterPath}` : '';
+                    // Construct direct CDN URL from film ID
+                    // Path is each digit of film ID as subdirectory
+                    let posterUrl = '';
+                    if (filmId && slug) {
+                        const idPath = filmId.split('').join('/');
+                        posterUrl = `https://a.ltrbxd.com/resized/film-poster/${idPath}/${filmId}-${slug}-0-230-0-345-crop.jpg`;
+                    }
 
                     // Get rating
                     let rating = null;
