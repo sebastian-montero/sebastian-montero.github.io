@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filmshelf</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            font-family: 'IBM Plex Mono', 'Courier New', monospace;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 60px 20px;
+            margin: 0;
+        }
+
+        .nav {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 60px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: -0.015rem;
+        }
+
+        .nav a {
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .dark-mode .nav a {
+            color: #ffffff;
+        }
+
+        .nav a:hover {
+            opacity: 0.6;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -0.16rem;
+            margin-bottom: 16px;
+            color: #000000;
+        }
+
+        .dark-mode h1 {
+            color: #ffffff;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            letter-spacing: -0.0175rem;
+            margin-bottom: 48px;
+            opacity: 0.6;
+        }
+
+        .year-section {
+            margin-bottom: 48px;
+        }
+
+        .year-title {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -0.05rem;
+            margin-bottom: 24px;
+            color: #000000;
+        }
+
+        .dark-mode .year-title {
+            color: #ffffff;
+        }
+
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 24px;
+        }
+
+        .movie-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-poster {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background: #f0f0f0;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .dark-mode .movie-poster {
+            background: #1a1a1a;
+        }
+
+        .movie-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.2s;
+        }
+
+        .movie-poster img:hover {
+            opacity: 0.8;
+        }
+
+        .movie-title {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: -0.015rem;
+            margin-bottom: 4px;
+            color: #000000;
+        }
+
+        .dark-mode .movie-title {
+            color: #ffffff;
+        }
+
+        .movie-rating {
+            font-size: 11px;
+            letter-spacing: -0.01rem;
+            opacity: 0.6;
+        }
+
+        .loading {
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        .error {
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+                letter-spacing: -0.1rem;
+                margin-bottom: 12px;
+            }
+
+            .nav {
+                margin-bottom: 40px;
+                flex-wrap: wrap;
+            }
+
+            .movies-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 12px;
+                margin-right: 8px;
+            }
+
+            .movie-title {
+                font-size: 11px;
+            }
+
+            .movie-rating {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">home</a>
+            <a href="mailto:quinone.sectors0x@icloud.com">mail</a>
+            <a href="https://x.com/sebastianmxnt">x</a>
+            <a href="https://www.linkedin.com/in/sebastianmontero/">linkedin</a>
+            <a href="https://github.com/sebastian-montero">github</a>
+        </div>
+
+        <h1>filmshelf</h1>
+        <p class="subtitle">recently viewed films</p>
+
+        <div id="films-container">
+            <p class="loading">loading...</p>
+        </div>
+    </div>
+
+    <script>
+        const updateTheme = () => {
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (systemPrefersDark) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        };
+
+        updateTheme();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+
+        const LETTERBOXD_USERNAME = 'smxnt';
+        const TMDB_API_KEY = '2dca580c2a14b55200e784d157207b4d'; // Free public demo key
+        const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w342';
+        const CORS_PROXIES = [
+            'https://corsproxy.io/?',
+            'https://api.allorigins.win/raw?url=',
+            'https://cors-anywhere.herokuapp.com/'
+        ];
+
+        async function fetchWithProxy(url, proxyIndex = 0) {
+            if (proxyIndex >= CORS_PROXIES.length) {
+                throw new Error('All proxies failed');
+            }
+
+            try {
+                const proxy = CORS_PROXIES[proxyIndex];
+                const response = await fetch(proxy + encodeURIComponent(url));
+                if (!response.ok) throw new Error('Proxy failed');
+                return await response.text();
+            } catch (error) {
+                return fetchWithProxy(url, proxyIndex + 1);
+            }
+        }
+
+        async function getTMDBPoster(title) {
+            try {
+                // Extract year if present in title like "Movie Name (2024)"
+                const yearMatch = title.match(/\((\d{4})\)$/);
+                const year = yearMatch ? yearMatch[1] : null;
+                const cleanTitle = title.replace(/\s*\(\d{4}\)$/, '');
+
+                let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(cleanTitle)}`;
+                if (year) searchUrl += `&year=${year}`;
+
+                const response = await fetch(searchUrl);
+                const data = await response.json();
+
+                if (data.results && data.results.length > 0 && data.results[0].poster_path) {
+                    return TMDB_IMAGE_BASE + data.results[0].poster_path;
+                }
+            } catch (e) {
+                console.error('TMDB search failed for:', title);
+            }
+            return null;
+        }
+
+        async function fetchFilms() {
+            const container = document.getElementById('films-container');
+
+            try {
+                const url = `https://letterboxd.com/${LETTERBOXD_USERNAME}/films/by/date/`;
+                const html = await fetchWithProxy(url);
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                // Try multiple selector patterns
+                let filmItems = doc.querySelectorAll('li.poster-container');
+
+                if (filmItems.length === 0) {
+                    filmItems = doc.querySelectorAll('li.griditem');
+                }
+
+                const filmData = [];
+                filmItems.forEach(item => {
+                    const reactDiv = item.querySelector('div.react-component');
+                    if (!reactDiv) return;
+
+                    const title = reactDiv.getAttribute('data-item-name') || '';
+                    const slug = reactDiv.getAttribute('data-item-slug') || '';
+
+                    // Get rating
+                    let rating = null;
+                    const ratingSpan = item.querySelector('span.rating, span[class*="rated-"]');
+                    if (ratingSpan) {
+                        const ratingClass = Array.from(ratingSpan.classList).find(c => c.startsWith('rated-'));
+                        if (ratingClass) {
+                            const ratingNum = parseInt(ratingClass.replace('rated-', ''));
+                            rating = ratingNum / 2;
+                        }
+                    }
+
+                    if (title && slug) {
+                        filmData.push({ title, slug, rating });
+                    }
+                });
+
+                // Fetch TMDB posters in parallel
+                const films = await Promise.all(
+                    filmData.map(async (film) => {
+                        const poster = await getTMDBPoster(film.title);
+                        return { ...film, poster };
+                    })
+                );
+
+                renderFilms(films);
+            } catch (error) {
+                console.error('Error fetching films:', error);
+                container.innerHTML = '<p class="error">failed to load films</p>';
+            }
+        }
+
+        function renderFilms(films) {
+            const container = document.getElementById('films-container');
+            container.innerHTML = '';
+
+            if (films.length === 0) {
+                container.innerHTML = '<p class="error">no films found</p>';
+                return;
+            }
+
+            const grid = document.createElement('div');
+            grid.className = 'movies-grid';
+
+            films.forEach(film => {
+                const card = document.createElement('a');
+                card.className = 'movie-card';
+                card.href = `https://letterboxd.com/film/${film.slug}/`;
+                card.target = '_blank';
+                card.rel = 'noopener noreferrer';
+                card.style.textDecoration = 'none';
+                card.style.color = 'inherit';
+
+                const poster = document.createElement('div');
+                poster.className = 'movie-poster';
+                if (film.poster) {
+                    const img = document.createElement('img');
+                    img.src = film.poster;
+                    img.alt = film.title;
+                    img.loading = 'lazy';
+                    poster.appendChild(img);
+                }
+                card.appendChild(poster);
+
+                const titleEl = document.createElement('div');
+                titleEl.className = 'movie-title';
+                titleEl.textContent = film.title;
+                card.appendChild(titleEl);
+
+                const ratingEl = document.createElement('div');
+                ratingEl.className = 'movie-rating';
+                ratingEl.textContent = film.rating ? `${film.rating}/5` : '—';
+                card.appendChild(ratingEl);
+
+                grid.appendChild(card);
+            });
+
+            container.appendChild(grid);
+        }
+
+        fetchFilms();
+    </script>
+</body>
+</html>
