@@ -261,45 +261,16 @@
                     filmItems = doc.querySelectorAll('li.griditem');
                 }
 
-                // Debug: log first item's HTML
-                if (filmItems.length > 0) {
-                    console.log('First film item HTML:', filmItems[0].outerHTML);
-                }
-
                 filmItems.forEach(item => {
-                    // Try different attribute patterns
-                    let posterDiv = item.querySelector('div.film-poster');
-                    let title = '', slug = '', posterUrl = '';
+                    const reactDiv = item.querySelector('div.react-component');
+                    if (!reactDiv) return;
 
-                    if (posterDiv) {
-                        title = posterDiv.getAttribute('data-film-name') || '';
-                        slug = posterDiv.getAttribute('data-film-slug') || '';
-                        // Check all attributes on posterDiv
-                        console.log('posterDiv attributes:', [...posterDiv.attributes].map(a => `${a.name}="${a.value}"`));
-                    }
+                    const title = reactDiv.getAttribute('data-item-name') || '';
+                    const slug = reactDiv.getAttribute('data-item-slug') || '';
+                    const posterPath = reactDiv.getAttribute('data-poster-url') || '';
 
-                    // Also check for react-component pattern
-                    if (!title) {
-                        const reactDiv = item.querySelector('div.react-component');
-                        if (reactDiv) {
-                            title = reactDiv.getAttribute('data-item-name') || '';
-                            slug = reactDiv.getAttribute('data-item-slug') || '';
-                        }
-                    }
-
-                    // Get poster image - check multiple attributes (lazy loading)
-                    const img = item.querySelector('img');
-                    if (img) {
-                        console.log('img attributes:', [...img.attributes].map(a => `${a.name}="${a.value}"`));
-                        posterUrl = img.getAttribute('src') ||
-                                    img.getAttribute('data-src') ||
-                                    img.getAttribute('srcset')?.split(' ')[0] || '';
-                    }
-
-                    // Also check for data-image on poster div
-                    if (!posterUrl && posterDiv) {
-                        posterUrl = posterDiv.getAttribute('data-image') || '';
-                    }
+                    // Construct full poster URL
+                    const posterUrl = posterPath ? `https://letterboxd.com${posterPath}` : '';
 
                     // Get rating
                     let rating = null;
@@ -316,8 +287,6 @@
                         films.push({ title, slug, poster: posterUrl, rating });
                     }
                 });
-
-                console.log('Parsed films:', films);
 
                 renderFilms(films);
             } catch (error) {
