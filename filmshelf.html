@@ -35,7 +35,7 @@
         .container {
             max-width: 1200px;
             padding: 60px 20px;
-            margin: 0 auto;
+            margin: 0;
         }
 
         .nav {
@@ -222,69 +222,52 @@
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
         const LETTERBOXD_USERNAME = 'smxnt';
-        const FILMS_URL = `https://letterboxd.com/${LETTERBOXD_USERNAME}/films/`;
+        const RSS_URL = `https://letterboxd.com/${LETTERBOXD_USERNAME}/rss/`;
         const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
 
         async function fetchFilms() {
             const container = document.getElementById('films-container');
 
             try {
-                const response = await fetch(CORS_PROXY + encodeURIComponent(FILMS_URL));
+                const response = await fetch(CORS_PROXY + encodeURIComponent(RSS_URL));
                 if (!response.ok) throw new Error('Failed to fetch');
 
-                const html = await response.text();
+                const xml = await response.text();
                 const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
+                const doc = parser.parseFromString(xml, 'application/xml');
 
+                const items = doc.querySelectorAll('item');
                 const films = [];
 
-                // Find all film poster containers
-                const posterContainers = doc.querySelectorAll('li.poster-container');
+                items.forEach(item => {
+                    const title = item.querySelector('title')?.textContent || '';
+                    const link = item.querySelector('link')?.textContent || '';
+                    const description = item.querySelector('description')?.textContent || '';
 
-                posterContainers.forEach(container => {
-                    // Get film data from the div with data attributes
-                    const filmDiv = container.querySelector('div[data-film-slug]') ||
-                                   container.querySelector('div[data-target-link]') ||
-                                   container.querySelector('.film-poster');
+                    // Parse letterboxd specific data
+                    const filmTitle = item.querySelector('filmTitle')?.textContent || title.split(',')[0];
+                    const memberRating = item.querySelector('memberRating')?.textContent || '';
+                    const watchedDate = item.querySelector('watchedDate')?.textContent || '';
 
-                    if (!filmDiv) return;
+                    // Extract poster image from description
+                    const imgMatch = description.match(/<img src="([^"]+)"/);
+                    const posterUrl = imgMatch ? imgMatch[1] : '';
 
-                    const slug = filmDiv.getAttribute('data-film-slug') ||
-                                filmDiv.getAttribute('data-target-link')?.replace('/film/', '').replace('/', '') || '';
-                    const title = filmDiv.getAttribute('data-film-name') ||
-                                 container.querySelector('img')?.getAttribute('alt') || '';
+                    // Only include diary entries (films watched), not lists
+                    if (filmTitle && watchedDate) {
+                        const rating = memberRating ? parseFloat(memberRating) : null;
 
-                    // Get poster image
-                    const img = container.querySelector('img');
-                    let posterUrl = '';
-                    if (img) {
-                        posterUrl = img.getAttribute('src') || img.getAttribute('data-src') || '';
-                    }
-
-                    // Get rating from poster-viewingdata
-                    let rating = null;
-                    const viewingData = container.querySelector('.poster-viewingdata');
-                    if (viewingData) {
-                        const ratedSpan = viewingData.querySelector('span[class*="rated-"]');
-                        if (ratedSpan) {
-                            const ratingClass = Array.from(ratedSpan.classList).find(c => c.startsWith('rated-'));
-                            if (ratingClass) {
-                                const ratingValue = parseInt(ratingClass.replace('rated-', ''));
-                                rating = ratingValue / 2; // Convert from 1-10 to 0.5-5
-                            }
-                        }
-                    }
-
-                    if (title || slug) {
                         films.push({
-                            title: title || slug.replace(/-/g, ' '),
-                            slug: slug,
+                            title: filmTitle,
                             rating: rating,
                             posterUrl: posterUrl,
-                            link: `https://letterboxd.com/film/${slug}/`
+                            link: link
                         });
                     }
                 });
+
+                // Sort by most recent
+                films.sort((a, b) => new Date(b.watchedDate) - new Date(a.watchedDate));
 
                 // Render
                 container.innerHTML = '';
