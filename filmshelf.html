@@ -222,6 +222,8 @@
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
         const LETTERBOXD_USERNAME = 'smxnt';
+        const TMDB_API_KEY = '2dca580c2a14b55200e784d157207b4d'; // Free public demo key
+        const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w342';
         const CORS_PROXIES = [
             'https://corsproxy.io/?',
             'https://api.allorigins.win/raw?url=',
@@ -243,6 +245,28 @@
             }
         }
 
+        async function getTMDBPoster(title) {
+            try {
+                // Extract year if present in title like "Movie Name (2024)"
+                const yearMatch = title.match(/\((\d{4})\)$/);
+                const year = yearMatch ? yearMatch[1] : null;
+                const cleanTitle = title.replace(/\s*\(\d{4}\)$/, '');
+
+                let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(cleanTitle)}`;
+                if (year) searchUrl += `&year=${year}`;
+
+                const response = await fetch(searchUrl);
+                const data = await response.json();
+
+                if (data.results && data.results.length > 0 && data.results[0].poster_path) {
+                    return TMDB_IMAGE_BASE + data.results[0].poster_path;
+                }
+            } catch (e) {
+                console.error('TMDB search failed for:', title);
+            }
+            return null;
+        }
+
         async function fetchFilms() {
             const container = document.getElementById('films-container');
 
@@ -261,21 +285,13 @@
                     filmItems = doc.querySelectorAll('li.griditem');
                 }
 
+                const filmData = [];
                 filmItems.forEach(item => {
                     const reactDiv = item.querySelector('div.react-component');
                     if (!reactDiv) return;
 
                     const title = reactDiv.getAttribute('data-item-name') || '';
                     const slug = reactDiv.getAttribute('data-item-slug') || '';
-                    const filmId = reactDiv.getAttribute('data-film-id') || '';
-
-                    // Construct direct CDN URL from film ID
-                    // Path is each digit of film ID as subdirectory
-                    let posterUrl = '';
-                    if (filmId && slug) {
-                        const idPath = filmId.split('').join('/');
-                        posterUrl = `https://a.ltrbxd.com/resized/film-poster/${idPath}/${filmId}-${slug}-0-230-0-345-crop.jpg`;
-                    }
 
                     // Get rating
                     let rating = null;
@@ -289,9 +305,17 @@
                     }
 
                     if (title && slug) {
-                        films.push({ title, slug, poster: posterUrl, rating });
+                        filmData.push({ title, slug, rating });
                     }
                 });
+
+                // Fetch TMDB posters in parallel
+                const films = await Promise.all(
+                    filmData.map(async (film) => {
+                        const poster = await getTMDBPoster(film.title);
+                        return { ...film, poster };
+                    })
+                );
 
                 renderFilms(films);
             } catch (error) {
@@ -325,11 +349,9 @@
                 poster.className = 'movie-poster';
                 if (film.poster) {
                     const img = document.createElement('img');
-                    // Use wsrv.nl proxy to avoid ORB blocking
-                    img.src = `https://wsrv.nl/?url=${encodeURIComponent(film.poster)}&default=${encodeURIComponent('https://s.ltrbxd.com/static/img/empty-poster-230-aXvPfQ9Q.png')}`;
+                    img.src = film.poster;
                     img.alt = film.title;
                     img.loading = 'lazy';
-                    img.onerror = () => { img.style.display = 'none'; };
                     poster.appendChild(img);
                 }
                 card.appendChild(poster);
