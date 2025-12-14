@@ -280,10 +280,17 @@
                         }
                     }
 
-                    // Get poster image
+                    // Get poster image - check multiple attributes (lazy loading)
                     const img = item.querySelector('img');
                     if (img) {
-                        posterUrl = img.getAttribute('src') || '';
+                        posterUrl = img.getAttribute('src') ||
+                                    img.getAttribute('data-src') ||
+                                    img.getAttribute('srcset')?.split(' ')[0] || '';
+                    }
+
+                    // Also check for data-image on poster div
+                    if (!posterUrl && posterDiv) {
+                        posterUrl = posterDiv.getAttribute('data-image') || '';
                     }
 
                     // Get rating
