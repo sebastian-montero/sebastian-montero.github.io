@@ -99,7 +99,7 @@
 
         .movies-grid {
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             gap: 24px;
         }
 
@@ -177,7 +177,8 @@
 
             .movies-grid {
                 grid-template-columns: repeat(4, 1fr);
-                gap: 16px;
+                gap: 12px;
+                margin: 0 8px;
             }
 
             .movie-title {
@@ -201,7 +202,7 @@
         </div>
 
         <h1>filmshelf</h1>
-        <p class="subtitle">recently reviewed films</p>
+        <p class="subtitle">recently viewed films</p>
 
         <div id="films-container">
             <p class="loading">loading...</p>
