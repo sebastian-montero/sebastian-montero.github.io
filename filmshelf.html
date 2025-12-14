@@ -12,8 +12,12 @@
             box-sizing: border-box;
         }
 
-        body, html {
-            height: 100%;
+        html {
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100%;
             font-family: 'IBM Plex Mono', 'Courier New', monospace;
             background: #ffffff;
             color: #000000;
@@ -268,81 +272,58 @@
                     }
                 });
 
-                // Group by watched year
-                const filmsByYear = {};
-                films.forEach(film => {
-                    if (!filmsByYear[film.watchedYear]) {
-                        filmsByYear[film.watchedYear] = [];
-                    }
-                    filmsByYear[film.watchedYear].push(film);
-                });
-
-                // Sort years descending (recent first)
-                const sortedYears = Object.keys(filmsByYear).sort((a, b) => b - a);
+                // Sort all films by watched date (recent first)
+                films.sort((a, b) => new Date(b.watchedDate) - new Date(a.watchedDate));
 
                 // Render
                 container.innerHTML = '';
 
-                if (sortedYears.length === 0) {
+                if (films.length === 0) {
                     container.innerHTML = '<p class="error">no films found</p>';
                     return;
                 }
 
-                sortedYears.forEach(year => {
-                    const section = document.createElement('div');
-                    section.className = 'year-section';
+                const grid = document.createElement('div');
+                grid.className = 'movies-grid';
 
-                    const yearTitle = document.createElement('h2');
-                    yearTitle.className = 'year-title';
-                    yearTitle.textContent = year;
-                    section.appendChild(yearTitle);
+                films.forEach(film => {
+                    const card = document.createElement('a');
+                    card.className = 'movie-card';
+                    card.href = film.link;
+                    card.target = '_blank';
+                    card.rel = 'noopener noreferrer';
+                    card.style.textDecoration = 'none';
+                    card.style.color = 'inherit';
 
-                    const grid = document.createElement('div');
-                    grid.className = 'movies-grid';
+                    const poster = document.createElement('div');
+                    poster.className = 'movie-poster';
+                    if (film.posterUrl) {
+                        const img = document.createElement('img');
+                        img.src = film.posterUrl;
+                        img.alt = film.title;
+                        img.loading = 'lazy';
+                        poster.appendChild(img);
+                    }
+                    card.appendChild(poster);
 
-                    // Sort films within year by watched date (recent first)
-                    filmsByYear[year].sort((a, b) => new Date(b.watchedDate) - new Date(a.watchedDate));
+                    const titleEl = document.createElement('div');
+                    titleEl.className = 'movie-title';
+                    titleEl.textContent = film.title;
+                    card.appendChild(titleEl);
 
-                    filmsByYear[year].forEach(film => {
-                        const card = document.createElement('a');
-                        card.className = 'movie-card';
-                        card.href = film.link;
-                        card.target = '_blank';
-                        card.rel = 'noopener noreferrer';
-                        card.style.textDecoration = 'none';
-                        card.style.color = 'inherit';
+                    const ratingEl = document.createElement('div');
+                    ratingEl.className = 'movie-rating';
+                    if (film.rating !== null) {
+                        ratingEl.textContent = `${film.rating}/5`;
+                    } else {
+                        ratingEl.textContent = '—';
+                    }
+                    card.appendChild(ratingEl);
 
-                        const poster = document.createElement('div');
-                        poster.className = 'movie-poster';
-                        if (film.posterUrl) {
-                            const img = document.createElement('img');
-                            img.src = film.posterUrl;
-                            img.alt = film.title;
-                            img.loading = 'lazy';
-                            poster.appendChild(img);
-                        }
-                        card.appendChild(poster);
-
-                        const titleEl = document.createElement('div');
-                        titleEl.className = 'movie-title';
-                        titleEl.textContent = film.title;
-                        card.appendChild(titleEl);
-
-                        const ratingEl = document.createElement('div');
-                        ratingEl.className = 'movie-rating';
-                        if (film.rating !== null) {
-                            ratingEl.textContent = `${film.rating}/5`;
-                        } else {
-                            ratingEl.textContent = '—';
-                        }
-                        card.appendChild(ratingEl);
-
-                        grid.appendChild(card);
-                    });
-
-                    section.appendChild(grid);
-                    container.appendChild(section);
+                    grid.appendChild(card);
                 });
+
+                container.appendChild(grid);
 
             } catch (error) {
                 console.error('Error fetching films:', error);
