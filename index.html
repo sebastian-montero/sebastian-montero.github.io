@@ -15,17 +15,34 @@
         body, html {
             height: 100%;
             font-family: 'IBM Plex Mono', 'Courier New', monospace;
-            background: #ffffff;
-            color: #000000;
+            background-color: #f5f0e8;
+            color: #3a3a3a;
             line-height: 1.6;
             font-size: 14px;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
+        body {
+            background-image:
+                linear-gradient(rgba(100, 160, 210, 0.12) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(100, 160, 210, 0.12) 1px, transparent 1px),
+                linear-gradient(rgba(100, 160, 210, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(100, 160, 210, 0.06) 1px, transparent 1px);
+            background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+        }
+
         body.dark-mode {
-            background: #000000;
-            color: #ffffff;
+            background-color: #071528;
+            color: #a8d0f0;
+            background-image:
+                linear-gradient(rgba(80, 160, 240, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(80, 160, 240, 0.08) 1px, transparent 1px),
+                linear-gradient(rgba(80, 160, 240, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(80, 160, 240, 0.04) 1px, transparent 1px);
+            background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
         }
 
         .container {
@@ -44,13 +61,13 @@
         }
 
         .nav a {
-            color: #000000;
+            color: #1a3d5c;
             text-decoration: none;
             transition: opacity 0.2s;
         }
 
         .dark-mode .nav a {
-            color: #ffffff;
+            color: #6aaee0;
         }
 
         .nav a:hover {
@@ -63,7 +80,7 @@
             line-height: 1;
             letter-spacing: -0.16rem;
             margin-bottom: 32px;
-            color: #000000;
+            color: #1a3d5c;
         }
 
         .dark-mode h1 {
@@ -79,25 +96,30 @@
             line-height: 1.5;
             letter-spacing: -0.0175rem;
             margin-bottom: 16px;
-            color: #000000;
+            color: #2b5f85;
         }
 
         .dark-mode .content p {
-            color: #ffffff;
+            color: #a8d0f0;
         }
 
         .content strong {
             font-weight: 600;
+            color: #1a3d5c;
+        }
+
+        .dark-mode .content strong {
+            color: #ffffff;
         }
 
         .content a {
-            color: #000000;
+            color: #2e6d9e;
             text-decoration: underline;
             transition: opacity 0.2s;
         }
 
         .dark-mode .content a {
-            color: #ffffff;
+            color: #6aaee0;
         }
 
         .content a:hover {
@@ -119,10 +141,12 @@
                 margin-bottom: 40px;
                 flex-wrap: wrap;
             }
+
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <div class="nav">
             <a href="mailto:quinone.sectors0x@icloud.com">mail</a>
@@ -148,14 +172,13 @@ github:  https://github.com/sebastian-montero
 <p>I'm building tools for financial applications using multi-agent systems that reason, execute code, and coordinate autonomously.</p>
 
 <p>Outside of engineering, I'm into cooking, analog photography, and films. I'm a blue belt in BJJ, but currently obsessed with climbing.</p>
-            
+
 <p>Let's connect!</p>
 
         </div>
     </div>
 
     <script>
-        
         const updateTheme = () => {
             const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             if (systemPrefersDark) {
@@ -165,10 +188,8 @@ github:  https://github.com/sebastian-montero
             }
         };
 
-        
         updateTheme();
 
-        
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
     </script>
 </body>
