@@ -3,194 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian Montero</title>
+    <title>Sebastian Montero Paris</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            height: 100%;
-            font-family: 'IBM Plex Mono', 'Courier New', monospace;
-            background-color: #f5f0e8;
-            color: #3a3a3a;
-            line-height: 1.6;
-            font-size: 14px;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        body {
-            background-image:
-                linear-gradient(rgba(100, 160, 210, 0.12) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(100, 160, 210, 0.12) 1px, transparent 1px),
-                linear-gradient(rgba(100, 160, 210, 0.06) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(100, 160, 210, 0.06) 1px, transparent 1px);
-            background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
-            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
-        }
-
-        body.dark-mode {
-            background-color: #071528;
-            color: #a8d0f0;
-            background-image:
-                linear-gradient(rgba(80, 160, 240, 0.08) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(80, 160, 240, 0.08) 1px, transparent 1px),
-                linear-gradient(rgba(80, 160, 240, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(80, 160, 240, 0.04) 1px, transparent 1px);
-            background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
-        }
-
-        .container {
-            max-width: 650px;
-            padding: 60px 20px;
-            margin: 0;
-        }
-
-        .nav {
-            display: flex;
-            gap: 24px;
-            margin-bottom: 60px;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: -0.015rem;
-        }
-
-        .nav a {
-            color: #1a3d5c;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .dark-mode .nav a {
-            color: #6aaee0;
-        }
-
-        .nav a:hover {
-            opacity: 0.6;
-        }
-
-        h1 {
-            font-size: 40px;
-            font-weight: 400;
-            line-height: 1;
-            letter-spacing: -0.16rem;
-            margin-bottom: 32px;
-            color: #1a3d5c;
-        }
-
-        .dark-mode h1 {
-            color: #ffffff;
-        }
-
-        .content {
-            max-width: 600px;
-        }
-
-        .content p {
-            font-size: 14px;
-            line-height: 1.5;
-            letter-spacing: -0.0175rem;
-            margin-bottom: 16px;
-            color: #2b5f85;
-        }
-
-        .dark-mode .content p {
-            color: #a8d0f0;
-        }
-
-        .content strong {
-            font-weight: 600;
-            color: #1a3d5c;
-        }
-
-        .dark-mode .content strong {
-            color: #ffffff;
-        }
-
-        .content a {
-            color: #2e6d9e;
-            text-decoration: underline;
-            transition: opacity 0.2s;
-        }
-
-        .dark-mode .content a {
-            color: #6aaee0;
-        }
-
-        .content a:hover {
-            opacity: 0.6;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 20px;
-            }
-
-            h1 {
-                font-size: 28px;
-                letter-spacing: -0.1rem;
-                margin-bottom: 24px;
-            }
-
-            .nav {
-                margin-bottom: 40px;
-                flex-wrap: wrap;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="site.css">
+    <script src="transitions.js"></script>
 </head>
 <body>
 
     <div class="container">
-        <div class="nav">
-            <a href="mailto:hello@sebastianmontero.com">email</a>
-            <a href="https://x.com/sebastianmxnt">x</a>
-            <a href="https://www.linkedin.com/in/sebastianmontero/">linkedin</a>
-            <a href="https://github.com/sebastian-montero">github</a>
-        </div>
+        <nav class="nav-links primary-nav" aria-label="Main navigation">
+            <a href="./" aria-current="page">HOME</a>
+            <a href="xp/">EXPERIENCE</a>
+            <a href="essays/">ESSAYS</a>
+            <a href="poetry/">POETRY</a>
+        </nav>
 
-        <h1>Sebastian Montero</h1>
+        <main class="content">
+            <h1>Sebastian Montero Paris</h1>
 
-        <div class="content">
-            <!--
-email: mailto:hello@sebastianmontero.com
-x: https://x.com/sebastianmxnt
-linkedin: https://www.linkedin.com/in/sebastianmontero/
-github:  https://github.com/sebastian-montero
--->
+            <p><strong>Founding AI Engineer at Mav9</strong>, building agentic systems for private capital.</p>
 
-<p><strong>Engineer.</strong> Building agents (with agents).</p>
+            <p>My work has been in data and AI. I've built and deployed production-grade agents for a climate tech leader, developed recommendation systems and machine learning models at an HR tech company, and worked with several clients on analytics projects at McKinsey &amp; Company.</p>
 
-<p>Based in London, originally from Costa Rica. I build software with experience spanning data science, ML, recommendation systems, LLM workflows, and agentic architectures.</p>
+            <p>I'm from Costa Rica, and now live in London. I care about Britain and Europe making more of what they need, developing their own AI capabilities and becoming more prosperous.</p>
 
-<p>I'm building tools for financial applications using multi-agent systems that reason, execute code, and coordinate autonomously.</p>
+            <p>Outside work, I like climbing, running, swimming and cycling. I love reading sci-fi books and playing retro games. <em>Parts Unknown</em> sparked a travel and culture bug that has taken me around the world to connect with cultures through their food.</p>
 
-<p>Outside of engineering, I'm into cooking, analog photography, and films. I'm also a blue belt in BJJ, but currently obsessed with climbing & mountaineering.</p>
-
-<p>Let's connect!</p>
-
-        </div>
+            <p>If you want to chat, <a href="mailto:smonteroparis@mail.grokbot.com">email my bot</a> or <a href="https://x.com/sebastianmxnt">message me on X</a>.</p>
+        </main>
     </div>
 
-    <script>
-        const updateTheme = () => {
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (systemPrefersDark) {
-                document.body.classList.add('dark-mode');
-            } else {
-                document.body.classList.remove('dark-mode');
-            }
-        };
+    <footer>
+        <nav class="nav-links" aria-label="Contact and social links">
+            <a href="mailto:smonteroparis@mail.grokbot.com" aria-label="Email my bot">EMAIL</a>
+            <a href="https://x.com/sebastianmxnt">X</a>
+            <a href="https://github.com/sebastian-montero">GITHUB</a>
+            <a href="https://www.linkedin.com/in/sebastianmontero/">LINKEDIN</a>
+        </nav>
+    </footer>
 
-        updateTheme();
-
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
-    </script>
+    <script src="theme.js"></script>
 </body>
 </html>

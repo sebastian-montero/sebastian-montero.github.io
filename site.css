@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body, html {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    background-color: #f7f3ec;
+    color: #423c34;
+    line-height: 1.6;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    --grid-line: rgba(118, 107, 85, 0.09);
+    --grid-subdivision: rgba(118, 107, 85, 0.035);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(var(--grid-subdivision) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-subdivision) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+body.dark-mode {
+    --grid-line: rgba(80, 160, 240, 0.055);
+    --grid-subdivision: rgba(80, 160, 240, 0.022);
+    background-color: #071528;
+    color: #a8d0f0;
+}
+
+.container {
+    max-width: 650px;
+    padding: 60px 20px;
+    margin-inline-start: clamp(0px, calc(8vw - 64px), 60px);
+}
+
+footer {
+    margin-top: auto;
+    padding: 0 20px 24px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-size: 12px;
+    letter-spacing: -0.015rem;
+}
+
+.primary-nav {
+    margin-bottom: 36px;
+}
+
+footer .nav-links {
+    justify-content: center;
+}
+
+.nav-links a {
+    padding: 4px 0;
+    color: #4f4a3f;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.dark-mode .nav-links a {
+    color: #6aaee0;
+}
+
+.nav-links a:hover,
+.content a:hover {
+    opacity: 0.97;
+}
+
+.dark-mode .nav-links a:hover,
+.dark-mode .content a:hover {
+    opacity: 0.6;
+}
+
+.nav-links a[aria-current="page"],
+.nav-links a[aria-current="location"] {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.16rem;
+    margin-bottom: 32px;
+}
+
+h1,
+.education > h2 {
+    color: #2c2823;
+}
+
+.dark-mode h1,
+.dark-mode .education > h2 {
+    color: #ffffff;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content p {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.0175rem;
+    margin-bottom: 16px;
+    color: #423c34;
+}
+
+.dark-mode .content p {
+    color: #a8d0f0;
+}
+
+.post h1 {
+    line-height: 1.15;
+    margin-bottom: 8px;
+}
+
+.post p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.post-date {
+    display: block;
+    font-size: 13px;
+}
+
+.post .post-date,
+.poem .post-date {
+    margin-bottom: 24px;
+}
+
+.content strong,
+.work-entry :is(h2, h3) {
+    font-weight: 600;
+    color: #2c2823;
+}
+
+.dark-mode .content strong,
+.dark-mode .work-entry :is(h2, h3) {
+    color: #ffffff;
+}
+
+.content a {
+    color: #4f5b36;
+    text-decoration: underline;
+    transition: opacity 0.2s;
+}
+
+.dark-mode .content a {
+    color: #6aaee0;
+}
+
+.work-entry + .work-entry {
+    margin-top: 32px;
+}
+
+.work-entry :is(h2, h3) {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.work-entry .work-meta {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #60594d;
+}
+
+.dark-mode .work-entry .work-meta {
+    color: #829fb9;
+}
+
+.work-entry p:last-child {
+    margin-bottom: 0;
+}
+
+.education {
+    margin-top: 36px;
+}
+
+.education > h2 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.055rem;
+    margin-bottom: 18px;
+}
+
+.poem-index ul {
+    list-style: none;
+}
+
+.poem-index li + li {
+    margin-top: 12px;
+}
+
+.poem h1 {
+    margin-bottom: 8px;
+}
+
+.poem .poem-dedication {
+    font-size: 13px;
+    font-style: italic;
+}
+
+body.poetry-theme {
+    --poetry-background: #f5eaf0;
+    --poetry-heading: #392039;
+    --poetry-text: #54354e;
+    --poetry-link: #753360;
+    --grid-line: rgba(153, 88, 133, 0.13);
+    --grid-subdivision: rgba(153, 88, 133, 0.055);
+    background-color: var(--poetry-background);
+    color: var(--poetry-text);
+}
+
+body.poetry-theme.dark-mode {
+    --poetry-background: #221423;
+    --poetry-heading: #fff0fa;
+    --poetry-text: #e6c9db;
+    --poetry-link: #e3add4;
+    --grid-line: rgba(213, 139, 184, 0.12);
+    --grid-subdivision: rgba(213, 139, 184, 0.05);
+}
+
+.poetry-theme h1 {
+    color: var(--poetry-heading);
+}
+
+.poetry-theme .content p {
+    color: var(--poetry-text);
+}
+
+.poetry-theme .nav-links a,
+.poetry-theme .content a {
+    color: var(--poetry-link);
+}
+
+.poetry-theme .nav-links a:hover,
+.poetry-theme .content a:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+}
+
+::view-transition-group(root),
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+}
+
+:root:active-view-transition-type(poetry-enter, poetry-exit)::view-transition-old(root) {
+    mix-blend-mode: normal;
+}
+
+:root:active-view-transition-type(poetry-enter, poetry-exit)::view-transition-new(root) {
+    animation: poetry-sweep 250ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+    mask-image: linear-gradient(
+        var(--poetry-sweep-direction),
+        #000 calc(50% - clamp(12px, 4vw, 36px)),
+        transparent calc(50% + clamp(12px, 4vw, 36px))
+    );
+    mask-size: 240% 100%;
+    mask-repeat: no-repeat;
+    mix-blend-mode: normal;
+}
+
+:root:active-view-transition-type(poetry-enter)::view-transition-new(root) {
+    --poetry-sweep-direction: to left;
+    --poetry-sweep-start: 0% 0;
+    --poetry-sweep-end: 100% 0;
+}
+
+:root:active-view-transition-type(poetry-exit)::view-transition-new(root) {
+    --poetry-sweep-direction: to right;
+    --poetry-sweep-start: 100% 0;
+    --poetry-sweep-end: 0% 0;
+}
+
+@keyframes poetry-sweep {
+    from {
+        mask-position: var(--poetry-sweep-start);
+    }
+    to {
+        mask-position: var(--poetry-sweep-end);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        letter-spacing: -0.1rem;
+        margin-bottom: 24px;
+    }
+}
