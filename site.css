@@ -102,6 +102,8 @@ footer {
 
 footer .nav-links {
     justify-content: center;
+    column-gap: clamp(14px, 4vw, 24px);
+    row-gap: 10px;
 }
 
 .nav-links a {
@@ -137,6 +139,10 @@ h1,
 
 .content {
     max-width: 600px;
+}
+
+.essay-page .content {
+    max-width: 720px;
 }
 
 .content p {
@@ -178,6 +184,111 @@ h1,
 .post .post-date,
 .poem .post-date {
     margin-bottom: 24px;
+}
+
+.essay-page .primary-nav {
+    max-width: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root.reading-mode {
+        --page-text: #c9d2dc;
+        --link-color: #b3cee7;
+    }
+}
+
+.reading-mode .container.essay-page {
+    width: 100%;
+    max-width: 800px;
+    margin-inline: auto;
+    padding: 60px 40px 80px;
+}
+
+.reading-mode .primary-nav {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.reading-mode .primary-nav a:not([aria-current]) {
+    display: none;
+}
+
+.reading-mode .primary-nav a[aria-current] {
+    text-decoration: none;
+}
+
+.reading-mode .essay-page .post {
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .reading-mode .container.essay-page {
+        padding: 40px 20px 60px;
+    }
+
+    .reading-mode .primary-nav {
+        margin-bottom: 24px;
+    }
+
+    .reading-mode .essay-page .post {
+        font-size: 17px;
+    }
+}
+
+.essay-page .post {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.essay-page .post h1 {
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 650;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    margin-bottom: 14px;
+}
+
+.essay-page .post-date {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    color: var(--nav-color);
+    margin-bottom: 36px;
+}
+
+.essay-page .post h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--heading-color);
+    margin: 40px 0 16px;
+}
+
+.essay-page .post p,
+.essay-page .post li {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: normal;
+}
+
+.essay-page .post p,
+.essay-page .post :is(ul, ol) {
+    margin-bottom: 22px;
+}
+
+.essay-page .post li + li {
+    margin-top: 10px;
+}
+
+.essay-page .post figure {
+    margin: 32px 0;
+}
+
+.essay-page .post figure img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .content strong,
